@@ -49,6 +49,7 @@
             this.nombreProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombrePiezaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
             this.panelConten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
@@ -317,7 +318,7 @@
             this.nombreProveedorDataGridViewTextBoxColumn,
             this.nombrePiezaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.suministraBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 216);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 208);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(347, 150);
             this.dataGridView1.TabIndex = 11;
@@ -357,12 +358,21 @@
             this.listBox3.Size = new System.Drawing.Size(120, 95);
             this.listBox3.TabIndex = 12;
             // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(600, 71);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(120, 95);
+            this.listBox4.TabIndex = 13;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox4);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listBox2);
@@ -404,6 +414,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreProveedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombrePiezaDataGridViewTextBoxColumn;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox listBox4;
     }
 }
 

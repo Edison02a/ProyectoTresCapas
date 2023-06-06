@@ -115,6 +115,38 @@ namespace CDatos
             }
         }
 
+
+        public List<EntidadesCategoria> Obtener4()
+        {
+            cBD.Cerrar();
+            List<EntidadesCategoria> datosCategorias = new List<EntidadesCategoria>();
+            try
+            {
+                cBD.Abrir();
+                SqlCommand sql = new SqlCommand("Select * from categoria ", cBD.conectar);
+                SqlDataReader sqlreader = sql.ExecuteReader();
+                while (sqlreader.Read())
+                {
+                    EntidadesCategoria objEnt4 = new EntidadesCategoria()
+                    {
+                        CategCategoria = Convert.ToString(sqlreader["categ"]),
+                        PrecioCategoria = Convert.ToInt64(sqlreader["precio"]),
+                    };
+                    datosCategorias.Add(objEnt4);
+
+
+                }
+                return datosCategorias;
+            }
+            catch
+            {
+
+                datosCategorias = null;
+                cBD.Cerrar();
+                return datosCategorias;
+            }
+        }
+
         //INSERTAR DATOS
         /*
         public void registrar(Entidades datos)

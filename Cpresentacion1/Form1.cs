@@ -50,6 +50,13 @@ namespace Cpresentacion1
             {
                 listBox3.Items.Add(item.CantidadSuministra);
             }
+
+
+            List<EntidadesCategoria> datosCategoria = objOpera.Lista4();
+            foreach (EntidadesCategoria item in datosCategoria)
+            {
+                listBox4.Items.Add(item.CategCategoria);
+            }
         }
     }
 }
