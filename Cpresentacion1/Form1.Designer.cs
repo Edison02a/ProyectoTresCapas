@@ -46,18 +46,18 @@
             this.button7 = new System.Windows.Forms.Button();
             this.btn_pieza = new System.Windows.Forms.Button();
             this.btn_proveedor = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ComboBox1 = new System.Windows.Forms.ComboBox();
-            this.ComboBox2 = new System.Windows.Forms.ComboBox();
-            this.ComboBox3 = new System.Windows.Forms.ComboBox();
+            this.panel_conten = new System.Windows.Forms.Panel();
             this.ComboBox4 = new System.Windows.Forms.ComboBox();
+            this.ComboBox3 = new System.Windows.Forms.ComboBox();
+            this.ComboBox2 = new System.Windows.Forms.ComboBox();
+            this.ComboBox1 = new System.Windows.Forms.ComboBox();
             this.panelConten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suministraBindingSource)).BeginInit();
             this.panel_agregar.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel_conten.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -363,43 +363,20 @@
             this.btn_proveedor.Text = "Proveedor";
             this.btn_proveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_proveedor.UseVisualStyleBackColor = true;
+            this.btn_proveedor.Click += new System.EventHandler(this.btn_proveedor_Click);
             // 
-            // panel1
+            // panel_conten
             // 
-            this.panel1.Controls.Add(this.ComboBox4);
-            this.panel1.Controls.Add(this.ComboBox3);
-            this.panel1.Controls.Add(this.ComboBox2);
-            this.panel1.Controls.Add(this.ComboBox1);
-            this.panel1.Controls.Add(this.panel_agregar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 48);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 402);
-            this.panel1.TabIndex = 19;
-            // 
-            // ComboBox1
-            // 
-            this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.Location = new System.Drawing.Point(151, 207);
-            this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(121, 21);
-            this.ComboBox1.TabIndex = 19;
-            // 
-            // ComboBox2
-            // 
-            this.ComboBox2.FormattingEnabled = true;
-            this.ComboBox2.Location = new System.Drawing.Point(340, 191);
-            this.ComboBox2.Name = "ComboBox2";
-            this.ComboBox2.Size = new System.Drawing.Size(121, 21);
-            this.ComboBox2.TabIndex = 20;
-            // 
-            // ComboBox3
-            // 
-            this.ComboBox3.FormattingEnabled = true;
-            this.ComboBox3.Location = new System.Drawing.Point(536, 207);
-            this.ComboBox3.Name = "ComboBox3";
-            this.ComboBox3.Size = new System.Drawing.Size(121, 21);
-            this.ComboBox3.TabIndex = 21;
+            this.panel_conten.Controls.Add(this.ComboBox4);
+            this.panel_conten.Controls.Add(this.ComboBox3);
+            this.panel_conten.Controls.Add(this.ComboBox2);
+            this.panel_conten.Controls.Add(this.ComboBox1);
+            this.panel_conten.Controls.Add(this.panel_agregar);
+            this.panel_conten.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_conten.Location = new System.Drawing.Point(0, 48);
+            this.panel_conten.Name = "panel_conten";
+            this.panel_conten.Size = new System.Drawing.Size(800, 402);
+            this.panel_conten.TabIndex = 19;
             // 
             // ComboBox4
             // 
@@ -409,13 +386,37 @@
             this.ComboBox4.Size = new System.Drawing.Size(121, 21);
             this.ComboBox4.TabIndex = 22;
             // 
+            // ComboBox3
+            // 
+            this.ComboBox3.FormattingEnabled = true;
+            this.ComboBox3.Location = new System.Drawing.Point(536, 207);
+            this.ComboBox3.Name = "ComboBox3";
+            this.ComboBox3.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox3.TabIndex = 21;
+            // 
+            // ComboBox2
+            // 
+            this.ComboBox2.FormattingEnabled = true;
+            this.ComboBox2.Location = new System.Drawing.Point(340, 191);
+            this.ComboBox2.Name = "ComboBox2";
+            this.ComboBox2.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox2.TabIndex = 20;
+            // 
+            // ComboBox1
+            // 
+            this.ComboBox1.FormattingEnabled = true;
+            this.ComboBox1.Location = new System.Drawing.Point(151, 207);
+            this.ComboBox1.Name = "ComboBox1";
+            this.ComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox1.TabIndex = 19;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_conten);
             this.Controls.Add(this.panelConten);
             this.Name = "Form1";
             this.Palette = this.kryptonPalette1;
@@ -428,7 +429,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suministraBindingSource)).EndInit();
             this.panel_agregar.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panel_conten.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -451,7 +452,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btn_pieza;
         private System.Windows.Forms.Button btn_proveedor;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_conten;
         private System.Windows.Forms.ComboBox ComboBox4;
         private System.Windows.Forms.ComboBox ComboBox3;
         private System.Windows.Forms.ComboBox ComboBox2;

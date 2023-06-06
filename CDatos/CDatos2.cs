@@ -148,16 +148,18 @@ namespace CDatos
         }
 
         //INSERTAR DATOS
-        /*
-        public void registrar(Entidades datos)
+        
+        public void registrarProveedor(Entidades datos)
         {
             cBD.Abrir();
-            string sql = "insert into Tabla_datos(Nombre,Apellido) VALUES('" + datos.NombreEst + "', '" + datos.ApellidoEst + "')";
+            string sql = "insert into prov(nombre,direccion,ciudad,provincia) VALUES('" + datos.NombreProv + "', '" + datos.DireccionProv+ "', '" + datos.CiudadProv + "', '" + datos.ProviciaProv + "')";
             SqlCommand comando = new SqlCommand(sql, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();
         }
 
+
+        /*
         //eliminar
         public void EliminarV(int ide)
         {

@@ -34,22 +34,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Design">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
+      <HintPath>F:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>F:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>F:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>F:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>F:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>F:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -82,6 +82,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet1.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -117,6 +122,17 @@
     </None>
     <None Include="ProveedorDataSet.xss">
       <DependentUpon>ProveedorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet1.xsc">
+      <DependentUpon>ProveedorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet1.xss">
+      <DependentUpon>ProveedorDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

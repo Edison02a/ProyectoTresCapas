@@ -29,5 +29,11 @@ namespace CLogica
         {
             return ObjDatos.Obtener4();
         }
+
+        public void IngresarProveedor(Entidades DatosEstu)
+        {
+            ObjDatos.registrarProveedor(DatosEstu);
+
+        }
     }
 }

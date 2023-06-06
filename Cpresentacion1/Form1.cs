@@ -27,11 +27,11 @@ namespace Cpresentacion1
         private void Form1_Load_1(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.suministra' Puede moverla o quitarla según sea necesario.
-            this.suministraTableAdapter.Fill(this.proveedorDataSet.suministra);
+            //this.suministraTableAdapter.Fill(this.proveedorDataSet.suministra);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.pieza' Puede moverla o quitarla según sea necesario.
-            this.piezaTableAdapter.Fill(this.proveedorDataSet.pieza);
+            // this.piezaTableAdapter.Fill(this.proveedorDataSet.pieza);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.prov' Puede moverla o quitarla según sea necesario.
-            this.provTableAdapter.Fill(this.proveedorDataSet.prov);
+            //this.provTableAdapter.Fill(this.proveedorDataSet.prov);
 
             List<Entidades> DatosProveedor = objOpera.Lista();
             string proveedor;
@@ -72,6 +72,30 @@ namespace Cpresentacion1
             {
                 panel_agregar.Visible = true;
             }
+        }
+
+        private Form currentForm = null;
+        private void OpenchildForm(Form hijo)
+        {
+            if (currentForm != null)
+            {
+                currentForm.Close();
+            }
+            currentForm = hijo;
+            hijo.TopLevel = false;
+            hijo.FormBorderStyle = FormBorderStyle.None;
+            hijo.Dock = DockStyle.Fill;
+            //hijo.BackColor = Color.FromArgb(32, 52, 68);
+            panel_conten.Controls.Add(hijo);
+            panel_conten.Tag = hijo;
+            hijo.BringToFront();
+            hijo.Show();
+
+        }
+
+        private void btn_proveedor_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormIngresoDatos());
         }
     }
 }
