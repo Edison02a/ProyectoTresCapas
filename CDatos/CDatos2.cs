@@ -36,6 +36,7 @@ namespace CDatos
 
                 }
                 return DatosProveedor;
+
             }
             catch
             {
@@ -50,6 +51,7 @@ namespace CDatos
 
         public List<EntidadesPieza> Obtener2()
         {
+            cBD.Cerrar();
             List<EntidadesPieza> DatosPieza = new List<EntidadesPieza>();
             try
             {

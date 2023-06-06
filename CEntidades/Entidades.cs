@@ -12,5 +12,6 @@ namespace CEntidades
         public string DireccionProv { get; set; }
         public string CiudadProv { get; set; }
         public string ProviciaProv { get; set; }
+
     }
 }

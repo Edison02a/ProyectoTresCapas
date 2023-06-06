@@ -37,7 +37,7 @@ namespace Cpresentacion1
                 listBox1.Items.Add(item.NombreProv);
             }
 
-            List<EntidadesPieza> DatosPieza = objOpera.List2();
+            List<EntidadesPieza> DatosPieza = objOpera.Lista2();
             foreach (EntidadesPieza item in DatosPieza)
             {
                 listBox2.Items.Add(item.NombrePieza);

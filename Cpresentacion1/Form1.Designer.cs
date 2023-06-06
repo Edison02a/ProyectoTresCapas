@@ -35,28 +35,16 @@
             this.btn_eliminar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_modificar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_agregar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.data = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.proveedorDataSet = new Cpresentacion1.ProveedorDataSet();
             this.provBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.provTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.provTableAdapter();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.piezaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.piezaTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.piezaTableAdapter();
-            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.centroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.panelConten.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -272,21 +260,6 @@
             this.btn_agregar.TabIndex = 1;
             this.btn_agregar.Values.Text = "Agregar";
             // 
-            // data
-            // 
-            this.data.AutoGenerateColumns = false;
-            this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDataGridViewTextBoxColumn,
-            this.direccionDataGridViewTextBoxColumn,
-            this.ciudadDataGridViewTextBoxColumn,
-            this.provinciaDataGridViewTextBoxColumn});
-            this.data.DataSource = this.provBindingSource;
-            this.data.Location = new System.Drawing.Point(48, 65);
-            this.data.Name = "data";
-            this.data.Size = new System.Drawing.Size(448, 150);
-            this.data.TabIndex = 7;
-            // 
             // proveedorDataSet
             // 
             this.proveedorDataSet.DataSetName = "ProveedorDataSet";
@@ -301,45 +274,6 @@
             // 
             this.provTableAdapter.ClearBeforeFill = true;
             // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            // 
-            // ciudadDataGridViewTextBoxColumn
-            // 
-            this.ciudadDataGridViewTextBoxColumn.DataPropertyName = "ciudad";
-            this.ciudadDataGridViewTextBoxColumn.HeaderText = "ciudad";
-            this.ciudadDataGridViewTextBoxColumn.Name = "ciudadDataGridViewTextBoxColumn";
-            // 
-            // provinciaDataGridViewTextBoxColumn
-            // 
-            this.provinciaDataGridViewTextBoxColumn.DataPropertyName = "provincia";
-            this.provinciaDataGridViewTextBoxColumn.HeaderText = "provincia";
-            this.provinciaDataGridViewTextBoxColumn.Name = "provinciaDataGridViewTextBoxColumn";
-            // 
-            // kryptonDataGridView1
-            // 
-            this.kryptonDataGridView1.AutoGenerateColumns = false;
-            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDataGridViewTextBoxColumn1,
-            this.colorDataGridViewTextBoxColumn,
-            this.centroDataGridViewTextBoxColumn,
-            this.categDataGridViewTextBoxColumn});
-            this.kryptonDataGridView1.DataSource = this.piezaBindingSource;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(48, 243);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(450, 150);
-            this.kryptonDataGridView1.TabIndex = 8;
-            // 
             // piezaBindingSource
             // 
             this.piezaBindingSource.DataMember = "pieza";
@@ -349,34 +283,10 @@
             // 
             this.piezaTableAdapter.ClearBeforeFill = true;
             // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
-            // 
-            // colorDataGridViewTextBoxColumn
-            // 
-            this.colorDataGridViewTextBoxColumn.DataPropertyName = "color";
-            this.colorDataGridViewTextBoxColumn.HeaderText = "color";
-            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
-            // 
-            // centroDataGridViewTextBoxColumn
-            // 
-            this.centroDataGridViewTextBoxColumn.DataPropertyName = "centro";
-            this.centroDataGridViewTextBoxColumn.HeaderText = "centro";
-            this.centroDataGridViewTextBoxColumn.Name = "centroDataGridViewTextBoxColumn";
-            // 
-            // categDataGridViewTextBoxColumn
-            // 
-            this.categDataGridViewTextBoxColumn.DataPropertyName = "categ";
-            this.categDataGridViewTextBoxColumn.HeaderText = "categ";
-            this.categDataGridViewTextBoxColumn.Name = "categDataGridViewTextBoxColumn";
-            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(531, 74);
+            this.listBox1.Location = new System.Drawing.Point(57, 71);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 9;
@@ -384,7 +294,7 @@
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(531, 260);
+            this.listBox2.Location = new System.Drawing.Point(218, 71);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(120, 95);
             this.listBox2.TabIndex = 10;
@@ -397,8 +307,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.kryptonDataGridView1);
-            this.Controls.Add(this.data);
             this.Controls.Add(this.panelConten);
             this.Name = "Form1";
             this.Palette = this.kryptonPalette1;
@@ -406,10 +314,8 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panelConten.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -422,21 +328,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_eliminar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_modificar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_agregar;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView data;
         private ProveedorDataSet proveedorDataSet;
         private System.Windows.Forms.BindingSource provBindingSource;
         private ProveedorDataSetTableAdapters.provTableAdapter provTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
         private System.Windows.Forms.BindingSource piezaBindingSource;
         private ProveedorDataSetTableAdapters.piezaTableAdapter piezaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn centroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categDataGridViewTextBoxColumn;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
     }

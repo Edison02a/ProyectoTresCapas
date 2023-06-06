@@ -15,7 +15,7 @@ namespace CLogica
             return ObjDatos.Obtener();
         }
 
-        public List<EntidadesPieza> List2()
+        public List<EntidadesPieza> Lista2()
         {
             return ObjDatos.Obtener2();
         }
