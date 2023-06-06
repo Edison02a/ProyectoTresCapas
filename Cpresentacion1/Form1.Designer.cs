@@ -40,25 +40,24 @@
             this.provTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.provTableAdapter();
             this.piezaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.piezaTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.piezaTableAdapter();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.suministraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suministraTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.suministraTableAdapter();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.ComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.ComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.ComboBox4 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.ComboBox3 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.panel_agregar = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.btn_pieza = new System.Windows.Forms.Button();
+            this.btn_proveedor = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ComboBox1 = new System.Windows.Forms.ComboBox();
+            this.ComboBox2 = new System.Windows.Forms.ComboBox();
+            this.ComboBox3 = new System.Windows.Forms.ComboBox();
+            this.ComboBox4 = new System.Windows.Forms.ComboBox();
             this.panelConten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suministraBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox3)).BeginInit();
+            this.panel_agregar.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -111,7 +110,7 @@
             // btn_eliminar
             // 
             this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_eliminar.Location = new System.Drawing.Point(344, 12);
+            this.btn_eliminar.Location = new System.Drawing.Point(367, 18);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btn_eliminar.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -166,7 +165,7 @@
             // btn_modificar
             // 
             this.btn_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modificar.Location = new System.Drawing.Point(218, 12);
+            this.btn_modificar.Location = new System.Drawing.Point(211, 18);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btn_modificar.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -221,7 +220,7 @@
             // btn_agregar
             // 
             this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar.Location = new System.Drawing.Point(116, 12);
+            this.btn_agregar.Location = new System.Drawing.Point(13, 18);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btn_agregar.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -272,6 +271,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_agregar.TabIndex = 1;
             this.btn_agregar.Values.Text = "Agregar";
+            this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click);
             // 
             // proveedorDataSet
             // 
@@ -296,22 +296,6 @@
             // 
             this.piezaTableAdapter.ClearBeforeFill = true;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(57, 71);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 9;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(218, 71);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 95);
-            this.listBox2.TabIndex = 10;
-            // 
             // suministraBindingSource
             // 
             this.suministraBindingSource.DataMember = "suministra";
@@ -321,57 +305,109 @@
             // 
             this.suministraTableAdapter.ClearBeforeFill = true;
             // 
-            // listBox3
+            // panel_agregar
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(395, 71);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(120, 95);
-            this.listBox3.TabIndex = 12;
+            this.panel_agregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_agregar.Controls.Add(this.button7);
+            this.panel_agregar.Controls.Add(this.btn_pieza);
+            this.panel_agregar.Controls.Add(this.btn_proveedor);
+            this.panel_agregar.Location = new System.Drawing.Point(13, 0);
+            this.panel_agregar.Name = "panel_agregar";
+            this.panel_agregar.Size = new System.Drawing.Size(97, 104);
+            this.panel_agregar.TabIndex = 18;
             // 
-            // listBox4
+            // button7
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(600, 71);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(120, 95);
-            this.listBox4.TabIndex = 13;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.Location = new System.Drawing.Point(0, 64);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button7.Size = new System.Drawing.Size(95, 31);
+            this.button7.TabIndex = 4;
+            this.button7.Text = "Categoria";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // btn_pieza
+            // 
+            this.btn_pieza.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_pieza.FlatAppearance.BorderSize = 0;
+            this.btn_pieza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pieza.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pieza.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_pieza.Location = new System.Drawing.Point(0, 33);
+            this.btn_pieza.Name = "btn_pieza";
+            this.btn_pieza.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_pieza.Size = new System.Drawing.Size(95, 31);
+            this.btn_pieza.TabIndex = 2;
+            this.btn_pieza.Text = "Piezas";
+            this.btn_pieza.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_pieza.UseVisualStyleBackColor = true;
+            // 
+            // btn_proveedor
+            // 
+            this.btn_proveedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_proveedor.FlatAppearance.BorderSize = 0;
+            this.btn_proveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_proveedor.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_proveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_proveedor.Location = new System.Drawing.Point(0, 0);
+            this.btn_proveedor.Name = "btn_proveedor";
+            this.btn_proveedor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_proveedor.Size = new System.Drawing.Size(95, 33);
+            this.btn_proveedor.TabIndex = 0;
+            this.btn_proveedor.Text = "Proveedor";
+            this.btn_proveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_proveedor.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.ComboBox4);
+            this.panel1.Controls.Add(this.ComboBox3);
+            this.panel1.Controls.Add(this.ComboBox2);
+            this.panel1.Controls.Add(this.ComboBox1);
+            this.panel1.Controls.Add(this.panel_agregar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 48);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 402);
+            this.panel1.TabIndex = 19;
             // 
             // ComboBox1
             // 
-            this.ComboBox1.DropDownWidth = 278;
-            this.ComboBox1.Location = new System.Drawing.Point(84, 181);
+            this.ComboBox1.FormattingEnabled = true;
+            this.ComboBox1.Location = new System.Drawing.Point(151, 207);
             this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(278, 21);
-            this.ComboBox1.TabIndex = 14;
-            this.ComboBox1.Text = "Proveedores";
+            this.ComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox1.TabIndex = 19;
             // 
             // ComboBox2
             // 
-            this.ComboBox2.DropDownWidth = 278;
-            this.ComboBox2.Location = new System.Drawing.Point(419, 181);
+            this.ComboBox2.FormattingEnabled = true;
+            this.ComboBox2.Location = new System.Drawing.Point(340, 191);
             this.ComboBox2.Name = "ComboBox2";
-            this.ComboBox2.Size = new System.Drawing.Size(278, 21);
-            this.ComboBox2.TabIndex = 15;
-            this.ComboBox2.Text = "Proveedores";
-            // 
-            // ComboBox4
-            // 
-            this.ComboBox4.DropDownWidth = 278;
-            this.ComboBox4.Location = new System.Drawing.Point(419, 307);
-            this.ComboBox4.Name = "ComboBox4";
-            this.ComboBox4.Size = new System.Drawing.Size(278, 21);
-            this.ComboBox4.TabIndex = 16;
-            this.ComboBox4.Text = "Proveedores";
+            this.ComboBox2.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox2.TabIndex = 20;
             // 
             // ComboBox3
             // 
-            this.ComboBox3.DropDownWidth = 278;
-            this.ComboBox3.Location = new System.Drawing.Point(84, 307);
+            this.ComboBox3.FormattingEnabled = true;
+            this.ComboBox3.Location = new System.Drawing.Point(536, 207);
             this.ComboBox3.Name = "ComboBox3";
-            this.ComboBox3.Size = new System.Drawing.Size(278, 21);
-            this.ComboBox3.TabIndex = 17;
-            this.ComboBox3.Text = "Proveedores";
+            this.ComboBox3.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox3.TabIndex = 21;
+            // 
+            // ComboBox4
+            // 
+            this.ComboBox4.FormattingEnabled = true;
+            this.ComboBox4.Location = new System.Drawing.Point(483, 285);
+            this.ComboBox4.Name = "ComboBox4";
+            this.ComboBox4.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox4.TabIndex = 22;
             // 
             // Form1
             // 
@@ -379,14 +415,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ComboBox3);
-            this.Controls.Add(this.ComboBox4);
-            this.Controls.Add(this.ComboBox2);
-            this.Controls.Add(this.ComboBox1);
-            this.Controls.Add(this.listBox4);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelConten);
             this.Name = "Form1";
             this.Palette = this.kryptonPalette1;
@@ -398,10 +427,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suministraBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComboBox3)).EndInit();
+            this.panel_agregar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -418,16 +445,17 @@
         private ProveedorDataSetTableAdapters.provTableAdapter provTableAdapter;
         private System.Windows.Forms.BindingSource piezaBindingSource;
         private ProveedorDataSetTableAdapters.piezaTableAdapter piezaTableAdapter;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.BindingSource suministraBindingSource;
         private ProveedorDataSetTableAdapters.suministraTableAdapter suministraTableAdapter;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox4;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ComboBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ComboBox2;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ComboBox4;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ComboBox3;
+        private System.Windows.Forms.Panel panel_agregar;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btn_pieza;
+        private System.Windows.Forms.Button btn_proveedor;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox ComboBox4;
+        private System.Windows.Forms.ComboBox ComboBox3;
+        private System.Windows.Forms.ComboBox ComboBox2;
+        private System.Windows.Forms.ComboBox ComboBox1;
     }
 }
 

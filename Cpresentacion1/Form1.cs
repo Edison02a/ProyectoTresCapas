@@ -58,6 +58,20 @@ namespace Cpresentacion1
             {
                 ComboBox4.Items.Add(item.CategCategoria);
             }
+
+            panel_agregar.Visible = false;
+        }
+
+        private void btn_agregar_Click(object sender, EventArgs e)
+        {
+            if(panel_agregar.Visible)
+            {
+                panel_agregar.Visible = false;
+            }
+            else
+            {
+                panel_agregar.Visible = true;
+            }
         }
     }
 }
