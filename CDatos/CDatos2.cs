@@ -11,6 +11,8 @@ namespace CDatos
     public class CDatos2
     {
         CBD cBD = new CBD();
+
+        //recuperar datos del proveedor
         public List<Entidades> Obtener()
         {
             List<Entidades> DatosEst = new List<Entidades>();
@@ -43,6 +45,43 @@ namespace CDatos
                 return DatosEst;
             }
         }
+
+        //recuperar datos de la pieza
+
+        public List<EntidadesPieza> Obtener2()
+        {
+            List<EntidadesPieza> DatosPieza = new List<EntidadesPieza>();
+            try
+            {
+                cBD.Abrir();
+                SqlCommand sql = new SqlCommand("Select * from prov", cBD.conectar);
+                SqlDataReader sqlreader = sql.ExecuteReader();
+                while (sqlreader.Read())
+                {
+                    EntidadesPieza objEnt2 = new EntidadesPieza()
+                    {
+                        NombrePieza = Convert.ToString(sqlreader["Nombre"]),
+                        ColorPieza = Convert.ToString(sqlreader["Color"]),
+                        CentroPieza = Convert.ToString(sqlreader["Centro"]),
+                        CategoriaPieza = Convert.ToString(sqlreader["Categoria"]),
+
+                    };
+                    DatosPieza.Add(objEnt2);
+
+
+                }
+                return DatosPieza;
+            }
+            catch
+            {
+
+                DatosPieza = null;
+                cBD.Cerrar();
+                return DatosPieza;
+            }
+        }
+
+
 
         //INSERTAR DATOS
         /*

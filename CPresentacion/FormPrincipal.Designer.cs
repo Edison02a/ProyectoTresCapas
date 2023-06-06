@@ -367,7 +367,7 @@
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(12, 88);
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(57, 94);
             this.kryptonDataGridView1.Name = "kryptonDataGridView1";
             this.kryptonDataGridView1.Size = new System.Drawing.Size(240, 150);
             this.kryptonDataGridView1.TabIndex = 6;
