@@ -20,6 +20,8 @@ namespace CPresentacion
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.prov' Puede moverla o quitarla según sea necesario.
+            this.provTableAdapter.Fill(this.proveedorDataSet.prov);
 
         }
     }

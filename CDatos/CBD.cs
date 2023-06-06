@@ -13,7 +13,7 @@ namespace CDatos
 {
     public class CBD
     {
-        public string cadena = "Data source =.; initial catalog = Estudiante; user id = sa; password = sqlserver ";
+        public string cadena = "Data Source=.;Initial Catalog=Proveedor;Persist Security Info=True;User ID=sa;Password=sqlserver";
         public SqlConnection conectar = new SqlConnection();
         public CBD()
         {

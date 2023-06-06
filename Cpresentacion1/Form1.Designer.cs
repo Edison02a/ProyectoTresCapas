@@ -1,16 +1,16 @@
-﻿namespace CPresentacion
+﻿namespace Cpresentacion1
 {
-    partial class FormPrincipal
+    partial class Form1
     {
         /// <summary>
-        /// Required designer variable.
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Limpiar los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,41 +20,44 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de Windows Forms
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panelConten = new System.Windows.Forms.Panel();
             this.btn_eliminar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_modificar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_agregar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.panel_logo = new System.Windows.Forms.Panel();
-            this.panel_submen = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btn_Caliente = new System.Windows.Forms.Button();
-            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.proveedorDataSet = new CPresentacion.ProveedorDataSet();
+            this.data = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.proveedorDataSet = new Cpresentacion1.ProveedorDataSet();
             this.provBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.provTableAdapter = new CPresentacion.ProveedorDataSetTableAdapters.provTableAdapter();
+            this.provTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.provTableAdapter();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.piezaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.piezaTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.piezaTableAdapter();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.centroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.panelConten.SuspendLayout();
-            this.panel_logo.SuspendLayout();
-            this.panel_submen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -98,12 +101,11 @@
             this.panelConten.Controls.Add(this.btn_eliminar);
             this.panelConten.Controls.Add(this.btn_modificar);
             this.panelConten.Controls.Add(this.btn_agregar);
-            this.panelConten.Controls.Add(this.panel_logo);
             this.panelConten.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConten.Location = new System.Drawing.Point(0, 0);
             this.panelConten.Name = "panelConten";
             this.panelConten.Size = new System.Drawing.Size(800, 48);
-            this.panelConten.TabIndex = 5;
+            this.panelConten.TabIndex = 6;
             // 
             // btn_eliminar
             // 
@@ -270,108 +272,20 @@
             this.btn_agregar.TabIndex = 1;
             this.btn_agregar.Values.Text = "Agregar";
             // 
-            // panel_logo
+            // data
             // 
-            this.panel_logo.Controls.Add(this.panel_submen);
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(110, 48);
-            this.panel_logo.TabIndex = 0;
-            // 
-            // panel_submen
-            // 
-            this.panel_submen.Controls.Add(this.button4);
-            this.panel_submen.Controls.Add(this.button3);
-            this.panel_submen.Controls.Add(this.button2);
-            this.panel_submen.Controls.Add(this.btn_Caliente);
-            this.panel_submen.Location = new System.Drawing.Point(3, 51);
-            this.panel_submen.Name = "panel_submen";
-            this.panel_submen.Size = new System.Drawing.Size(188, 153);
-            this.panel_submen.TabIndex = 5;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(0, 111);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(188, 37);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Comidas";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(0, 74);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(188, 37);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Postres";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(0, 37);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(188, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Bebidas frías";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btn_Caliente
-            // 
-            this.btn_Caliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Caliente.FlatAppearance.BorderSize = 0;
-            this.btn_Caliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Caliente.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Caliente.Image = ((System.Drawing.Image)(resources.GetObject("btn_Caliente.Image")));
-            this.btn_Caliente.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Caliente.Location = new System.Drawing.Point(0, 0);
-            this.btn_Caliente.Name = "btn_Caliente";
-            this.btn_Caliente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_Caliente.Size = new System.Drawing.Size(188, 37);
-            this.btn_Caliente.TabIndex = 0;
-            this.btn_Caliente.Text = "Bebidas calientes";
-            this.btn_Caliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Caliente.UseVisualStyleBackColor = true;
-            // 
-            // kryptonDataGridView1
-            // 
-            this.kryptonDataGridView1.AutoGenerateColumns = false;
-            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.data.AutoGenerateColumns = false;
+            this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.ciudadDataGridViewTextBoxColumn,
             this.provinciaDataGridViewTextBoxColumn});
-            this.kryptonDataGridView1.DataSource = this.provBindingSource;
-            this.kryptonDataGridView1.Location = new System.Drawing.Point(46, 88);
-            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
-            this.kryptonDataGridView1.Size = new System.Drawing.Size(448, 150);
-            this.kryptonDataGridView1.TabIndex = 6;
+            this.data.DataSource = this.provBindingSource;
+            this.data.Location = new System.Drawing.Point(48, 65);
+            this.data.Name = "data";
+            this.data.Size = new System.Drawing.Size(448, 150);
+            this.data.TabIndex = 7;
             // 
             // proveedorDataSet
             // 
@@ -411,25 +325,92 @@
             this.provinciaDataGridViewTextBoxColumn.HeaderText = "provincia";
             this.provinciaDataGridViewTextBoxColumn.Name = "provinciaDataGridViewTextBoxColumn";
             // 
-            // FormPrincipal
+            // kryptonDataGridView1
+            // 
+            this.kryptonDataGridView1.AutoGenerateColumns = false;
+            this.kryptonDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn1,
+            this.colorDataGridViewTextBoxColumn,
+            this.centroDataGridViewTextBoxColumn,
+            this.categDataGridViewTextBoxColumn});
+            this.kryptonDataGridView1.DataSource = this.piezaBindingSource;
+            this.kryptonDataGridView1.Location = new System.Drawing.Point(48, 243);
+            this.kryptonDataGridView1.Name = "kryptonDataGridView1";
+            this.kryptonDataGridView1.Size = new System.Drawing.Size(450, 150);
+            this.kryptonDataGridView1.TabIndex = 8;
+            // 
+            // piezaBindingSource
+            // 
+            this.piezaBindingSource.DataMember = "pieza";
+            this.piezaBindingSource.DataSource = this.proveedorDataSet;
+            // 
+            // piezaTableAdapter
+            // 
+            this.piezaTableAdapter.ClearBeforeFill = true;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "nombre";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            // 
+            // colorDataGridViewTextBoxColumn
+            // 
+            this.colorDataGridViewTextBoxColumn.DataPropertyName = "color";
+            this.colorDataGridViewTextBoxColumn.HeaderText = "color";
+            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
+            // 
+            // centroDataGridViewTextBoxColumn
+            // 
+            this.centroDataGridViewTextBoxColumn.DataPropertyName = "centro";
+            this.centroDataGridViewTextBoxColumn.HeaderText = "centro";
+            this.centroDataGridViewTextBoxColumn.Name = "centroDataGridViewTextBoxColumn";
+            // 
+            // categDataGridViewTextBoxColumn
+            // 
+            this.categDataGridViewTextBoxColumn.DataPropertyName = "categ";
+            this.categDataGridViewTextBoxColumn.HeaderText = "categ";
+            this.categDataGridViewTextBoxColumn.Name = "categDataGridViewTextBoxColumn";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(531, 74);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 9;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(531, 260);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(120, 95);
+            this.listBox2.TabIndex = 10;
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.kryptonDataGridView1);
+            this.Controls.Add(this.data);
             this.Controls.Add(this.panelConten);
-            this.Name = "FormPrincipal";
+            this.Name = "Form1";
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.Text = "FormPrincipal";
-            this.Load += new System.EventHandler(this.FormPrincipal_Load);
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panelConten.ResumeLayout(false);
-            this.panel_logo.ResumeLayout(false);
-            this.panel_submen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,13 +422,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_eliminar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_modificar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_agregar;
-        private System.Windows.Forms.Panel panel_logo;
-        private System.Windows.Forms.Panel panel_submen;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btn_Caliente;
-        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView data;
         private ProveedorDataSet proveedorDataSet;
         private System.Windows.Forms.BindingSource provBindingSource;
         private ProveedorDataSetTableAdapters.provTableAdapter provTableAdapter;
@@ -455,5 +430,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
+        private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
+        private System.Windows.Forms.BindingSource piezaBindingSource;
+        private ProveedorDataSetTableAdapters.piezaTableAdapter piezaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn centroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
+

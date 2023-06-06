@@ -15,7 +15,7 @@ namespace CDatos
         //recuperar datos del proveedor
         public List<Entidades> Obtener()
         {
-            List<Entidades> DatosEst = new List<Entidades>();
+            List<Entidades> DatosProveedor = new List<Entidades>();
             try
             {
                 cBD.Abrir();
@@ -31,18 +31,18 @@ namespace CDatos
                         ProviciaProv = Convert.ToString(sqlreader["Provincia"]),
 
                     };
-                    DatosEst.Add(objEnt);
+                    DatosProveedor.Add(objEnt);
 
 
                 }
-                return DatosEst;
+                return DatosProveedor;
             }
             catch
             {
 
-                DatosEst = null;
+                DatosProveedor = null;
                 cBD.Cerrar();
-                return DatosEst;
+                return DatosProveedor;
             }
         }
 
@@ -54,16 +54,16 @@ namespace CDatos
             try
             {
                 cBD.Abrir();
-                SqlCommand sql = new SqlCommand("Select * from prov", cBD.conectar);
+                SqlCommand sql = new SqlCommand("Select * from pieza", cBD.conectar);
                 SqlDataReader sqlreader = sql.ExecuteReader();
                 while (sqlreader.Read())
                 {
                     EntidadesPieza objEnt2 = new EntidadesPieza()
                     {
-                        NombrePieza = Convert.ToString(sqlreader["Nombre"]),
-                        ColorPieza = Convert.ToString(sqlreader["Color"]),
-                        CentroPieza = Convert.ToString(sqlreader["Centro"]),
-                        CategoriaPieza = Convert.ToString(sqlreader["Categoria"]),
+                        NombrePieza = Convert.ToString(sqlreader["nombre"]),
+                        ColorPieza = Convert.ToString(sqlreader["color"]),
+                        CentroPieza = Convert.ToString(sqlreader["centro"]),
+                        CategoriaPieza = Convert.ToString(sqlreader["categ"]),
 
                     };
                     DatosPieza.Add(objEnt2);
