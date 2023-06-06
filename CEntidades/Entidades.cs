@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CEntidades
 {
-    internal class Entidades
+    public  class Entidades
     {
+        public string NombreProv { get; set; }
+        public string DireccionProv { get; set; }
+        public string CiudadProv { get; set; }
+        public string ProviciaProv { get; set; }
     }
 }

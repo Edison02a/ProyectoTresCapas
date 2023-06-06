@@ -44,5 +44,15 @@
     <Compile Include="COperaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CDatos\CDatos.csproj">
+      <Project>{2118db8b-3c78-4799-bff5-e2cbb3fefc42}</Project>
+      <Name>CDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CEntidades\CEntidades.csproj">
+      <Project>{6b129200-6573-43ab-bd8c-00ad0d1bae61}</Project>
+      <Name>CEntidades</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
