@@ -83,7 +83,37 @@ namespace CDatos
             }
         }
 
+        public List<EntidadesSuministra> Obtener3()
+        {
+            cBD.Cerrar();
+            List<EntidadesSuministra> DatosSuministra = new List<EntidadesSuministra>();
+            try
+            {
+                cBD.Abrir();
+                SqlCommand sql = new SqlCommand("Select * from suministra", cBD.conectar);
+                SqlDataReader sqlreader = sql.ExecuteReader();
+                while (sqlreader.Read())
+                {
+                    EntidadesSuministra objEnt3 = new EntidadesSuministra()
+                    {
+                        CantidadSuministra = Convert.ToInt32(sqlreader["cantidad"]),
+                        NombreProveedorSuministra = Convert.ToString(sqlreader["nombreProveedor"]),
+                        NombrePiezaSuministra = Convert.ToString(sqlreader["nombrePieza"]),
+                    };
+                    DatosSuministra.Add(objEnt3);
 
+
+                }
+                return DatosSuministra;
+            }
+            catch
+            {
+
+                DatosSuministra = null;
+                cBD.Cerrar();
+                return DatosSuministra;
+            }
+        }
 
         //INSERTAR DATOS
         /*

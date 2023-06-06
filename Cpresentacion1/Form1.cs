@@ -26,6 +26,8 @@ namespace Cpresentacion1
         COperaciones objOpera = new COperaciones();
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.suministra' Puede moverla o quitarla según sea necesario.
+            this.suministraTableAdapter.Fill(this.proveedorDataSet.suministra);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.pieza' Puede moverla o quitarla según sea necesario.
             this.piezaTableAdapter.Fill(this.proveedorDataSet.pieza);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.prov' Puede moverla o quitarla según sea necesario.
@@ -43,6 +45,11 @@ namespace Cpresentacion1
                 listBox2.Items.Add(item.NombrePieza);
             }
 
+            List<EntidadesSuministra> DatosSuministra = objOpera.Lista3();
+            foreach (EntidadesSuministra item in DatosSuministra)
+            {
+                listBox3.Items.Add(item.CantidadSuministra);
+            }
         }
     }
 }

@@ -19,5 +19,10 @@ namespace CLogica
         {
             return ObjDatos.Obtener2();
         }
+
+        public List<EntidadesSuministra> Lista3()
+        {
+            return ObjDatos.Obtener3();
+        }
     }
 }
