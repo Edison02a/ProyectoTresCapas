@@ -42,20 +42,23 @@
             this.piezaTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.piezaTableAdapter();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.suministraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suministraTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.suministraTableAdapter();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreProveedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrePiezaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox4 = new System.Windows.Forms.ListBox();
+            this.ComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.ComboBox2 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.ComboBox4 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.ComboBox3 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.panelConten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suministraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -309,20 +312,6 @@
             this.listBox2.Size = new System.Drawing.Size(120, 95);
             this.listBox2.TabIndex = 10;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cantidadDataGridViewTextBoxColumn,
-            this.nombreProveedorDataGridViewTextBoxColumn,
-            this.nombrePiezaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.suministraBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(42, 208);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(347, 150);
-            this.dataGridView1.TabIndex = 11;
-            // 
             // suministraBindingSource
             // 
             this.suministraBindingSource.DataMember = "suministra";
@@ -331,24 +320,6 @@
             // suministraTableAdapter
             // 
             this.suministraTableAdapter.ClearBeforeFill = true;
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            // 
-            // nombreProveedorDataGridViewTextBoxColumn
-            // 
-            this.nombreProveedorDataGridViewTextBoxColumn.DataPropertyName = "nombreProveedor";
-            this.nombreProveedorDataGridViewTextBoxColumn.HeaderText = "nombreProveedor";
-            this.nombreProveedorDataGridViewTextBoxColumn.Name = "nombreProveedorDataGridViewTextBoxColumn";
-            // 
-            // nombrePiezaDataGridViewTextBoxColumn
-            // 
-            this.nombrePiezaDataGridViewTextBoxColumn.DataPropertyName = "nombrePieza";
-            this.nombrePiezaDataGridViewTextBoxColumn.HeaderText = "nombrePieza";
-            this.nombrePiezaDataGridViewTextBoxColumn.Name = "nombrePiezaDataGridViewTextBoxColumn";
             // 
             // listBox3
             // 
@@ -366,15 +337,54 @@
             this.listBox4.Size = new System.Drawing.Size(120, 95);
             this.listBox4.TabIndex = 13;
             // 
+            // ComboBox1
+            // 
+            this.ComboBox1.DropDownWidth = 278;
+            this.ComboBox1.Location = new System.Drawing.Point(84, 181);
+            this.ComboBox1.Name = "ComboBox1";
+            this.ComboBox1.Size = new System.Drawing.Size(278, 21);
+            this.ComboBox1.TabIndex = 14;
+            this.ComboBox1.Text = "Proveedores";
+            // 
+            // ComboBox2
+            // 
+            this.ComboBox2.DropDownWidth = 278;
+            this.ComboBox2.Location = new System.Drawing.Point(419, 181);
+            this.ComboBox2.Name = "ComboBox2";
+            this.ComboBox2.Size = new System.Drawing.Size(278, 21);
+            this.ComboBox2.TabIndex = 15;
+            this.ComboBox2.Text = "Proveedores";
+            // 
+            // ComboBox4
+            // 
+            this.ComboBox4.DropDownWidth = 278;
+            this.ComboBox4.Location = new System.Drawing.Point(419, 307);
+            this.ComboBox4.Name = "ComboBox4";
+            this.ComboBox4.Size = new System.Drawing.Size(278, 21);
+            this.ComboBox4.TabIndex = 16;
+            this.ComboBox4.Text = "Proveedores";
+            // 
+            // ComboBox3
+            // 
+            this.ComboBox3.DropDownWidth = 278;
+            this.ComboBox3.Location = new System.Drawing.Point(84, 307);
+            this.ComboBox3.Name = "ComboBox3";
+            this.ComboBox3.Size = new System.Drawing.Size(278, 21);
+            this.ComboBox3.TabIndex = 17;
+            this.ComboBox3.Text = "Proveedores";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ComboBox3);
+            this.Controls.Add(this.ComboBox4);
+            this.Controls.Add(this.ComboBox2);
+            this.Controls.Add(this.ComboBox1);
             this.Controls.Add(this.listBox4);
             this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panelConten);
@@ -387,8 +397,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suministraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ComboBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,14 +420,14 @@
         private ProveedorDataSetTableAdapters.piezaTableAdapter piezaTableAdapter;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource suministraBindingSource;
         private ProveedorDataSetTableAdapters.suministraTableAdapter suministraTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreProveedorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombrePiezaDataGridViewTextBoxColumn;
         private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.ListBox listBox4;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ComboBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ComboBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ComboBox4;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox ComboBox3;
     }
 }
 

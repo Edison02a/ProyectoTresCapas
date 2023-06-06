@@ -34,28 +34,29 @@ namespace Cpresentacion1
             this.provTableAdapter.Fill(this.proveedorDataSet.prov);
 
             List<Entidades> DatosProveedor = objOpera.Lista();
+            string proveedor;
             foreach (Entidades item in DatosProveedor)
             {
-                listBox1.Items.Add(item.NombreProv);
+                ComboBox1.Items.Add(item.NombreProv);
             }
 
             List<EntidadesPieza> DatosPieza = objOpera.Lista2();
             foreach (EntidadesPieza item in DatosPieza)
             {
-                listBox2.Items.Add(item.NombrePieza);
+                ComboBox2.Items.Add(item.NombrePieza);
             }
 
             List<EntidadesSuministra> DatosSuministra = objOpera.Lista3();
             foreach (EntidadesSuministra item in DatosSuministra)
             {
-                listBox3.Items.Add(item.CantidadSuministra);
+                ComboBox3.Items.Add(item.CantidadSuministra);
             }
 
 
             List<EntidadesCategoria> datosCategoria = objOpera.Lista4();
             foreach (EntidadesCategoria item in datosCategoria)
             {
-                listBox4.Items.Add(item.CategCategoria);
+                ComboBox4.Items.Add(item.CategCategoria);
             }
         }
     }
