@@ -42,15 +42,15 @@
             this.piezaTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.piezaTableAdapter();
             this.suministraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suministraTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.suministraTableAdapter();
-            this.panel_agregar = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btn_pieza = new System.Windows.Forms.Button();
-            this.btn_proveedor = new System.Windows.Forms.Button();
-            this.panel_conten = new System.Windows.Forms.Panel();
-            this.ComboBox4 = new System.Windows.Forms.ComboBox();
-            this.ComboBox3 = new System.Windows.Forms.ComboBox();
-            this.ComboBox2 = new System.Windows.Forms.ComboBox();
             this.ComboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel_agregar = new System.Windows.Forms.Panel();
+            this.ComboBox2 = new System.Windows.Forms.ComboBox();
+            this.ComboBox3 = new System.Windows.Forms.ComboBox();
+            this.ComboBox4 = new System.Windows.Forms.ComboBox();
+            this.panel_conten = new System.Windows.Forms.Panel();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panelConten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
@@ -101,16 +101,17 @@
             this.panelConten.Controls.Add(this.btn_eliminar);
             this.panelConten.Controls.Add(this.btn_modificar);
             this.panelConten.Controls.Add(this.btn_agregar);
+            this.panelConten.Controls.Add(this.panel_agregar);
             this.panelConten.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConten.Location = new System.Drawing.Point(0, 0);
             this.panelConten.Name = "panelConten";
-            this.panelConten.Size = new System.Drawing.Size(800, 48);
+            this.panelConten.Size = new System.Drawing.Size(800, 82);
             this.panelConten.TabIndex = 6;
             // 
             // btn_eliminar
             // 
             this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_eliminar.Location = new System.Drawing.Point(367, 18);
+            this.btn_eliminar.Location = new System.Drawing.Point(238, 7);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btn_eliminar.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -165,7 +166,7 @@
             // btn_modificar
             // 
             this.btn_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modificar.Location = new System.Drawing.Point(211, 18);
+            this.btn_modificar.Location = new System.Drawing.Point(116, 7);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btn_modificar.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -220,7 +221,7 @@
             // btn_agregar
             // 
             this.btn_agregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_agregar.Location = new System.Drawing.Point(13, 18);
+            this.btn_agregar.Location = new System.Drawing.Point(14, 7);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btn_agregar.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -305,65 +306,48 @@
             // 
             this.suministraTableAdapter.ClearBeforeFill = true;
             // 
+            // ComboBox1
+            // 
+            this.ComboBox1.FormattingEnabled = true;
+            this.ComboBox1.Location = new System.Drawing.Point(221, 13);
+            this.ComboBox1.Name = "ComboBox1";
+            this.ComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox1.TabIndex = 19;
+            // 
             // panel_agregar
             // 
             this.panel_agregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_agregar.Controls.Add(this.button7);
-            this.panel_agregar.Controls.Add(this.btn_pieza);
-            this.panel_agregar.Controls.Add(this.btn_proveedor);
-            this.panel_agregar.Location = new System.Drawing.Point(13, 0);
+            this.panel_agregar.Controls.Add(this.kryptonButton3);
+            this.panel_agregar.Controls.Add(this.kryptonButton2);
+            this.panel_agregar.Controls.Add(this.kryptonButton1);
+            this.panel_agregar.Location = new System.Drawing.Point(14, 43);
             this.panel_agregar.Name = "panel_agregar";
-            this.panel_agregar.Size = new System.Drawing.Size(97, 104);
+            this.panel_agregar.Size = new System.Drawing.Size(277, 36);
             this.panel_agregar.TabIndex = 18;
             // 
-            // button7
+            // ComboBox2
             // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(0, 64);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(95, 31);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Categoria";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = true;
+            this.ComboBox2.FormattingEnabled = true;
+            this.ComboBox2.Location = new System.Drawing.Point(367, 13);
+            this.ComboBox2.Name = "ComboBox2";
+            this.ComboBox2.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox2.TabIndex = 20;
             // 
-            // btn_pieza
+            // ComboBox3
             // 
-            this.btn_pieza.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_pieza.FlatAppearance.BorderSize = 0;
-            this.btn_pieza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pieza.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pieza.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_pieza.Location = new System.Drawing.Point(0, 33);
-            this.btn_pieza.Name = "btn_pieza";
-            this.btn_pieza.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_pieza.Size = new System.Drawing.Size(95, 31);
-            this.btn_pieza.TabIndex = 2;
-            this.btn_pieza.Text = "Piezas";
-            this.btn_pieza.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_pieza.UseVisualStyleBackColor = true;
+            this.ComboBox3.FormattingEnabled = true;
+            this.ComboBox3.Location = new System.Drawing.Point(510, 13);
+            this.ComboBox3.Name = "ComboBox3";
+            this.ComboBox3.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox3.TabIndex = 21;
             // 
-            // btn_proveedor
+            // ComboBox4
             // 
-            this.btn_proveedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_proveedor.FlatAppearance.BorderSize = 0;
-            this.btn_proveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_proveedor.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_proveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_proveedor.Location = new System.Drawing.Point(0, 0);
-            this.btn_proveedor.Name = "btn_proveedor";
-            this.btn_proveedor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btn_proveedor.Size = new System.Drawing.Size(95, 33);
-            this.btn_proveedor.TabIndex = 0;
-            this.btn_proveedor.Text = "Proveedor";
-            this.btn_proveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_proveedor.UseVisualStyleBackColor = true;
-            this.btn_proveedor.Click += new System.EventHandler(this.btn_proveedor_Click);
+            this.ComboBox4.FormattingEnabled = true;
+            this.ComboBox4.Location = new System.Drawing.Point(652, 13);
+            this.ComboBox4.Name = "ComboBox4";
+            this.ComboBox4.Size = new System.Drawing.Size(121, 21);
+            this.ComboBox4.TabIndex = 22;
             // 
             // panel_conten
             // 
@@ -371,44 +355,179 @@
             this.panel_conten.Controls.Add(this.ComboBox3);
             this.panel_conten.Controls.Add(this.ComboBox2);
             this.panel_conten.Controls.Add(this.ComboBox1);
-            this.panel_conten.Controls.Add(this.panel_agregar);
             this.panel_conten.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_conten.Location = new System.Drawing.Point(0, 48);
+            this.panel_conten.Location = new System.Drawing.Point(0, 82);
             this.panel_conten.Name = "panel_conten";
-            this.panel_conten.Size = new System.Drawing.Size(800, 402);
+            this.panel_conten.Size = new System.Drawing.Size(800, 368);
             this.panel_conten.TabIndex = 19;
             // 
-            // ComboBox4
+            // kryptonButton1
             // 
-            this.ComboBox4.FormattingEnabled = true;
-            this.ComboBox4.Location = new System.Drawing.Point(483, 285);
-            this.ComboBox4.Name = "ComboBox4";
-            this.ComboBox4.Size = new System.Drawing.Size(121, 21);
-            this.ComboBox4.TabIndex = 22;
+            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton1.Location = new System.Drawing.Point(3, 3);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.Size = new System.Drawing.Size(92, 30);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterRight;
+            this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.Rounding = 5;
+            this.kryptonButton1.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, -1, -2);
+            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.StateDisabled.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateDisabled.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton1.StateNormal.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateNormal.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StatePressed.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton1.StatePressed.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton1.StatePressed.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.StatePressed.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton1.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateTracking.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton1.StateTracking.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton1.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton1.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.TabIndex = 19;
+            this.kryptonButton1.Values.Text = "Proveedor\r\n";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // ComboBox3
+            // kryptonButton2
             // 
-            this.ComboBox3.FormattingEnabled = true;
-            this.ComboBox3.Location = new System.Drawing.Point(536, 207);
-            this.ComboBox3.Name = "ComboBox3";
-            this.ComboBox3.Size = new System.Drawing.Size(121, 21);
-            this.ComboBox3.TabIndex = 21;
+            this.kryptonButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton2.Location = new System.Drawing.Point(101, 3);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton2.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton2.Size = new System.Drawing.Size(75, 30);
+            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterRight;
+            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton2.StateCommon.Border.Rounding = 5;
+            this.kryptonButton2.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, -1, -2);
+            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton2.StateDisabled.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.StateDisabled.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton2.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton2.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton2.StateNormal.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateNormal.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton2.StatePressed.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton2.StatePressed.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton2.StatePressed.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton2.StatePressed.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton2.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton2.StateTracking.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton2.StateTracking.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton2.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton2.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton2.TabIndex = 20;
+            this.kryptonButton2.Values.Text = "Pieza";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
             // 
-            // ComboBox2
+            // kryptonButton3
             // 
-            this.ComboBox2.FormattingEnabled = true;
-            this.ComboBox2.Location = new System.Drawing.Point(340, 191);
-            this.ComboBox2.Name = "ComboBox2";
-            this.ComboBox2.Size = new System.Drawing.Size(121, 21);
-            this.ComboBox2.TabIndex = 20;
-            // 
-            // ComboBox1
-            // 
-            this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.Location = new System.Drawing.Point(151, 207);
-            this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(121, 21);
-            this.ComboBox1.TabIndex = 19;
+            this.kryptonButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton3.Location = new System.Drawing.Point(182, 3);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton3.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton3.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.Size = new System.Drawing.Size(85, 30);
+            this.kryptonButton3.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton3.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterRight;
+            this.kryptonButton3.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateCommon.Border.Rounding = 5;
+            this.kryptonButton3.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, -1, -2);
+            this.kryptonButton3.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton3.StateDisabled.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton3.StateDisabled.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton3.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton3.StateNormal.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateNormal.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StatePressed.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton3.StatePressed.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton3.StatePressed.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton3.StatePressed.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton3.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.StateTracking.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton3.StateTracking.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton3.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton3.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton3.TabIndex = 21;
+            this.kryptonButton3.Values.Text = "Categoria\r\n";
+            this.kryptonButton3.Click += new System.EventHandler(this.kryptonButton3_Click);
             // 
             // Form1
             // 
@@ -449,14 +568,14 @@
         private System.Windows.Forms.BindingSource suministraBindingSource;
         private ProveedorDataSetTableAdapters.suministraTableAdapter suministraTableAdapter;
         private System.Windows.Forms.Panel panel_agregar;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btn_pieza;
-        private System.Windows.Forms.Button btn_proveedor;
-        private System.Windows.Forms.Panel panel_conten;
-        private System.Windows.Forms.ComboBox ComboBox4;
-        private System.Windows.Forms.ComboBox ComboBox3;
-        private System.Windows.Forms.ComboBox ComboBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private System.Windows.Forms.ComboBox ComboBox1;
+        private System.Windows.Forms.ComboBox ComboBox2;
+        private System.Windows.Forms.ComboBox ComboBox3;
+        private System.Windows.Forms.ComboBox ComboBox4;
+        private System.Windows.Forms.Panel panel_conten;
     }
 }
 

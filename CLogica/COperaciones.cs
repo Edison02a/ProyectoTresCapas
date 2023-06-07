@@ -35,5 +35,11 @@ namespace CLogica
             ObjDatos.registrarProveedor(DatosEstu);
 
         }
+
+        public void IngresarCategoria(EntidadesCategoria datosCate)
+        {
+            ObjDatos.registrarCategoria(datosCate);
+
+        }
     }
 }

@@ -158,6 +158,14 @@ namespace CDatos
             cBD.Cerrar();
         }
 
+        public void registrarCategoria(EntidadesCategoria datosCateg)
+        {
+            cBD.Abrir();
+            string sql = "insert into categoria(categ,precio) VALUES('" + datosCateg.CategCategoria + "', '" + datosCateg.PrecioCategoria + "')";
+            SqlCommand comando = new SqlCommand(sql, cBD.conectar);
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
+        }
 
         /*
         //eliminar

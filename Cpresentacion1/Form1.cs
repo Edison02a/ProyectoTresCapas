@@ -95,7 +95,32 @@ namespace Cpresentacion1
 
         private void btn_proveedor_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void btn_pieza_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
             OpenchildForm(new FormIngresoDatos());
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormIngresoPiezas());
+        }
+
+        private void kryptonButton3_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormIngresoCategoria());  
         }
     }
 }

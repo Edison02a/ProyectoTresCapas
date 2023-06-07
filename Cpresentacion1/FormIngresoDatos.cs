@@ -237,7 +237,7 @@ namespace Cpresentacion1
                     MessageBox.Show("Operación no válida");
                     return;
             }
-            boton_activar();
+            
         }
 
         private void btn_sig_Click(object sender, EventArgs e)
@@ -246,14 +246,14 @@ namespace Cpresentacion1
             proveedordatos.NombreProv = tb_nombre.Text;
             proveedordatos.DireccionProv = tb_direccion.Text;
             proveedordatos.CiudadProv = cmbx_ciudad.SelectedItem.ToString();
-            proveedordatos.DireccionProv = cmbx_povincia.SelectedItem.ToString();
+            proveedordatos.ProviciaProv = cmbx_povincia.SelectedItem.ToString();
             COperaciones operaciones = new COperaciones();
             operaciones.IngresarProveedor(proveedordatos);
         }
 
         private void cmbx_ciudad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            boton_activar();
+           
         }
 
         private void boton_activar()
@@ -264,6 +264,16 @@ namespace Cpresentacion1
             }
         }
         string nombre, ciudad, provincia,direccion;
+
+        private void FormIngresoDatos_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void kryptonGroup1_MouseMove(object sender, MouseEventArgs e)
+        {
+            boton_activar();
+        }
 
         private void tb_direccion_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -292,7 +302,6 @@ namespace Cpresentacion1
                     }
                 }
 
-                boton_activar();
             }
         }
 

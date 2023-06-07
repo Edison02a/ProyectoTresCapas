@@ -92,7 +92,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(372, 58);
+            this.label11.Location = new System.Drawing.Point(377, 8);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(165, 23);
             this.label11.TabIndex = 126;
@@ -101,7 +101,7 @@
             // kryptonGroup1
             // 
             this.kryptonGroup1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonGroup1.Location = new System.Drawing.Point(64, 84);
+            this.kryptonGroup1.Location = new System.Drawing.Point(69, 34);
             this.kryptonGroup1.Name = "kryptonGroup1";
             // 
             // kryptonGroup1.Panel
@@ -124,6 +124,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonGroup1.StateCommon.Border.Rounding = 10;
             this.kryptonGroup1.TabIndex = 127;
+            this.kryptonGroup1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.kryptonGroup1_MouseMove);
             // 
             // label1
             // 
@@ -272,7 +273,6 @@
             // btn_sig
             // 
             this.btn_sig.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_sig.Enabled = false;
             this.btn_sig.Location = new System.Drawing.Point(272, 250);
             this.btn_sig.Name = "btn_sig";
             this.btn_sig.Size = new System.Drawing.Size(93, 31);
@@ -346,6 +346,7 @@
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "FormIngresoDatos";
             this.Load += new System.EventHandler(this.FormIngresoDatos_Load);
+            this.MouseHover += new System.EventHandler(this.FormIngresoDatos_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1.Panel)).EndInit();
             this.kryptonGroup1.Panel.ResumeLayout(false);
             this.kryptonGroup1.Panel.PerformLayout();

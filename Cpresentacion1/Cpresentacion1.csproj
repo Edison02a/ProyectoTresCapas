@@ -70,11 +70,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormIngresoCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngresoCategoria.Designer.cs">
+      <DependentUpon>FormIngresoCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIngresoDatos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormIngresoDatos.Designer.cs">
       <DependentUpon>FormIngresoDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngresoPiezas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngresoPiezas.Designer.cs">
+      <DependentUpon>FormIngresoPiezas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,8 +103,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormIngresoCategoria.resx">
+      <DependentUpon>FormIngresoCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormIngresoDatos.resx">
       <DependentUpon>FormIngresoDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngresoPiezas.resx">
+      <DependentUpon>FormIngresoPiezas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
