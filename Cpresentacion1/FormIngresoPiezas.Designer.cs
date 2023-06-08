@@ -245,7 +245,6 @@
             // btn_sig
             // 
             this.btn_sig.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_sig.Enabled = false;
             this.btn_sig.Location = new System.Drawing.Point(272, 250);
             this.btn_sig.Name = "btn_sig";
             this.btn_sig.Size = new System.Drawing.Size(93, 31);

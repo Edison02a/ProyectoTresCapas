@@ -95,11 +95,21 @@ namespace Cpresentacion1
 
         private void btn_sig_Click(object sender, EventArgs e)
         {
-            EntidadesCategoria categoriadatos = new EntidadesCategoria();
-            categoriadatos.CategCategoria = tb_nombre.Text;
-            categoriadatos.PrecioCategoria = int.Parse(tb_precio.Text);
-            COperaciones operaciones = new COperaciones();
-            operaciones.IngresarCategoria(categoriadatos);
+            try
+            {
+                EntidadesCategoria categoriadatos = new EntidadesCategoria();
+                categoriadatos.CategCategoria = tb_nombre.Text;
+                categoriadatos.PrecioCategoria = int.Parse(tb_precio.Text);
+                COperaciones operaciones = new COperaciones();
+                operaciones.IngresarCategoria(categoriadatos);
+                MessageBox.Show("Los datos se guardaron correctamente", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+         
         }
     }
 }

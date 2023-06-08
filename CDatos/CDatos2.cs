@@ -177,7 +177,7 @@ namespace CDatos
         public void registrarSuministrar(EntidadesSuministra datosSuministra)
         {
             cBD.Abrir();
-            string sql = "insert into suministra(cantidad,nombreProveedor,nombrePieza) VALUES('" + datosSuministra.CantidadSuministra + "', '" + datosSuministra.NombrePiezaSuministra + "', '" + datosSuministra.NombreProveedorSuministra + "')";
+            string sql = "insert into suministra(cantidad,nombreProveedor,nombrePieza) VALUES('" + datosSuministra.CantidadSuministra + "', '" + datosSuministra.NombreProveedorSuministra + "', '" + datosSuministra.NombrePiezaSuministra + "')";
             SqlCommand comando = new SqlCommand(sql, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();

@@ -96,20 +96,29 @@ namespace Cpresentacion1
 
         private void btn_sig_Click(object sender, EventArgs e)
         {
-            EntidadesPieza piezaDatos = new EntidadesPieza();
-            piezaDatos.NombrePieza = tb_nombre.Text;
-            piezaDatos.ColorPieza = tb_color.Text;
-            piezaDatos.CentroPieza = tb_centro.Text;
-            piezaDatos.CategoriaPieza = cb_categoria.SelectedItem.ToString();
-            COperaciones operaciones = new COperaciones();
-            operaciones.IngresarPieza(piezaDatos);
+            try
+            {
+                EntidadesPieza piezaDatos = new EntidadesPieza();
+                piezaDatos.NombrePieza = tb_nombre.Text;
+                piezaDatos.ColorPieza = tb_color.Text;
+                piezaDatos.CentroPieza = tb_centro.Text;
+                piezaDatos.CategoriaPieza = cb_categoria.SelectedItem.ToString();
+                COperaciones operaciones = new COperaciones();
+                operaciones.IngresarPieza(piezaDatos);
 
-            EntidadesSuministra suministraDatos = new EntidadesSuministra();
-            suministraDatos.NombrePiezaSuministra = tb_nombre.Text;
-            suministraDatos.CantidadSuministra = int.Parse(tb_cantidad.Text);
-            suministraDatos.NombreProveedorSuministra = cb_proveedor.SelectedItem.ToString();
-            COperaciones operaciones2 = new COperaciones();
-            operaciones2.IngresarPiezaIngresarSuministrar(suministraDatos);
+                EntidadesSuministra suministraDatos = new EntidadesSuministra();
+                suministraDatos.NombrePiezaSuministra = tb_nombre.Text;
+                suministraDatos.CantidadSuministra = int.Parse(tb_cantidad.Text);
+                suministraDatos.NombreProveedorSuministra = cb_proveedor.SelectedItem.ToString();
+                COperaciones operaciones2 = new COperaciones();
+                operaciones2.IngresarPiezaIngresarSuministrar(suministraDatos);
+                MessageBox.Show("Los datos se guardaron correctamente", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
 
         private void tb_centro_KeyPress(object sender, KeyPressEventArgs e)

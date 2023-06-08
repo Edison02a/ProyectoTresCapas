@@ -37,13 +37,21 @@ namespace Cpresentacion1
 
         private void btn_sig_Click(object sender, EventArgs e)
         {
-            Entidades proveedordatos = new Entidades();
-            proveedordatos.NombreProv = tb_nombre.Text;
-            proveedordatos.DireccionProv = tb_direccion.Text;
-            proveedordatos.CiudadProv = cmbx_ciudad.SelectedItem.ToString();
-            proveedordatos.ProviciaProv = cmbx_povincia.SelectedItem.ToString();
-            COperaciones operaciones = new COperaciones();
-            operaciones.IngresarProveedor(proveedordatos);
+            try
+            {
+                Entidades proveedordatos = new Entidades();
+                proveedordatos.NombreProv = tb_nombre.Text;
+                proveedordatos.DireccionProv = tb_direccion.Text;
+                proveedordatos.CiudadProv = cmbx_ciudad.SelectedItem.ToString();
+                proveedordatos.ProviciaProv = cmbx_povincia.SelectedItem.ToString();
+                COperaciones operaciones = new COperaciones();
+                operaciones.IngresarProveedor(proveedordatos);
+                MessageBox.Show("Los datos se guardaron correctamente", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex){
+                MessageBox.Show(ex.Message);
+            }
         }
 
 
