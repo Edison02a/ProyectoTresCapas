@@ -33,6 +33,42 @@ namespace Cpresentacion1
 
         }
 
+        
+
+        private void btn_sig_Click(object sender, EventArgs e)
+        {
+            Entidades proveedordatos = new Entidades();
+            proveedordatos.NombreProv = tb_nombre.Text;
+            proveedordatos.DireccionProv = tb_direccion.Text;
+            proveedordatos.CiudadProv = cmbx_ciudad.SelectedItem.ToString();
+            proveedordatos.ProviciaProv = cmbx_povincia.SelectedItem.ToString();
+            COperaciones operaciones = new COperaciones();
+            operaciones.IngresarProveedor(proveedordatos);
+        }
+
+
+
+        private void boton_activar()
+        {
+            if (tb_direccion.TextLength > 0 && tb_nombre.TextLength > 0 && cmbx_ciudad.SelectedIndex != null && cmbx_povincia.SelectedIndex != null)
+            {
+                btn_sig.Enabled = true;
+            }
+        }
+        string nombre, ciudad, provincia,direccion;
+
+        private void FormIngresoDatos_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void kryptonGroup1_MouseMove(object sender, MouseEventArgs e)
+        {
+            boton_activar();
+        }
+
+ 
+
         private void cmbx_povincia_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Azuay
@@ -237,42 +273,6 @@ namespace Cpresentacion1
                     MessageBox.Show("Operación no válida");
                     return;
             }
-            
-        }
-
-        private void btn_sig_Click(object sender, EventArgs e)
-        {
-            Entidades proveedordatos = new Entidades();
-            proveedordatos.NombreProv = tb_nombre.Text;
-            proveedordatos.DireccionProv = tb_direccion.Text;
-            proveedordatos.CiudadProv = cmbx_ciudad.SelectedItem.ToString();
-            proveedordatos.ProviciaProv = cmbx_povincia.SelectedItem.ToString();
-            COperaciones operaciones = new COperaciones();
-            operaciones.IngresarProveedor(proveedordatos);
-        }
-
-        private void cmbx_ciudad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void boton_activar()
-        {
-            if (tb_direccion.TextLength > 0 && tb_nombre.TextLength > 0 && cmbx_ciudad.SelectedIndex != null && cmbx_povincia.SelectedIndex != null)
-            {
-                btn_sig.Enabled = true;
-            }
-        }
-        string nombre, ciudad, provincia,direccion;
-
-        private void FormIngresoDatos_MouseHover(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void kryptonGroup1_MouseMove(object sender, MouseEventArgs e)
-        {
-            boton_activar();
         }
 
         private void tb_direccion_KeyPress(object sender, KeyPressEventArgs e)

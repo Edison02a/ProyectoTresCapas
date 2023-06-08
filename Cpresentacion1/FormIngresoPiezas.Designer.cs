@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.kryptonGroup1 = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.tb_cantidad = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cb_proveedor = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_centro = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.cb_categoria = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.btn_cancelar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tb_nombre = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -37,19 +44,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.tb_centro = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cb_proveedor = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1.Panel)).BeginInit();
             this.kryptonGroup1.Panel.SuspendLayout();
             this.kryptonGroup1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonGroup1
@@ -60,7 +60,7 @@
             // 
             // kryptonGroup1.Panel
             // 
-            this.kryptonGroup1.Panel.Controls.Add(this.kryptonTextBox1);
+            this.kryptonGroup1.Panel.Controls.Add(this.tb_cantidad);
             this.kryptonGroup1.Panel.Controls.Add(this.label4);
             this.kryptonGroup1.Panel.Controls.Add(this.cb_proveedor);
             this.kryptonGroup1.Panel.Controls.Add(this.label3);
@@ -83,35 +83,114 @@
             this.kryptonGroup1.StateCommon.Border.Rounding = 10;
             this.kryptonGroup1.TabIndex = 129;
             // 
+            // tb_cantidad
+            // 
+            this.tb_cantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.tb_cantidad.Location = new System.Drawing.Point(273, 202);
+            this.tb_cantidad.Margin = new System.Windows.Forms.Padding(0);
+            this.tb_cantidad.Name = "tb_cantidad";
+            this.tb_cantidad.Size = new System.Drawing.Size(207, 28);
+            this.tb_cantidad.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.tb_cantidad.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.tb_cantidad.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.tb_cantidad.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.tb_cantidad.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.tb_cantidad.StateCommon.Border.Rounding = 18;
+            this.tb_cantidad.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
+            this.tb_cantidad.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_cantidad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tb_cantidad.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tb_cantidad.TabIndex = 158;
+            this.tb_cantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_cantidad_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(190, 215);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 15);
+            this.label4.TabIndex = 157;
+            this.label4.Text = "Cantidad:";
+            // 
+            // cb_proveedor
+            // 
+            this.cb_proveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cb_proveedor.DropDownWidth = 88;
+            this.cb_proveedor.Location = new System.Drawing.Point(458, 162);
+            this.cb_proveedor.Name = "cb_proveedor";
+            this.cb_proveedor.Size = new System.Drawing.Size(92, 27);
+            this.cb_proveedor.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
+            this.cb_proveedor.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Black;
+            this.cb_proveedor.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.cb_proveedor.StateCommon.ComboBox.Border.Rounding = 10;
+            this.cb_proveedor.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_proveedor.TabIndex = 156;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(384, 162);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.TabIndex = 155;
+            this.label3.Text = "Proveedor:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(190, 162);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 15);
+            this.label2.TabIndex = 154;
+            this.label2.Text = "Categoria";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(190, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 15);
+            this.label1.TabIndex = 153;
+            this.label1.Text = "Centro:";
+            // 
+            // tb_centro
+            // 
+            this.tb_centro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.tb_centro.Location = new System.Drawing.Point(273, 115);
+            this.tb_centro.Margin = new System.Windows.Forms.Padding(0);
+            this.tb_centro.Name = "tb_centro";
+            this.tb_centro.Size = new System.Drawing.Size(207, 28);
+            this.tb_centro.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.tb_centro.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.tb_centro.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.tb_centro.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.tb_centro.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.tb_centro.StateCommon.Border.Rounding = 18;
+            this.tb_centro.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
+            this.tb_centro.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_centro.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tb_centro.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tb_centro.TabIndex = 152;
+            this.tb_centro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_centro_KeyPress);
+            // 
             // cb_categoria
             // 
             this.cb_categoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cb_categoria.DropDownWidth = 88;
-            this.cb_categoria.Items.AddRange(new object[] {
-            "Azuay",
-            "Bolívar",
-            "Cañar",
-            "Carchi",
-            "Chimborazo",
-            "Cotopaxi",
-            "El Oro",
-            "Esmeraldas",
-            "Galápagos",
-            "Guayas",
-            "Imbabura",
-            "Loja",
-            "Los Ríos",
-            "Manabí",
-            "Morona Santiago",
-            "Napo",
-            "Orellana",
-            "Pastaza",
-            "Pichincha",
-            "Santa Elena",
-            "Santo Domingo de los Tsáchilas",
-            "Sucumbíos",
-            "Tungurahua",
-            "Zamora Chinchipe"});
             this.cb_categoria.Location = new System.Drawing.Point(273, 162);
             this.cb_categoria.Name = "cb_categoria";
             this.cb_categoria.Size = new System.Drawing.Size(92, 27);
@@ -161,6 +240,7 @@
             this.tb_nombre.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.tb_nombre.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_nombre.TabIndex = 148;
+            this.tb_nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_nombre_KeyPress);
             // 
             // btn_sig
             // 
@@ -199,6 +279,7 @@
             this.tb_color.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.tb_color.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_color.TabIndex = 142;
+            this.tb_color.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_color_KeyPress);
             // 
             // label5
             // 
@@ -234,133 +315,6 @@
             this.label11.Text = "Agregar piezas";
             this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
-            // tb_centro
-            // 
-            this.tb_centro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tb_centro.Location = new System.Drawing.Point(273, 115);
-            this.tb_centro.Margin = new System.Windows.Forms.Padding(0);
-            this.tb_centro.Name = "tb_centro";
-            this.tb_centro.Size = new System.Drawing.Size(207, 28);
-            this.tb_centro.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.tb_centro.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.tb_centro.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.tb_centro.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.tb_centro.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.tb_centro.StateCommon.Border.Rounding = 18;
-            this.tb_centro.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
-            this.tb_centro.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_centro.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.tb_centro.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tb_centro.TabIndex = 152;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(190, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 15);
-            this.label1.TabIndex = 153;
-            this.label1.Text = "Centro:";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(190, 162);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 15);
-            this.label2.TabIndex = 154;
-            this.label2.Text = "Categoria";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(384, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
-            this.label3.TabIndex = 155;
-            this.label3.Text = "Proveedor:";
-            // 
-            // cb_proveedor
-            // 
-            this.cb_proveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cb_proveedor.DropDownWidth = 88;
-            this.cb_proveedor.Items.AddRange(new object[] {
-            "Azuay",
-            "Bolívar",
-            "Cañar",
-            "Carchi",
-            "Chimborazo",
-            "Cotopaxi",
-            "El Oro",
-            "Esmeraldas",
-            "Galápagos",
-            "Guayas",
-            "Imbabura",
-            "Loja",
-            "Los Ríos",
-            "Manabí",
-            "Morona Santiago",
-            "Napo",
-            "Orellana",
-            "Pastaza",
-            "Pichincha",
-            "Santa Elena",
-            "Santo Domingo de los Tsáchilas",
-            "Sucumbíos",
-            "Tungurahua",
-            "Zamora Chinchipe"});
-            this.cb_proveedor.Location = new System.Drawing.Point(458, 162);
-            this.cb_proveedor.Name = "cb_proveedor";
-            this.cb_proveedor.Size = new System.Drawing.Size(92, 27);
-            this.cb_proveedor.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
-            this.cb_proveedor.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Black;
-            this.cb_proveedor.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cb_proveedor.StateCommon.ComboBox.Border.Rounding = 10;
-            this.cb_proveedor.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_proveedor.TabIndex = 156;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(190, 215);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 15);
-            this.label4.TabIndex = 157;
-            this.label4.Text = "Color:";
-            // 
-            // kryptonTextBox1
-            // 
-            this.kryptonTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.kryptonTextBox1.Location = new System.Drawing.Point(273, 202);
-            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(207, 28);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 18;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.kryptonTextBox1.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.kryptonTextBox1.TabIndex = 158;
-            // 
             // FormIngresoPiezas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,14 +325,15 @@
             this.Controls.Add(this.label11);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormIngresoPiezas";
-            this.Text = "FormIngresoPiezas";
+            this.Text = "1";
+            this.Load += new System.EventHandler(this.FormIngresoPiezas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1.Panel)).EndInit();
             this.kryptonGroup1.Panel.ResumeLayout(false);
             this.kryptonGroup1.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1)).EndInit();
             this.kryptonGroup1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,7 +355,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_cantidad;
         private System.Windows.Forms.Label label4;
     }
 }

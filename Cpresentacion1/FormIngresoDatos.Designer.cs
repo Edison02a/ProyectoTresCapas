@@ -152,31 +152,6 @@
             // 
             this.cmbx_ciudad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmbx_ciudad.DropDownWidth = 88;
-            this.cmbx_ciudad.Items.AddRange(new object[] {
-            "Azuay",
-            "Bolívar",
-            "Cañar",
-            "Carchi",
-            "Chimborazo",
-            "Cotopaxi",
-            "El Oro",
-            "Esmeraldas",
-            "Galápagos",
-            "Guayas",
-            "Imbabura",
-            "Loja",
-            "Los Ríos",
-            "Manabí",
-            "Morona Santiago",
-            "Napo",
-            "Orellana",
-            "Pastaza",
-            "Pichincha",
-            "Santa Elena",
-            "Santo Domingo de los Tsáchilas",
-            "Sucumbíos",
-            "Tungurahua",
-            "Zamora Chinchipe"});
             this.cmbx_ciudad.Location = new System.Drawing.Point(388, 128);
             this.cmbx_ciudad.Name = "cmbx_ciudad";
             this.cmbx_ciudad.Size = new System.Drawing.Size(92, 27);
@@ -188,7 +163,6 @@
             this.cmbx_ciudad.StateCommon.ComboBox.Border.Rounding = 10;
             this.cmbx_ciudad.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbx_ciudad.TabIndex = 151;
-            this.cmbx_ciudad.SelectedIndexChanged += new System.EventHandler(this.cmbx_ciudad_SelectedIndexChanged);
             // 
             // cmbx_povincia
             // 

@@ -41,5 +41,8 @@ namespace CLogica
             ObjDatos.registrarCategoria(datosCate);
 
         }
+
+
+        
     }
 }

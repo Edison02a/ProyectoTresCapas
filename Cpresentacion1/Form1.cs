@@ -122,5 +122,15 @@ namespace Cpresentacion1
         {
             OpenchildForm(new FormIngresoCategoria());  
         }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_conten_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
