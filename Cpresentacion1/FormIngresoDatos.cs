@@ -41,7 +41,7 @@ namespace Cpresentacion1
             {
                 Entidades proveedordatos = new Entidades();
                 //int ci = Convert.ToInt32(tb_cedula.Text);
-                proveedordatos.CedulaProv = tb_cedula.Text;
+                proveedordatos.CedulaProv = cedula;
                 proveedordatos.NombreProv = tb_nombre.Text;
                 proveedordatos.ApellidoProv = tb_apellido.Text;
                 proveedordatos.DireccionProv = tb_direccion.Text;
