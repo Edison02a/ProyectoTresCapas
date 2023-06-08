@@ -33,6 +33,8 @@
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.kryptonGroup1 = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.tb_apellido = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbx_ciudad = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -106,6 +108,8 @@
             // 
             // kryptonGroup1.Panel
             // 
+            this.kryptonGroup1.Panel.Controls.Add(this.tb_apellido);
+            this.kryptonGroup1.Panel.Controls.Add(this.label3);
             this.kryptonGroup1.Panel.Controls.Add(this.label1);
             this.kryptonGroup1.Panel.Controls.Add(this.label2);
             this.kryptonGroup1.Panel.Controls.Add(this.cmbx_ciudad);
@@ -126,12 +130,45 @@
             this.kryptonGroup1.TabIndex = 127;
             this.kryptonGroup1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.kryptonGroup1_MouseMove);
             // 
+            // tb_apellido
+            // 
+            this.tb_apellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.tb_apellido.Location = new System.Drawing.Point(273, 69);
+            this.tb_apellido.Margin = new System.Windows.Forms.Padding(0);
+            this.tb_apellido.Name = "tb_apellido";
+            this.tb_apellido.Size = new System.Drawing.Size(207, 28);
+            this.tb_apellido.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.tb_apellido.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.tb_apellido.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.tb_apellido.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.tb_apellido.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.tb_apellido.StateCommon.Border.Rounding = 18;
+            this.tb_apellido.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
+            this.tb_apellido.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_apellido.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tb_apellido.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tb_apellido.TabIndex = 155;
+            this.tb_apellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_apellido_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(190, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 15);
+            this.label3.TabIndex = 154;
+            this.label3.Text = "Apellido:";
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(394, 158);
+            this.label1.Location = new System.Drawing.Point(394, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 14);
             this.label1.TabIndex = 153;
@@ -142,7 +179,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(285, 158);
+            this.label2.Location = new System.Drawing.Point(285, 191);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 14);
             this.label2.TabIndex = 152;
@@ -152,7 +189,7 @@
             // 
             this.cmbx_ciudad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmbx_ciudad.DropDownWidth = 88;
-            this.cmbx_ciudad.Location = new System.Drawing.Point(388, 128);
+            this.cmbx_ciudad.Location = new System.Drawing.Point(388, 161);
             this.cmbx_ciudad.Name = "cmbx_ciudad";
             this.cmbx_ciudad.Size = new System.Drawing.Size(92, 27);
             this.cmbx_ciudad.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
@@ -193,7 +230,7 @@
             "Sucumbíos",
             "Tungurahua",
             "Zamora Chinchipe"});
-            this.cmbx_povincia.Location = new System.Drawing.Point(273, 128);
+            this.cmbx_povincia.Location = new System.Drawing.Point(273, 161);
             this.cmbx_povincia.Name = "cmbx_povincia";
             this.cmbx_povincia.Size = new System.Drawing.Size(92, 27);
             this.cmbx_povincia.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
@@ -221,6 +258,7 @@
             this.btn_cancelar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.TabIndex = 149;
             this.btn_cancelar.Values.Text = "Cancelar";
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // tb_nombre
             // 
@@ -264,7 +302,7 @@
             // tb_direccion
             // 
             this.tb_direccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tb_direccion.Location = new System.Drawing.Point(273, 74);
+            this.tb_direccion.Location = new System.Drawing.Point(273, 111);
             this.tb_direccion.Margin = new System.Windows.Forms.Padding(0);
             this.tb_direccion.Name = "tb_direccion";
             this.tb_direccion.Size = new System.Drawing.Size(207, 28);
@@ -289,7 +327,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(190, 82);
+            this.label5.Location = new System.Drawing.Point(190, 119);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 15);
             this.label5.TabIndex = 139;
@@ -348,5 +386,7 @@
         private System.Windows.Forms.Label label2;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbx_ciudad;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbx_povincia;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_apellido;
+        private System.Windows.Forms.Label label3;
     }
 }

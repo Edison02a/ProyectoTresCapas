@@ -122,7 +122,7 @@
             this.cb_proveedor.DropDownWidth = 88;
             this.cb_proveedor.Location = new System.Drawing.Point(458, 162);
             this.cb_proveedor.Name = "cb_proveedor";
-            this.cb_proveedor.Size = new System.Drawing.Size(92, 27);
+            this.cb_proveedor.Size = new System.Drawing.Size(202, 27);
             this.cb_proveedor.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
             this.cb_proveedor.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Black;
             this.cb_proveedor.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -148,7 +148,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(190, 162);
+            this.label2.Location = new System.Drawing.Point(169, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 154;
@@ -191,9 +191,9 @@
             // 
             this.cb_categoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cb_categoria.DropDownWidth = 88;
-            this.cb_categoria.Location = new System.Drawing.Point(273, 162);
+            this.cb_categoria.Location = new System.Drawing.Point(252, 162);
             this.cb_categoria.Name = "cb_categoria";
-            this.cb_categoria.Size = new System.Drawing.Size(92, 27);
+            this.cb_categoria.Size = new System.Drawing.Size(107, 27);
             this.cb_categoria.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
             this.cb_categoria.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Black;
             this.cb_categoria.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -202,6 +202,7 @@
             this.cb_categoria.StateCommon.ComboBox.Border.Rounding = 10;
             this.cb_categoria.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_categoria.TabIndex = 151;
+            this.cb_categoria.SelectedIndexChanged += new System.EventHandler(this.cb_categoria_SelectedIndexChanged);
             // 
             // btn_cancelar
             // 

@@ -8,6 +8,7 @@ namespace CEntidades
 {
     public class EntidadesPieza
     {
+        public int IdPieza { get; set; }
         public string NombrePieza { get; set; }
         public string ColorPieza { get; set; }
         public string CentroPieza { get; set; }

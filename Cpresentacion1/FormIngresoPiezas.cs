@@ -51,12 +51,13 @@ namespace Cpresentacion1
             }
         }
 
+
         private void FormIngresoPiezas_Load(object sender, EventArgs e)
         {
             List<Entidades> DatosProveedor = objOpera.Lista();
             foreach (Entidades item in DatosProveedor)
             {
-                cb_proveedor.Items.Add(item.NombreProv);
+                cb_proveedor.Items.Add(item.NombreProv + " "+item.ApellidoProv + " "+ item.IdProveedor);
             }
 
 
@@ -71,6 +72,7 @@ namespace Cpresentacion1
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+               
                 try
                 {
                     int cantidad = int.Parse(tb_cantidad.Text);
@@ -93,32 +95,29 @@ namespace Cpresentacion1
                 }
             }
         }
-
+        int id_pieza,id_proveedor;
         private void btn_sig_Click(object sender, EventArgs e)
         {
-            try
-            {
-                EntidadesPieza piezaDatos = new EntidadesPieza();
-                piezaDatos.NombrePieza = tb_nombre.Text;
-                piezaDatos.ColorPieza = tb_color.Text;
-                piezaDatos.CentroPieza = tb_centro.Text;
-                piezaDatos.CategoriaPieza = cb_categoria.SelectedItem.ToString();
-                COperaciones operaciones = new COperaciones();
-                operaciones.IngresarPieza(piezaDatos);
 
-                EntidadesSuministra suministraDatos = new EntidadesSuministra();
-                suministraDatos.NombrePiezaSuministra = tb_nombre.Text;
-                suministraDatos.CantidadSuministra = int.Parse(tb_cantidad.Text);
-                suministraDatos.NombreProveedorSuministra = cb_proveedor.SelectedItem.ToString();
-                COperaciones operaciones2 = new COperaciones();
-                operaciones2.IngresarPiezaIngresarSuministrar(suministraDatos);
-                MessageBox.Show("Los datos se guardaron correctamente", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
+            List<Entidades> datosCategoria = objOpera.Lista();
+            foreach (Entidades item in datosCategoria)
             {
-                MessageBox.Show(ex.Message);
+                if (item.NombreProv== cb_proveedor.SelectedItem.ToString())
+                {
+                    id_proveedor = item.IdProveedor;
+                }
             }
+            MessageBox.Show(id_proveedor.ToString());
+
+
+        
+     
            
+        }
+
+        private void cb_categoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void tb_centro_KeyPress(object sender, KeyPressEventArgs e)

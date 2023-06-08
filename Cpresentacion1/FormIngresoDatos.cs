@@ -41,6 +41,7 @@ namespace Cpresentacion1
             {
                 Entidades proveedordatos = new Entidades();
                 proveedordatos.NombreProv = tb_nombre.Text;
+                proveedordatos.ApellidoProv = tb_apellido.Text;
                 proveedordatos.DireccionProv = tb_direccion.Text;
                 proveedordatos.CiudadProv = cmbx_ciudad.SelectedItem.ToString();
                 proveedordatos.ProviciaProv = cmbx_povincia.SelectedItem.ToString();
@@ -58,12 +59,12 @@ namespace Cpresentacion1
 
         private void boton_activar()
         {
-            if (tb_direccion.TextLength > 0 && tb_nombre.TextLength > 0 && cmbx_ciudad.SelectedIndex != null && cmbx_povincia.SelectedIndex != null)
+            if (tb_direccion.TextLength > 0 && tb_nombre.TextLength > 0 && cmbx_ciudad.SelectedIndex != -1 && cmbx_povincia.SelectedIndex != -1)
             {
                 btn_sig.Enabled = true;
             }
         }
-        string nombre, ciudad, provincia,direccion;
+        string nombre, ciudad, provincia,direccion,apellido;
 
         private void FormIngresoDatos_MouseHover(object sender, EventArgs e)
         {
@@ -283,6 +284,43 @@ namespace Cpresentacion1
             }
         }
 
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void tb_apellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                apellido = tb_apellido.Text;
+
+
+                if (string.IsNullOrEmpty(tb_nombre.Text))
+                {
+                    MessageBox.Show("No puedes dejar el campo vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tb_apellido.Focus();
+                }
+                else
+                {
+                    if (Regex.IsMatch(apellido, "^[a-zA-Z\\s]+$"))
+                    {
+                        tb_direccion.Focus();
+                    }
+                    else
+                    {
+
+                        MessageBox.Show("El apellido solo puede contenter letras", "Infomación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tb_apellido.Clear();
+                        tb_apellido.Focus();
+                    }
+                }
+                boton_activar();
+
+            }
+        }
+
         private void tb_direccion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -299,7 +337,7 @@ namespace Cpresentacion1
                 {
                     if (Regex.IsMatch(direccion, "^[a-zA-Z0-9\\s]+$"))
                     {
-                        tb_direccion.Focus();
+                        
                     }
                     else
                     {
@@ -334,7 +372,7 @@ namespace Cpresentacion1
                     {
                         if (Regex.IsMatch(nombre, "^[a-zA-Z\\s]+$"))
                         {
-                            tb_direccion.Focus();
+                            tb_apellido.Focus();
                         }
                             else
                         {

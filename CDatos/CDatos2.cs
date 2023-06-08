@@ -25,7 +25,9 @@ namespace CDatos
                 {
                     Entidades objEnt = new Entidades()
                     {
+                        IdProveedor = Convert.ToInt16(sqlreader["id"]),
                         NombreProv = Convert.ToString(sqlreader["Nombre"]),
+                        ApellidoProv = Convert.ToString(sqlreader["Apellido"]),
                         DireccionProv = Convert.ToString(sqlreader["Direccion"]),
                         CiudadProv = Convert.ToString(sqlreader["Ciudad"]),
                         ProviciaProv = Convert.ToString(sqlreader["Provincia"]),
@@ -129,6 +131,7 @@ namespace CDatos
                 {
                     EntidadesCategoria objEnt4 = new EntidadesCategoria()
                     {
+                        IdCateogoria = Convert.ToInt32(sqlreader["id"]),
                         CategCategoria = Convert.ToString(sqlreader["categ"]),
                         PrecioCategoria = Convert.ToInt64(sqlreader["precio"]),
                     };
@@ -152,7 +155,7 @@ namespace CDatos
         public void registrarProveedor(Entidades datos)
         {
             cBD.Abrir();
-            string sql = "insert into prov(nombre,direccion,ciudad,provincia) VALUES('" + datos.NombreProv + "', '" + datos.DireccionProv+ "', '" + datos.CiudadProv + "', '" + datos.ProviciaProv + "')";
+            string sql = "insert into prov(nombre,apellido,direccion,ciudad,provincia) VALUES('" + datos.NombreProv + "','" + datos.ApellidoProv + "' ,'" + datos.DireccionProv+ "', '" + datos.CiudadProv + "', '" + datos.ProviciaProv + "')";
             SqlCommand comando = new SqlCommand(sql, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();
@@ -177,7 +180,7 @@ namespace CDatos
         public void registrarSuministrar(EntidadesSuministra datosSuministra)
         {
             cBD.Abrir();
-            string sql = "insert into suministra(cantidad,nombreProveedor,nombrePieza) VALUES('" + datosSuministra.CantidadSuministra + "', '" + datosSuministra.NombreProveedorSuministra + "', '" + datosSuministra.NombrePiezaSuministra + "')";
+            string sql = "insert into suministra(cantidad,nombreProveedor,nombrePieza,id_pieza,id_proveedor) VALUES('" + datosSuministra.CantidadSuministra + "', '" + datosSuministra.NombreProveedorSuministra + "', '" + datosSuministra.NombrePiezaSuministra + "')";
             SqlCommand comando = new SqlCommand(sql, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();
