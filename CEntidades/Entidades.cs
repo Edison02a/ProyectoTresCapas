@@ -8,7 +8,7 @@ namespace CEntidades
 {
     public  class Entidades
     {
-        public int IdProveedor { get; set; }
+        public int CedulaProv { get; set; }
         public string NombreProv { get; set; }
         public string ApellidoProv { get; set; }
         public string DireccionProv { get; set; }

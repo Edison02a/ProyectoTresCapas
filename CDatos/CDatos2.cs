@@ -25,7 +25,7 @@ namespace CDatos
                 {
                     Entidades objEnt = new Entidades()
                     {
-                        IdProveedor = Convert.ToInt16(sqlreader["id"]),
+                        CedulaProv = Convert.ToInt32(sqlreader["ci"]),
                         NombreProv = Convert.ToString(sqlreader["Nombre"]),
                         ApellidoProv = Convert.ToString(sqlreader["Apellido"]),
                         DireccionProv = Convert.ToString(sqlreader["Direccion"]),

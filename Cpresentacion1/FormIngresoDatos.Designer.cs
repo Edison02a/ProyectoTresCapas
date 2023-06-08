@@ -45,6 +45,8 @@
             this.tb_direccion = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.tb_cedula = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroup1.Panel)).BeginInit();
             this.kryptonGroup1.Panel.SuspendLayout();
@@ -108,6 +110,8 @@
             // 
             // kryptonGroup1.Panel
             // 
+            this.kryptonGroup1.Panel.Controls.Add(this.tb_cedula);
+            this.kryptonGroup1.Panel.Controls.Add(this.label4);
             this.kryptonGroup1.Panel.Controls.Add(this.tb_apellido);
             this.kryptonGroup1.Panel.Controls.Add(this.label3);
             this.kryptonGroup1.Panel.Controls.Add(this.label1);
@@ -120,7 +124,7 @@
             this.kryptonGroup1.Panel.Controls.Add(this.tb_direccion);
             this.kryptonGroup1.Panel.Controls.Add(this.label5);
             this.kryptonGroup1.Panel.Controls.Add(this.label10);
-            this.kryptonGroup1.Size = new System.Drawing.Size(744, 308);
+            this.kryptonGroup1.Size = new System.Drawing.Size(744, 351);
             this.kryptonGroup1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.kryptonGroup1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.kryptonGroup1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -133,7 +137,7 @@
             // tb_apellido
             // 
             this.tb_apellido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tb_apellido.Location = new System.Drawing.Point(273, 69);
+            this.tb_apellido.Location = new System.Drawing.Point(275, 116);
             this.tb_apellido.Margin = new System.Windows.Forms.Padding(0);
             this.tb_apellido.Name = "tb_apellido";
             this.tb_apellido.Size = new System.Drawing.Size(207, 28);
@@ -157,7 +161,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(190, 77);
+            this.label3.Location = new System.Drawing.Point(197, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 154;
@@ -168,7 +172,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(394, 191);
+            this.label1.Location = new System.Drawing.Point(403, 238);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 14);
             this.label1.TabIndex = 153;
@@ -179,7 +183,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(285, 191);
+            this.label2.Location = new System.Drawing.Point(284, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 14);
             this.label2.TabIndex = 152;
@@ -189,7 +193,7 @@
             // 
             this.cmbx_ciudad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmbx_ciudad.DropDownWidth = 88;
-            this.cmbx_ciudad.Location = new System.Drawing.Point(388, 161);
+            this.cmbx_ciudad.Location = new System.Drawing.Point(390, 208);
             this.cmbx_ciudad.Name = "cmbx_ciudad";
             this.cmbx_ciudad.Size = new System.Drawing.Size(92, 27);
             this.cmbx_ciudad.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
@@ -230,7 +234,7 @@
             "Sucumbíos",
             "Tungurahua",
             "Zamora Chinchipe"});
-            this.cmbx_povincia.Location = new System.Drawing.Point(273, 161);
+            this.cmbx_povincia.Location = new System.Drawing.Point(275, 208);
             this.cmbx_povincia.Name = "cmbx_povincia";
             this.cmbx_povincia.Size = new System.Drawing.Size(92, 27);
             this.cmbx_povincia.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
@@ -246,7 +250,7 @@
             // btn_cancelar
             // 
             this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_cancelar.Location = new System.Drawing.Point(415, 250);
+            this.btn_cancelar.Location = new System.Drawing.Point(406, 299);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(93, 31);
             this.btn_cancelar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -263,7 +267,7 @@
             // tb_nombre
             // 
             this.tb_nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tb_nombre.Location = new System.Drawing.Point(273, 34);
+            this.tb_nombre.Location = new System.Drawing.Point(275, 76);
             this.tb_nombre.Margin = new System.Windows.Forms.Padding(0);
             this.tb_nombre.Name = "tb_nombre";
             this.tb_nombre.Size = new System.Drawing.Size(207, 28);
@@ -285,7 +289,7 @@
             // btn_sig
             // 
             this.btn_sig.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_sig.Location = new System.Drawing.Point(272, 250);
+            this.btn_sig.Location = new System.Drawing.Point(263, 299);
             this.btn_sig.Name = "btn_sig";
             this.btn_sig.Size = new System.Drawing.Size(93, 31);
             this.btn_sig.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -302,7 +306,7 @@
             // tb_direccion
             // 
             this.tb_direccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tb_direccion.Location = new System.Drawing.Point(273, 111);
+            this.tb_direccion.Location = new System.Drawing.Point(275, 158);
             this.tb_direccion.Margin = new System.Windows.Forms.Padding(0);
             this.tb_direccion.Name = "tb_direccion";
             this.tb_direccion.Size = new System.Drawing.Size(207, 28);
@@ -327,7 +331,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(190, 119);
+            this.label5.Location = new System.Drawing.Point(197, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 15);
             this.label5.TabIndex = 139;
@@ -338,11 +342,44 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(187, 42);
+            this.label10.Location = new System.Drawing.Point(197, 76);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 15);
             this.label10.TabIndex = 137;
             this.label10.Text = "Nombre: ";
+            // 
+            // tb_cedula
+            // 
+            this.tb_cedula.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.tb_cedula.Location = new System.Drawing.Point(275, 35);
+            this.tb_cedula.Margin = new System.Windows.Forms.Padding(0);
+            this.tb_cedula.Name = "tb_cedula";
+            this.tb_cedula.Size = new System.Drawing.Size(207, 28);
+            this.tb_cedula.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.tb_cedula.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.tb_cedula.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.tb_cedula.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.tb_cedula.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.tb_cedula.StateCommon.Border.Rounding = 18;
+            this.tb_cedula.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
+            this.tb_cedula.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_cedula.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tb_cedula.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tb_cedula.TabIndex = 157;
+            this.tb_cedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_cedula_KeyPress);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(197, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 15);
+            this.label4.TabIndex = 156;
+            this.label4.Text = "Cédula: ";
             // 
             // FormIngresoDatos
             // 
@@ -388,5 +425,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbx_povincia;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_apellido;
         private System.Windows.Forms.Label label3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_cedula;
+        private System.Windows.Forms.Label label4;
     }
 }

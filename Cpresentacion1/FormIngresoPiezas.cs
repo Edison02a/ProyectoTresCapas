@@ -57,7 +57,7 @@ namespace Cpresentacion1
             List<Entidades> DatosProveedor = objOpera.Lista();
             foreach (Entidades item in DatosProveedor)
             {
-                cb_proveedor.Items.Add(item.NombreProv + " "+item.ApellidoProv + " "+ item.IdProveedor);
+                cb_proveedor.Items.Add(item.NombreProv + " "+item.ApellidoProv + " "+ item.CedulaProv);
             }
 
 
@@ -104,7 +104,7 @@ namespace Cpresentacion1
             {
                 if (item.NombreProv== cb_proveedor.SelectedItem.ToString())
                 {
-                    id_proveedor = item.IdProveedor;
+                    id_proveedor = item.CedulaProv;
                 }
             }
             MessageBox.Show(id_proveedor.ToString());

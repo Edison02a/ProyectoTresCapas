@@ -33,23 +33,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\bunifu\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Design">
       <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,6 +65,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation">
+      <HintPath>..\..\Visual 2do parcial\WinAppDatos_GET_SET\bin\Debug\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -88,6 +94,12 @@
     <Compile Include="FormIngresoPiezas.Designer.cs">
       <DependentUpon>FormIngresoPiezas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificar.Designer.cs">
+      <DependentUpon>FormModificar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorDataSet.Designer.cs">
@@ -100,6 +112,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormIngresoPiezas.resx">
       <DependentUpon>FormIngresoPiezas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificar.resx">
+      <DependentUpon>FormModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -151,6 +171,17 @@
     </None>
     <None Include="ProveedorDataSet1.xss">
       <DependentUpon>ProveedorDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet2.xsc">
+      <DependentUpon>ProveedorDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet2.xss">
+      <DependentUpon>ProveedorDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

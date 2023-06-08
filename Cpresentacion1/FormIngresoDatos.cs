@@ -25,7 +25,7 @@ namespace Cpresentacion1
 
         private void FormIngresoDatos_Load(object sender, EventArgs e)
         {
-            tb_nombre.Focus();
+            tb_cedula.Focus();
         }
 
         private void cmbx_pres_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,6 +40,8 @@ namespace Cpresentacion1
             try
             {
                 Entidades proveedordatos = new Entidades();
+                //int ci = Convert.ToInt32(tb_cedula.Text);
+                proveedordatos.CedulaProv = tb_cedula.Text;
                 proveedordatos.NombreProv = tb_nombre.Text;
                 proveedordatos.ApellidoProv = tb_apellido.Text;
                 proveedordatos.DireccionProv = tb_direccion.Text;
@@ -64,7 +66,8 @@ namespace Cpresentacion1
                 btn_sig.Enabled = true;
             }
         }
-        string nombre, ciudad, provincia,direccion,apellido;
+        string nombre, ciudad, provincia, direccion, apellido;
+            int cedula;
 
         private void FormIngresoDatos_MouseHover(object sender, EventArgs e)
         {
@@ -287,6 +290,78 @@ namespace Cpresentacion1
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        public bool ValidarCedula(string cedula)
+        {
+            // Verificar que la cédula tenga 10 dígitos
+            if (!Regex.IsMatch(cedula, @"^\d{10}$"))
+            {
+                return false;
+            }
+
+            // Verificar el dígito verificador
+            int[] coeficientes = { 2, 1, 2, 1, 2, 1, 2, 1, 2 };
+            int total = 0;
+
+            for (int i = 0; i < coeficientes.Length; i++)
+            {
+                int digito = int.Parse(cedula[i].ToString());
+                int producto = digito * coeficientes[i];
+
+                if (producto >= 10)
+                {
+                    producto -= 9;
+                }
+
+                total += producto;
+            }
+
+            int digitoVerificador = 10 - (total % 10);
+            if (digitoVerificador == 10)
+            {
+                digitoVerificador = 0;
+            }
+
+            return digitoVerificador == int.Parse(cedula[9].ToString());
+        }
+        private void tb_cedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
+                    cedula = int.Parse(tb_cedula.Text);
+
+                    if (ValidarCedula(tb_cedula.Text))
+                    {
+                       
+                        tb_nombre.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese uan cedula correcta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tb_cedula.Clear();
+                        tb_cedula.Focus();
+                    }
+                }
+                catch
+                {
+                    if (string.IsNullOrEmpty(tb_cedula.Text))
+                    {
+                        MessageBox.Show("No puedes dejar el campo vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tb_cedula.Focus();
+                    }
+                    else
+                       if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+                    {
+                        MessageBox.Show("Solo se permiten números enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tb_cedula.Clear();
+                        tb_cedula.Focus();
+                    }
+                }
+                boton_activar();
+            }
         }
 
         private void tb_apellido_KeyPress(object sender, KeyPressEventArgs e)

@@ -21,11 +21,12 @@ namespace Cpresentacion1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            panel_modificar.Visible = false;
         }
         COperaciones objOpera = new COperaciones();
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            panel_modificar.Visible = false;
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.suministra' Puede moverla o quitarla según sea necesario.
             //this.suministraTableAdapter.Fill(this.proveedorDataSet.suministra);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.pieza' Puede moverla o quitarla según sea necesario.
@@ -37,26 +38,26 @@ namespace Cpresentacion1
             string proveedor;
             foreach (Entidades item in DatosProveedor)
             {
-                ComboBox1.Items.Add(item.NombreProv);
+                //ComboBox1.Items.Add(item.NombreProv);
             }
 
             List<EntidadesPieza> DatosPieza = objOpera.Lista2();
             foreach (EntidadesPieza item in DatosPieza)
             {
-                ComboBox2.Items.Add(item.NombrePieza);
+                //ComboBox2.Items.Add(item.NombrePieza);
             }
 
             List<EntidadesSuministra> DatosSuministra = objOpera.Lista3();
             foreach (EntidadesSuministra item in DatosSuministra)
             {
-                ComboBox3.Items.Add(item.CantidadSuministra);
+                //ComboBox3.Items.Add(item.CantidadSuministra);
             }
 
 
             List<EntidadesCategoria> datosCategoria = objOpera.Lista4();
             foreach (EntidadesCategoria item in datosCategoria)
             {
-                ComboBox4.Items.Add(item.CategCategoria);
+                //ComboBox4.Items.Add(item.CategCategoria);
             }
 
             panel_agregar.Visible = false;
@@ -64,13 +65,19 @@ namespace Cpresentacion1
 
         private void btn_agregar_Click(object sender, EventArgs e)
         {
-            if(panel_agregar.Visible)
+            
+            panel_agregar.BringToFront();
+            panel_modificar.Visible = false;
+            //panel_reporteAdmin.Visible = false;
+            if (panel_agregar.Visible)
             {
                 panel_agregar.Visible = false;
             }
             else
             {
+                panel_agregar.Size = new System.Drawing.Size(277, 36);
                 panel_agregar.Visible = true;
+
             }
         }
 
@@ -131,6 +138,29 @@ namespace Cpresentacion1
         private void panel_conten_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            panel_modificar.BringToFront();
+            panel_agregar.Visible = false;
+            //panel_reporteAdmin.Visible = false;
+            if (panel_modificar.Visible)
+            {
+                panel_modificar.Visible = false;
+            }
+            else
+            {
+                panel_modificar.Size = new System.Drawing.Size(183, 36);
+                panel_modificar.Visible = true;
+
+            }
+        }
+
+        private void kryptonButton5_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormModificar());
+            panel_modificar.Visible = false;
         }
     }
 }
