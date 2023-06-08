@@ -166,6 +166,22 @@ namespace CDatos
             comando.ExecuteNonQuery();
             cBD.Cerrar();
         }
+        public void registrarPieza(EntidadesPieza datosPieza)
+        {
+            cBD.Abrir();
+            string sql = "insert into pieza(nombre,color,centro,categ) VALUES('" + datosPieza.NombrePieza + "', '" + datosPieza.ColorPieza + "', '" + datosPieza.CentroPieza + "', '" + datosPieza.CategoriaPieza + "')";
+            SqlCommand comando = new SqlCommand(sql, cBD.conectar);
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
+        }
+        public void registrarSuministrar(EntidadesSuministra datosSuministra)
+        {
+            cBD.Abrir();
+            string sql = "insert into suministra(cantidad,nombreProveedor,nombrePieza) VALUES('" + datosSuministra.CantidadSuministra + "', '" + datosSuministra.NombrePiezaSuministra + "', '" + datosSuministra.NombreProveedorSuministra + "')";
+            SqlCommand comando = new SqlCommand(sql, cBD.conectar);
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
+        }
 
         /*
         //eliminar

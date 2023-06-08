@@ -94,6 +94,24 @@ namespace Cpresentacion1
             }
         }
 
+        private void btn_sig_Click(object sender, EventArgs e)
+        {
+            EntidadesPieza piezaDatos = new EntidadesPieza();
+            piezaDatos.NombrePieza = tb_nombre.Text;
+            piezaDatos.ColorPieza = tb_color.Text;
+            piezaDatos.CentroPieza = tb_centro.Text;
+            piezaDatos.CategoriaPieza = cb_categoria.SelectedItem.ToString();
+            COperaciones operaciones = new COperaciones();
+            operaciones.IngresarPieza(piezaDatos);
+
+            EntidadesSuministra suministraDatos = new EntidadesSuministra();
+            suministraDatos.NombrePiezaSuministra = tb_nombre.Text;
+            suministraDatos.CantidadSuministra = int.Parse(tb_cantidad.Text);
+            suministraDatos.NombreProveedorSuministra = cb_proveedor.SelectedItem.ToString();
+            COperaciones operaciones2 = new COperaciones();
+            operaciones2.IngresarPiezaIngresarSuministrar(suministraDatos);
+        }
+
         private void tb_centro_KeyPress(object sender, KeyPressEventArgs e)
         {
 

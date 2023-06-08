@@ -258,6 +258,7 @@
             this.btn_sig.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sig.TabIndex = 136;
             this.btn_sig.Values.Text = "Guardar";
+            this.btn_sig.Click += new System.EventHandler(this.btn_sig_Click);
             // 
             // tb_color
             // 

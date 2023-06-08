@@ -42,7 +42,17 @@ namespace CLogica
 
         }
 
+        public void IngresarPieza(EntidadesPieza datosPieza)
+        {
+            ObjDatos.registrarPieza(datosPieza);
 
-        
+        }
+
+        public void IngresarPiezaIngresarSuministrar(EntidadesSuministra datosSuministra)
+        {
+            ObjDatos.registrarSuministrar(datosSuministra);
+
+        }
+
     }
 }
