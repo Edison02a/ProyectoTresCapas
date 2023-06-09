@@ -36,10 +36,10 @@ namespace Cpresentacion1
 
             List<Entidades> DatosProveedor = objOpera.Lista();
             string proveedor;
-            foreach (Entidades item in DatosProveedor)
+            /*foreach (Entidades item in DatosProveedor)
             {
                 //ComboBox1.Items.Add(item.NombreProv);
-            }
+            }*/
 
             List<EntidadesPieza> DatosPieza = objOpera.Lista2();
             foreach (EntidadesPieza item in DatosPieza)

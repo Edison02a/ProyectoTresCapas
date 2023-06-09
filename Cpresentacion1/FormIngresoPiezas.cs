@@ -132,7 +132,7 @@ namespace Cpresentacion1
                 operaciones.IngresarPieza(piezaDatos);
 
                 EntidadesSuministra suministraDatos = new EntidadesSuministra();
-                suministraDatos.CantidadSuministra = int.Parse(tb_cantidad.Text);
+                suministraDatos.CantidadSuministra = Convert.ToInt32(tb_cantidad.Text);
                 suministraDatos.IdPieza = id_pieza;
                 suministraDatos.IdProveedor = id_proveedor;
                 COperaciones operaciones2 = new COperaciones();

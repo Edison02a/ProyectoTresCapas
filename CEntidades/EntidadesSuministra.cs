@@ -9,6 +9,7 @@ namespace CEntidades
     public class EntidadesSuministra
     {
         public int CantidadSuministra { get; set; }
+        
         public int IdPieza { get; set; }
         public int IdProveedor { get; set; }
     }

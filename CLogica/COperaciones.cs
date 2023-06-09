@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,9 +8,10 @@ using CDatos;
 using CEntidades;
 namespace CLogica
 {
-    public  class COperaciones
+    public class COperaciones
     {
         CDatos2 ObjDatos = new CDatos2();
+
         public List<Entidades> Lista()
         {
             return ObjDatos.Obtener();
@@ -58,14 +60,19 @@ namespace CLogica
             return ObjDatos.BuscarId(ciP);
         }
 
-        public EntidadesPieza BuscarIdP(int ciP)
+        public List<EntidadesPieza> ObtenerPiezasProveedor(int ciProveedor)
         {
-            return ObjDatos.BuscarIdP(ciP);
+            return ObjDatos.ObtenerPiezasProveedor(ciProveedor);
         }
 
         public EntidadesSuministra BuscarIdS(int ciP)
         {
             return ObjDatos.BuscarIdS(ciP);
+
+        }
+        public void ActualizarPieza(string nombrePieza, string colorPieza, string centroPieza, string categoriaPieza, int IdPieza, int ciProveedor, int cantidadSuministra)
+        {
+            ObjDatos.ActualizarPieza(nombrePieza, colorPieza, centroPieza, categoriaPieza,IdPieza, ciProveedor, cantidadSuministra);
         }
     }
 }

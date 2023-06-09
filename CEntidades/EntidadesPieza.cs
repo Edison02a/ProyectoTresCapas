@@ -13,5 +13,6 @@ namespace CEntidades
         public string ColorPieza { get; set; }
         public string CentroPieza { get; set; }
         public string CategoriaPieza { get; set; }
+        public int CantidadSuministrada { get; set; }
     }
 }
