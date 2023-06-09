@@ -67,7 +67,7 @@ namespace Cpresentacion1
             }
         }
         string nombre, ciudad, provincia, direccion, apellido;
-            int cedula;
+        int cedula;
 
         private void FormIngresoDatos_MouseHover(object sender, EventArgs e)
         {

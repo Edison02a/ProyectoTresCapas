@@ -155,7 +155,7 @@ namespace CDatos
         public void registrarProveedor(Entidades datos)
         {
             cBD.Abrir();
-            string sql = "insert into prov(nombre,apellido,direccion,ciudad,provincia) VALUES('" + datos.NombreProv + "','" + datos.ApellidoProv + "' ,'" + datos.DireccionProv+ "', '" + datos.CiudadProv + "', '" + datos.ProviciaProv + "')";
+            string sql = "insert into prov(nombre,ci,apellido,direccion,ciudad,provincia) VALUES('" + datos.NombreProv + "','" + datos.CedulaProv + "','" + datos.ApellidoProv + "' ,'" + datos.DireccionProv+ "', '" + datos.CiudadProv + "', '" + datos.ProviciaProv + "')";
             SqlCommand comando = new SqlCommand(sql, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();
