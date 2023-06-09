@@ -99,7 +99,7 @@ namespace Cpresentacion1
             {
                 EntidadesCategoria categoriadatos = new EntidadesCategoria();
                 categoriadatos.CategCategoria = tb_nombre.Text;
-                categoriadatos.PrecioCategoria = int.Parse(tb_precio.Text);
+                categoriadatos.PrecioCategoria = tb_precio.Text;
                 COperaciones operaciones = new COperaciones();
                 operaciones.IngresarCategoria(categoriadatos);
                 MessageBox.Show("Los datos se guardaron correctamente", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);

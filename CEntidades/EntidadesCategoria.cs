@@ -9,7 +9,7 @@ namespace CEntidades
     public class EntidadesCategoria
     {
         public int IdCateogoria { get; set; }
-        public float PrecioCategoria { get; set; }
+        public string PrecioCategoria { get; set; }
         public string CategCategoria { get; set; }
     }
 }

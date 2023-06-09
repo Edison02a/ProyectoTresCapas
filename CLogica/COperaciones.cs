@@ -53,6 +53,19 @@ namespace CLogica
             ObjDatos.registrarSuministrar(datosSuministra);
 
         }
+        public Entidades BuscarId(int ciP)
+        {
+            return ObjDatos.BuscarId(ciP);
+        }
 
+        public EntidadesPieza BuscarIdP(int ciP)
+        {
+            return ObjDatos.BuscarIdP(ciP);
+        }
+
+        public EntidadesSuministra BuscarIdS(int ciP)
+        {
+            return ObjDatos.BuscarIdS(ciP);
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using CEntidades;
@@ -38,7 +39,7 @@ namespace CDatos
 
                 }
                 return DatosProveedor;
-
+               
             }
             catch
             {
@@ -133,13 +134,14 @@ namespace CDatos
                     {
                         IdCateogoria = Convert.ToInt32(sqlreader["id"]),
                         CategCategoria = Convert.ToString(sqlreader["categ"]),
-                        PrecioCategoria = Convert.ToInt64(sqlreader["precio"]),
+                        PrecioCategoria = Convert.ToString(sqlreader["precio"]),
                     };
                     datosCategorias.Add(objEnt4);
-
+                    
 
                 }
                 return datosCategorias;
+                
             }
             catch
             {
@@ -186,6 +188,131 @@ namespace CDatos
             cBD.Cerrar();
         }
 
+
+        public Entidades BuscarId(int ciPr)
+        {
+            cBD.Abrir();
+            string cadena = "select P.nombre,P.color,P.centro,P.categ,Pr.nombre,Pr.apellido,S.cantidad from prov Pr inner join suministra S on Pr.ci = S.id_proveedor inner join pieza P on P.id = S.id_pieza inner join categoria C on C.id = P.id where Pr.ci = " + ciPr + "";
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            SqlDataReader dataReader = comando.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+                Entidades objEnt = new Entidades()
+                {
+                    //CedulaProv = Convert.ToInt32(dataReader["ci"]),
+                    NombreProv = Convert.ToString(dataReader["nombre"]),
+                    ApellidoProv = Convert.ToString(dataReader["apellido"]),
+                    /*DireccionProv = Convert.ToString(dataReader["direccion"]),
+                    CiudadProv = Convert.ToString(dataReader["ciudad"]),
+                    ProviciaProv = Convert.ToString(dataReader["provincia"])*/
+                    //NombreEst = Convert.ToString(dataReader["Nombre"]),
+                    //ApellidoEst = Convert.ToString(dataReader["Apellido"])
+                };
+               
+                /*select P.nombre,P.color,P.centro,P.categ,Pr.nombre,Pr.apellido,S.cantidad from prov Pr inner join suministra S on Pr.ci = S.id_proveedor inner join pieza P on P.id = S.id_pieza inner join categoria C on C.id = P.id where Pr.ci = '1805097217*/
+                /* EntidadesCategoria objCategoria = new EntidadesCategoria()
+                 {
+                     CategCategoria= Convert.ToString(dataReader["categ"]),
+                     //PrecioCategoria = Convert.ToString(dataReader["precio"]),
+
+                 };*/
+                EntidadesPieza objPieza = new EntidadesPieza()
+                {
+                    NombrePieza = Convert.ToString(dataReader["nombre"]),
+                    ColorPieza = Convert.ToString(dataReader["color"]),
+                    CentroPieza = Convert.ToString(dataReader["centro"]),
+                    CategoriaPieza= Convert.ToString(dataReader["categ"])
+                };
+
+                EntidadesSuministra objSumi = new EntidadesSuministra()
+                {
+                    CantidadSuministra= Convert.ToInt32(dataReader["cantidad"]),
+                };
+                dataReader.Close();
+                return objEnt;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
+        public EntidadesPieza BuscarIdP(int ciPr)
+        {
+            cBD.Abrir();
+            string cadena = "select P.nombre,P.color,P.centro,P.categ,Pr.nombre,Pr.apellido,S.cantidad from prov Pr inner join suministra S on Pr.ci = S.id_proveedor inner join pieza P on P.id = S.id_pieza inner join categoria C on C.id = P.id where Pr.ci = " + ciPr + "";
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            SqlDataReader dataReader = comando.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+                
+
+                /*select P.nombre,P.color,P.centro,P.categ,Pr.nombre,Pr.apellido,S.cantidad from prov Pr inner join suministra S on Pr.ci = S.id_proveedor inner join pieza P on P.id = S.id_pieza inner join categoria C on C.id = P.id where Pr.ci = '1805097217*/
+                /* EntidadesCategoria objCategoria = new EntidadesCategoria()
+                 {
+                     CategCategoria= Convert.ToString(dataReader["categ"]),
+                     //PrecioCategoria = Convert.ToString(dataReader["precio"]),
+
+                 };*/
+                EntidadesPieza objPieza = new EntidadesPieza()
+                {
+                    NombrePieza = Convert.ToString(dataReader["nombre"]),
+                    ColorPieza = Convert.ToString(dataReader["color"]),
+                    CentroPieza = Convert.ToString(dataReader["centro"]),
+                    CategoriaPieza = Convert.ToString(dataReader["categ"])
+                };
+
+                EntidadesSuministra objSumi = new EntidadesSuministra()
+                {
+                    CantidadSuministra = Convert.ToInt32(dataReader["cantidad"]),
+                };
+                dataReader.Close();
+                return objPieza;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public EntidadesSuministra BuscarIdS(int ciPr)
+        {
+            cBD.Abrir();
+            string cadena = "select P.nombre,P.color,P.centro,P.categ,Pr.nombre,Pr.apellido,S.cantidad from prov Pr inner join suministra S on Pr.ci = S.id_proveedor inner join pieza P on P.id = S.id_pieza inner join categoria C on C.id = P.id where Pr.ci = " + ciPr + "";
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            SqlDataReader dataReader = comando.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+
+
+                /*select P.nombre,P.color,P.centro,P.categ,Pr.nombre,Pr.apellido,S.cantidad from prov Pr inner join suministra S on Pr.ci = S.id_proveedor inner join pieza P on P.id = S.id_pieza inner join categoria C on C.id = P.id where Pr.ci = '1805097217*/
+                /* EntidadesCategoria objCategoria = new EntidadesCategoria()
+                 {
+                     CategCategoria= Convert.ToString(dataReader["categ"]),
+                     //PrecioCategoria = Convert.ToString(dataReader["precio"]),
+
+                 };*/
+               
+
+                EntidadesSuministra objSumi = new EntidadesSuministra()
+                {
+                    CantidadSuministra = Convert.ToInt32(dataReader["cantidad"]),
+                };
+                dataReader.Close();
+                return objSumi;
+            }
+            else
+            {
+                return null;
+            }
+        }
         /*
         //eliminar
         public void EliminarV(int ide)

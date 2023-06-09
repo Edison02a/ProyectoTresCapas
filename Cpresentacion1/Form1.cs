@@ -48,10 +48,10 @@ namespace Cpresentacion1
             }
 
             List<EntidadesSuministra> DatosSuministra = objOpera.Lista3();
-            foreach (EntidadesSuministra item in DatosSuministra)
+            /*foreach (EntidadesSuministra item in DatosSuministra)
             {
                 //ComboBox3.Items.Add(item.CantidadSuministra);
-            }
+            }*/
 
 
             List<EntidadesCategoria> datosCategoria = objOpera.Lista4();
