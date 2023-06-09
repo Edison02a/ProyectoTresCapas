@@ -21,8 +21,10 @@ namespace Cpresentacion1
 
         private void FormModificar_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet3.prov' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet4.prov' Puede moverla o quitarla según sea necesario.
             this.provTableAdapter1.Fill(this.proveedorDataSet3.prov);
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet3.prov' Puede moverla o quitarla según sea necesario.
+            //this.provTableAdapter1.Fill(this.proveedorDataSet3.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet2.prov' Puede moverla o quitarla según sea necesario.
             List<Entidades> DatosProveedor = objOpera.Lista();
             foreach (Entidades item in DatosProveedor)

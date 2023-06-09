@@ -38,6 +38,8 @@
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ciudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.proveedorDataSet3 = new Cpresentacion1.ProveedorDataSet3();
             this.provBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedorDataSet2 = new Cpresentacion1.ProveedorDataSet2();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
@@ -62,10 +64,13 @@
             this.btn_sig = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label12 = new System.Windows.Forms.Label();
             this.provTableAdapter = new Cpresentacion1.ProveedorDataSet2TableAdapters.provTableAdapter();
-            this.proveedorDataSet3 = new Cpresentacion1.ProveedorDataSet3();
-            this.provBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.provTableAdapter1 = new Cpresentacion1.ProveedorDataSet3TableAdapters.provTableAdapter();
+            this.proveedorDataSet4 = new Cpresentacion1.ProveedorDataSet4();
+            this.provBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.provTableAdapter2 = new Cpresentacion1.ProveedorDataSet4TableAdapters.provTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
@@ -79,8 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_pieza)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -102,15 +107,11 @@
             this.kryptonButton1.Size = new System.Drawing.Size(100, 31);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.kryptonButton1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonButton1.StateCommon.Border.Rounding = 8;
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton1.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonButton1.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonButton1.TabIndex = 178;
             this.kryptonButton1.Values.Text = "Atrás";
             // 
@@ -125,7 +126,7 @@
             this.direccionDataGridViewTextBoxColumn,
             this.ciudadDataGridViewTextBoxColumn,
             this.provinciaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.provBindingSource1;
+            this.dataGridView1.DataSource = this.provBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(35, 116);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -170,6 +171,16 @@
             this.provinciaDataGridViewTextBoxColumn.HeaderText = "provincia";
             this.provinciaDataGridViewTextBoxColumn.Name = "provinciaDataGridViewTextBoxColumn";
             // 
+            // provBindingSource1
+            // 
+            this.provBindingSource1.DataMember = "prov";
+            this.provBindingSource1.DataSource = this.proveedorDataSet3;
+            // 
+            // proveedorDataSet3
+            // 
+            this.proveedorDataSet3.DataSetName = "ProveedorDataSet3";
+            this.proveedorDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // provBindingSource
             // 
             this.provBindingSource.DataMember = "prov";
@@ -183,9 +194,6 @@
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox2.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox2.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox2.Location = new System.Drawing.Point(434, 100);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
@@ -197,22 +205,16 @@
             this.kryptonGroupBox2.Size = new System.Drawing.Size(332, 167);
             this.kryptonGroupBox2.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonGroupBox2.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonGroupBox2.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonGroupBox2.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.kryptonGroupBox2.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.kryptonGroupBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonGroupBox2.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonGroupBox2.StateCommon.Border.Rounding = 10;
             this.kryptonGroupBox2.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonGroupBox2.StateCommon.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonGroupBox2.StateCommon.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonGroupBox2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonGroupBox2.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonGroupBox2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonGroupBox2.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonGroupBox2.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonGroupBox2.TabIndex = 176;
             this.kryptonGroupBox2.Values.Heading = "Búsqueda\r\n";
             // 
@@ -224,15 +226,11 @@
             this.btn_buscar.Size = new System.Drawing.Size(93, 31);
             this.btn_buscar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_buscar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_buscar.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btn_buscar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btn_buscar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btn_buscar.StateCommon.Border.Rounding = 8;
             this.btn_buscar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_buscar.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.btn_buscar.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.btn_buscar.TabIndex = 107;
             this.btn_buscar.Values.Text = "Buscar";
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
@@ -251,7 +249,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_codbuscar.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txt_codbuscar.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txt_codbuscar.StateCommon.Border.Rounding = 18;
             this.txt_codbuscar.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
             this.txt_codbuscar.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -273,9 +270,6 @@
             // kryptonGroupBox1
             // 
             this.kryptonGroupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
-            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
-            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
             this.kryptonGroupBox1.Location = new System.Drawing.Point(802, 95);
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
             // 
@@ -299,22 +293,16 @@
             this.kryptonGroupBox1.Size = new System.Drawing.Size(525, 367);
             this.kryptonGroupBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonGroupBox1.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonGroupBox1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonGroupBox1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
             this.kryptonGroupBox1.StateCommon.Border.Color2 = System.Drawing.Color.Black;
             this.kryptonGroupBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonGroupBox1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonGroupBox1.StateCommon.Border.Rounding = 10;
             this.kryptonGroupBox1.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonGroupBox1.StateCommon.Content.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonGroupBox1.StateCommon.Content.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonGroupBox1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
             this.kryptonGroupBox1.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
             this.kryptonGroupBox1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonGroupBox1.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonGroupBox1.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonGroupBox1.TabIndex = 175;
             this.kryptonGroupBox1.Values.Heading = "Modificar\r\n";
             // 
@@ -333,7 +321,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_cantidad.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txt_cantidad.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txt_cantidad.StateCommon.Border.Rounding = 18;
             this.txt_cantidad.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
             this.txt_cantidad.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -365,7 +352,6 @@
             this.cb_proveedor.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cb_proveedor.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.cb_proveedor.StateCommon.ComboBox.Border.Rounding = 10;
             this.cb_proveedor.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_proveedor.TabIndex = 184;
@@ -418,7 +404,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_centro.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txt_centro.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txt_centro.StateCommon.Border.Rounding = 18;
             this.txt_centro.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
             this.txt_centro.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -439,7 +424,6 @@
             this.cb_categoria.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cb_categoria.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.cb_categoria.StateCommon.ComboBox.Border.Rounding = 10;
             this.cb_categoria.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_categoria.TabIndex = 179;
@@ -459,7 +443,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_nombre.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txt_nombre.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txt_nombre.StateCommon.Border.Rounding = 18;
             this.txt_nombre.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
             this.txt_nombre.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -482,7 +465,6 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_color.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.txt_color.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.txt_color.StateCommon.Border.Rounding = 18;
             this.txt_color.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
             this.txt_color.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -525,7 +507,6 @@
             this.cbx_pieza.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.cbx_pieza.StateCommon.ComboBox.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.cbx_pieza.StateCommon.ComboBox.Border.Rounding = 10;
             this.cbx_pieza.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_pieza.TabIndex = 174;
@@ -549,15 +530,11 @@
             this.btn_sig.Size = new System.Drawing.Size(93, 31);
             this.btn_sig.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btn_sig.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_sig.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btn_sig.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btn_sig.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.btn_sig.StateCommon.Border.Rounding = 8;
             this.btn_sig.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sig.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.btn_sig.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.btn_sig.TabIndex = 107;
             this.btn_sig.Values.Text = "Guardar";
             this.btn_sig.Click += new System.EventHandler(this.btn_sig_Click);
@@ -577,19 +554,23 @@
             // 
             this.provTableAdapter.ClearBeforeFill = true;
             // 
-            // proveedorDataSet3
-            // 
-            this.proveedorDataSet3.DataSetName = "ProveedorDataSet3";
-            this.proveedorDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // provBindingSource1
-            // 
-            this.provBindingSource1.DataMember = "prov";
-            this.provBindingSource1.DataSource = this.proveedorDataSet3;
-            // 
             // provTableAdapter1
             // 
             this.provTableAdapter1.ClearBeforeFill = true;
+            // 
+            // proveedorDataSet4
+            // 
+            this.proveedorDataSet4.DataSetName = "ProveedorDataSet4";
+            this.proveedorDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // provBindingSource2
+            // 
+            this.provBindingSource2.DataMember = "prov";
+            this.provBindingSource2.DataSource = this.proveedorDataSet4;
+            // 
+            // provTableAdapter2
+            // 
+            this.provTableAdapter2.ClearBeforeFill = true;
             // 
             // FormModificar
             // 
@@ -608,6 +589,8 @@
             this.Text = "FormModificar";
             this.Load += new System.EventHandler(this.FormModificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
@@ -623,8 +606,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_pieza)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -667,5 +650,8 @@
         private ProveedorDataSet3 proveedorDataSet3;
         private System.Windows.Forms.BindingSource provBindingSource1;
         private ProveedorDataSet3TableAdapters.provTableAdapter provTableAdapter1;
+        private ProveedorDataSet4 proveedorDataSet4;
+        private System.Windows.Forms.BindingSource provBindingSource2;
+        private ProveedorDataSet4TableAdapters.provTableAdapter provTableAdapter2;
     }
 }

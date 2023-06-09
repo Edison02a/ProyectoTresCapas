@@ -122,6 +122,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet4.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +203,17 @@
     </None>
     <None Include="ProveedorDataSet3.xss">
       <DependentUpon>ProveedorDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet4.xsc">
+      <DependentUpon>ProveedorDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet4.xss">
+      <DependentUpon>ProveedorDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
