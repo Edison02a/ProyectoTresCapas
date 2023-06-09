@@ -16,6 +16,7 @@ namespace CDatos
         //recuperar datos del proveedor
         public List<Entidades> Obtener()
         {
+            cBD.Cerrar();
             List<Entidades> DatosProveedor = new List<Entidades>();
             try
             {
@@ -65,6 +66,7 @@ namespace CDatos
                 {
                     EntidadesPieza objEnt2 = new EntidadesPieza()
                     {
+                        IdPieza = Convert.ToInt16(sqlreader["id"]),
                         NombrePieza = Convert.ToString(sqlreader["nombre"]),
                         ColorPieza = Convert.ToString(sqlreader["color"]),
                         CentroPieza = Convert.ToString(sqlreader["centro"]),
@@ -100,8 +102,8 @@ namespace CDatos
                     EntidadesSuministra objEnt3 = new EntidadesSuministra()
                     {
                         CantidadSuministra = Convert.ToInt32(sqlreader["cantidad"]),
-                        NombreProveedorSuministra = Convert.ToString(sqlreader["nombreProveedor"]),
-                        NombrePiezaSuministra = Convert.ToString(sqlreader["nombrePieza"]),
+                        IdPieza = Convert.ToInt32(sqlreader["id_pieza"]),
+                        IdProveedor = Convert.ToInt32(sqlreader["id_proveedor"]),
                     };
                     DatosSuministra.Add(objEnt3);
 
@@ -182,7 +184,7 @@ namespace CDatos
         public void registrarSuministrar(EntidadesSuministra datosSuministra)
         {
             cBD.Abrir();
-            string sql = "insert into suministra(cantidad,nombreProveedor,nombrePieza,id_pieza,id_proveedor) VALUES('" + datosSuministra.CantidadSuministra + "', '" + datosSuministra.NombreProveedorSuministra + "', '" + datosSuministra.NombrePiezaSuministra + "')";
+            string sql = "insert into suministra(cantidad,id_pieza,id_proveedor) VALUES('" + datosSuministra.CantidadSuministra + "', '" + datosSuministra.IdPieza + "', '" + datosSuministra.IdProveedor + "')";
             SqlCommand comando = new SqlCommand(sql, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();

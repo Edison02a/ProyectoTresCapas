@@ -57,7 +57,7 @@ namespace Cpresentacion1
             List<Entidades> DatosProveedor = objOpera.Lista();
             foreach (Entidades item in DatosProveedor)
             {
-                cb_proveedor.Items.Add(item.NombreProv + " "+item.ApellidoProv + " "+ item.CedulaProv);
+                cb_proveedor.Items.Add(item.NombreProv + " " + item.ApellidoProv + " " + item.CedulaProv);
             }
 
 
@@ -98,21 +98,52 @@ namespace Cpresentacion1
         int id_pieza,id_proveedor;
         private void btn_sig_Click(object sender, EventArgs e)
         {
+            List<EntidadesPieza> DatosPiezas = objOpera.Lista2();
 
-            List<Entidades> datosCategoria = objOpera.Lista();
-            foreach (Entidades item in datosCategoria)
+            foreach (EntidadesPieza item in DatosPiezas)
             {
-                if (item.NombreProv== cb_proveedor.SelectedItem.ToString())
+                if (item.IdPieza > id_pieza)
+                {
+                    id_pieza = item.IdPieza;
+                }
+
+
+            }
+            id_pieza += 1;
+
+            List<Entidades> Proveedor = objOpera.Lista();
+            foreach (Entidades item in Proveedor)
+            {
+                if (item.NombreProv + " " + item.ApellidoProv + " " + item.CedulaProv == cb_proveedor.SelectedItem.ToString())
                 {
                     id_proveedor = item.CedulaProv;
                 }
+
             }
-            MessageBox.Show(id_proveedor.ToString());
 
+            try
+            {
+                EntidadesPieza piezaDatos = new EntidadesPieza();
+                piezaDatos.NombrePieza = tb_nombre.Text;
+                piezaDatos.ColorPieza = tb_color.Text;
+                piezaDatos.CentroPieza = tb_centro.Text;
+                piezaDatos.CategoriaPieza = cb_categoria.SelectedItem.ToString();
+                COperaciones operaciones = new COperaciones();
+                operaciones.IngresarPieza(piezaDatos);
 
-        
-     
-           
+                EntidadesSuministra suministraDatos = new EntidadesSuministra();
+                suministraDatos.CantidadSuministra = int.Parse(tb_cantidad.Text);
+                suministraDatos.IdPieza = id_pieza;
+                suministraDatos.IdProveedor = id_proveedor;
+                COperaciones operaciones2 = new COperaciones();
+                operaciones2.IngresarPiezaIngresarSuministrar(suministraDatos);
+                MessageBox.Show("Los datos se guardaron correctamente", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void cb_categoria_SelectedIndexChanged(object sender, EventArgs e)

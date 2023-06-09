@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -48,10 +49,20 @@ namespace Cpresentacion1
                 try
                 {
                     precio = float.Parse(tb_precio.Text);
+                    string input = tb_precio.Text;
+                    Regex regex = new Regex(@"^\d+(\.\d{1,2})?$");
+
+                    if (!regex.IsMatch(input))
+                    {
+                        tb_precio.Clear();
+                        tb_precio.Focus();
+                        MessageBox.Show("El precio puede contener hasta 2 decimales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
                 }
                 catch
                 {
-                    MessageBox.Show("Ingrese un valor monetario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ingrese el precio en números", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tb_precio.Focus();
                 }
 
@@ -97,6 +108,7 @@ namespace Cpresentacion1
         {
             try
             {
+                CultureInfo culture = new CultureInfo("es-ES");
                 EntidadesCategoria categoriadatos = new EntidadesCategoria();
                 categoriadatos.CategCategoria = tb_nombre.Text;
                 categoriadatos.PrecioCategoria = tb_precio.Text;
@@ -109,7 +121,8 @@ namespace Cpresentacion1
             {
                 MessageBox.Show(ex.Message);
             }
-         
+
+
         }
     }
 }

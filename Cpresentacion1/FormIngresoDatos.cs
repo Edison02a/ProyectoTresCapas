@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using CEntidades;
 using CLogica;
 using ComponentFactory.Krypton.Toolkit;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Cpresentacion1
 {
@@ -26,6 +27,7 @@ namespace Cpresentacion1
         private void FormIngresoDatos_Load(object sender, EventArgs e)
         {
             tb_cedula.Focus();
+            cmbx_ciudad.Enabled = false;
         }
 
         private void cmbx_pres_SelectedIndexChanged(object sender, EventArgs e)
@@ -37,23 +39,32 @@ namespace Cpresentacion1
 
         private void btn_sig_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidarCedula(tb_cedula.Text) && tb_nombre.TextLength > 0 && tb_apellido.TextLength > 0 && tb_direccion.TextLength > 0 && cmbx_ciudad.SelectedIndex != -1 && cmbx_povincia.SelectedIndex != -1)
             {
-                Entidades proveedordatos = new Entidades();
-                //int ci = Convert.ToInt32(tb_cedula.Text);
-                proveedordatos.CedulaProv = cedula;
-                proveedordatos.NombreProv = tb_nombre.Text;
-                proveedordatos.ApellidoProv = tb_apellido.Text;
-                proveedordatos.DireccionProv = tb_direccion.Text;
-                proveedordatos.CiudadProv = cmbx_ciudad.SelectedItem.ToString();
-                proveedordatos.ProviciaProv = cmbx_povincia.SelectedItem.ToString();
-                COperaciones operaciones = new COperaciones();
-                operaciones.IngresarProveedor(proveedordatos);
-                MessageBox.Show("Los datos se guardaron correctamente", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                try
+                {
+                    Entidades proveedordatos = new Entidades();
+                    proveedordatos.CedulaProv = cedula;
+                    proveedordatos.NombreProv = tb_nombre.Text;
+                    proveedordatos.ApellidoProv = tb_apellido.Text;
+                    proveedordatos.DireccionProv = tb_direccion.Text;
+                    proveedordatos.CiudadProv = cmbx_ciudad.SelectedItem.ToString();
+                    proveedordatos.ProviciaProv = cmbx_povincia.SelectedItem.ToString();
+                    COperaciones operaciones = new COperaciones();
+                    operaciones.IngresarProveedor(proveedordatos);
+                    MessageBox.Show("Los datos se guardaron correctamente", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex){
-                MessageBox.Show(ex.Message);
+            else
+            {
+                MessageBox.Show("Existen campos vacios o incorrectos ", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
@@ -61,10 +72,7 @@ namespace Cpresentacion1
 
         private void boton_activar()
         {
-            if (tb_direccion.TextLength > 0 && tb_nombre.TextLength > 0 && cmbx_ciudad.SelectedIndex != -1 && cmbx_povincia.SelectedIndex != -1)
-            {
-                btn_sig.Enabled = true;
-            }
+            
         }
         string nombre, ciudad, provincia, direccion, apellido;
         int cedula;
@@ -83,6 +91,7 @@ namespace Cpresentacion1
 
         private void cmbx_povincia_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             // Azuay
             string[] Azuay = { "Cuenca", "Gualaceo", "Azogues", "Paute" };
 
@@ -162,123 +171,147 @@ namespace Cpresentacion1
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Azuay);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
 
                     break;
                 case "Bolívar":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Bolivar);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Cañar":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Canar);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Carchi":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Carchi);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Chimborazo":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Chimborazo);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Cotopaxi":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Cotopaxi);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "El Oro":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(ElOro);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = ""; ;
                     break;
 
                 case "Esmeraldas":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Esmeraldas);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Galápagos":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Galapagos);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Guayas":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Guayas);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Imbabura":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Imbabura);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Loja":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Loja);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Los Ríos":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(LosRios);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Manabí":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Manabi);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Morona Santiago":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(MoronaSantiago);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Napo":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Napo);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Orellana":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Orellana);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Pastaza":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Pastaza);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Pichincha":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Pichincha);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Santa Elena":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(SantaElena);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Santo Domingo de los Tsáchilas":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(SantoDomingo);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Sucumbíos":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Sucumbios);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Tungurahua":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(Tungurahua);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
                 case "Zamora Chinchipe":
                     cmbx_ciudad.Items.Clear();
                     cmbx_ciudad.Items.AddRange(ZamoraChinchipe);
                     cmbx_ciudad.Enabled = true;
+                    cmbx_ciudad.Text = "";
                     break;
 
                 default:
@@ -329,40 +362,53 @@ namespace Cpresentacion1
 
             if (e.KeyChar == (char)Keys.Enter)
             {
-                try
-                {
-                    cedula = int.Parse(tb_cedula.Text);
 
-                    if (ValidarCedula(tb_cedula.Text))
-                    {
-                       
-                        tb_nombre.Focus();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ingrese uan cedula correcta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        tb_cedula.Clear();
-                        tb_cedula.Focus();
-                    }
-                }
-                catch
-                {
-                    if (string.IsNullOrEmpty(tb_cedula.Text))
-                    {
-                        MessageBox.Show("No puedes dejar el campo vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        tb_cedula.Focus();
-                    }
-                    else
-                       if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
-                    {
-                        MessageBox.Show("Solo se permiten números enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        tb_cedula.Clear();
-                        tb_cedula.Focus();
-                    }
-                }
-                boton_activar();
+                try_cedula();
+
             }
         }
+        //funcion para validar la cedula 
+        public void try_cedula()
+        {
+            try
+            {
+                cedula = int.Parse(tb_cedula.Text);
+
+                if (ValidarCedula(tb_cedula.Text))
+                {
+
+                    tb_nombre.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese una cédula correcta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tb_cedula.Clear();
+                    tb_cedula.Focus();
+                }
+            }
+            catch
+            {
+                if (string.IsNullOrEmpty(tb_cedula.Text))
+                {
+                    MessageBox.Show("No puedes dejar el campo vacío", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tb_cedula.Focus();
+                }
+                else
+                {
+                    string input = tb_cedula.Text;
+                    bool esNumero = input.All(char.IsDigit);
+
+                    if (!esNumero)
+                    {
+                        MessageBox.Show("La cédula contiene números enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tb_cedula.Clear();
+                        tb_cedula.Focus();
+                    }
+                }
+
+            }
+        }
+
 
         private void tb_apellido_KeyPress(object sender, KeyPressEventArgs e)
         {
