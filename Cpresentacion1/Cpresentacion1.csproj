@@ -34,28 +34,29 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\bunifu\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Design">
       <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -132,6 +133,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet6.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +161,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -231,6 +238,17 @@
     <None Include="ProveedorDataSet5.xss">
       <DependentUpon>ProveedorDataSet5.xsd</DependentUpon>
     </None>
+    <None Include="ProveedorDataSet6.xsc">
+      <DependentUpon>ProveedorDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet6.xss">
+      <DependentUpon>ProveedorDataSet6.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -244,6 +262,15 @@
       <Project>{64e799cf-da88-48ec-a755-4b27f2d7f19e}</Project>
       <Name>CLogica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\acceso %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\persona.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

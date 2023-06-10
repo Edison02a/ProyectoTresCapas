@@ -195,9 +195,7 @@ namespace CDatos
         public Entidades BuscarId(int ciPr)
         {
             cBD.Abrir();
-            string consulta = "SELECT Pr.nombreP, Pr.apellido " +
-                              "FROM prov Pr " +
-                              "WHERE Pr.ci = @ciProv";
+            string consulta = "SELECT Pr.nombreP, Pr.apellido FROM prov Pr WHERE Pr.ci = @ciProv";
 
             SqlCommand cmd = new SqlCommand(consulta, cBD.conectar);
             cmd.Parameters.AddWithValue("@ciProv", ciPr);
@@ -219,6 +217,7 @@ namespace CDatos
 
         public List<EntidadesPieza> ObtenerPiezasProveedor(int ciProveedor)
         {
+
             cBD.Abrir();
             string consulta = "SELECT P.id, P.nombre, P.color, P.centro, P.categ, S.cantidad FROM pieza P INNER JOIN suministra S ON P.id=S.id_pieza WHERE S.id_proveedor = @ciProv";
 

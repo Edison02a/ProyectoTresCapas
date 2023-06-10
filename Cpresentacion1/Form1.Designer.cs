@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panelConten = new System.Windows.Forms.Panel();
+            this.panel_modificar = new System.Windows.Forms.Panel();
+            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_eliminar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_modificar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_agregar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -47,16 +50,30 @@
             this.suministraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suministraTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.suministraTableAdapter();
             this.panel_conten = new System.Windows.Forms.Panel();
-            this.panel_modificar = new System.Windows.Forms.Panel();
-            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.inicio_sesion_panel = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tb_contra = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_ingresar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lk_recuperar = new System.Windows.Forms.LinkLabel();
+            this.tb_usuario = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panelConten.SuspendLayout();
+            this.panel_modificar.SuspendLayout();
             this.panel_agregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suministraBindingSource)).BeginInit();
-            this.panel_modificar.SuspendLayout();
+            this.panel_conten.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inicio_sesion_panel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inicio_sesion_panel.Panel)).BeginInit();
+            this.inicio_sesion_panel.Panel.SuspendLayout();
+            this.inicio_sesion_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -108,6 +125,127 @@
             this.panelConten.Size = new System.Drawing.Size(1046, 82);
             this.panelConten.TabIndex = 6;
             // 
+            // panel_modificar
+            // 
+            this.panel_modificar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_modificar.Controls.Add(this.kryptonButton5);
+            this.panel_modificar.Controls.Add(this.kryptonButton6);
+            this.panel_modificar.Location = new System.Drawing.Point(116, 40);
+            this.panel_modificar.Name = "panel_modificar";
+            this.panel_modificar.Size = new System.Drawing.Size(183, 36);
+            this.panel_modificar.TabIndex = 22;
+            // 
+            // kryptonButton5
+            // 
+            this.kryptonButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton5.Location = new System.Drawing.Point(101, 3);
+            this.kryptonButton5.Name = "kryptonButton5";
+            this.kryptonButton5.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton5.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton5.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton5.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton5.Size = new System.Drawing.Size(75, 30);
+            this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton5.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton5.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterRight;
+            this.kryptonButton5.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.StateCommon.Border.Rounding = 5;
+            this.kryptonButton5.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton5.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, -1, -2);
+            this.kryptonButton5.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton5.StateDisabled.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton5.StateDisabled.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton5.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton5.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton5.StateNormal.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateNormal.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.StatePressed.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton5.StatePressed.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton5.StatePressed.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton5.StatePressed.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton5.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.StateTracking.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton5.StateTracking.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton5.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton5.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton5.TabIndex = 20;
+            this.kryptonButton5.Values.Text = "Pieza";
+            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
+            // 
+            // kryptonButton6
+            // 
+            this.kryptonButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton6.Location = new System.Drawing.Point(3, 3);
+            this.kryptonButton6.Name = "kryptonButton6";
+            this.kryptonButton6.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton6.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton6.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton6.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton6.Size = new System.Drawing.Size(92, 30);
+            this.kryptonButton6.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton6.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton6.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterRight;
+            this.kryptonButton6.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.StateCommon.Border.Rounding = 5;
+            this.kryptonButton6.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton6.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, -1, -2);
+            this.kryptonButton6.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton6.StateDisabled.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton6.StateDisabled.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton6.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.StateNormal.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonButton6.StateNormal.Back.Color2 = System.Drawing.Color.White;
+            this.kryptonButton6.StateNormal.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateNormal.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.StatePressed.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton6.StatePressed.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton6.StatePressed.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton6.StatePressed.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton6.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.StateTracking.Back.Color1 = System.Drawing.Color.Silver;
+            this.kryptonButton6.StateTracking.Back.Color2 = System.Drawing.Color.Silver;
+            this.kryptonButton6.StateTracking.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateTracking.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonButton6.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton6.TabIndex = 19;
+            this.kryptonButton6.Values.Text = "Proveedor";
+            // 
             // btn_eliminar
             // 
             this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -134,11 +272,13 @@
             this.btn_eliminar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.StateDisabled.Back.Color1 = System.Drawing.Color.White;
             this.btn_eliminar.StateDisabled.Back.Color2 = System.Drawing.Color.White;
-            this.btn_eliminar.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
-            this.btn_eliminar.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
+            this.btn_eliminar.StateDisabled.Border.Color1 = System.Drawing.Color.Gray;
+            this.btn_eliminar.StateDisabled.Border.Color2 = System.Drawing.Color.Gray;
             this.btn_eliminar.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_eliminar.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.btn_eliminar.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
             this.btn_eliminar.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.btn_eliminar.StateNormal.Back.Color2 = System.Drawing.Color.White;
             this.btn_eliminar.StateNormal.Border.Color1 = System.Drawing.Color.Black;
@@ -189,11 +329,13 @@
             this.btn_modificar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modificar.StateDisabled.Back.Color1 = System.Drawing.Color.White;
             this.btn_modificar.StateDisabled.Back.Color2 = System.Drawing.Color.White;
-            this.btn_modificar.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
-            this.btn_modificar.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
+            this.btn_modificar.StateDisabled.Border.Color1 = System.Drawing.Color.Gray;
+            this.btn_modificar.StateDisabled.Border.Color2 = System.Drawing.Color.Gray;
             this.btn_modificar.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_modificar.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.btn_modificar.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
             this.btn_modificar.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.btn_modificar.StateNormal.Back.Color2 = System.Drawing.Color.White;
             this.btn_modificar.StateNormal.Border.Color1 = System.Drawing.Color.Black;
@@ -245,11 +387,13 @@
             this.btn_agregar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_agregar.StateDisabled.Back.Color1 = System.Drawing.Color.White;
             this.btn_agregar.StateDisabled.Back.Color2 = System.Drawing.Color.White;
-            this.btn_agregar.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
-            this.btn_agregar.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
+            this.btn_agregar.StateDisabled.Border.Color1 = System.Drawing.Color.Gray;
+            this.btn_agregar.StateDisabled.Border.Color2 = System.Drawing.Color.Gray;
             this.btn_agregar.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_agregar.StateDisabled.Content.ShortText.Color1 = System.Drawing.Color.Gray;
+            this.btn_agregar.StateDisabled.Content.ShortText.Color2 = System.Drawing.Color.Gray;
             this.btn_agregar.StateNormal.Back.Color1 = System.Drawing.Color.White;
             this.btn_agregar.StateNormal.Back.Color2 = System.Drawing.Color.White;
             this.btn_agregar.StateNormal.Border.Color1 = System.Drawing.Color.Black;
@@ -283,7 +427,7 @@
             this.panel_agregar.Controls.Add(this.kryptonButton1);
             this.panel_agregar.Location = new System.Drawing.Point(14, 43);
             this.panel_agregar.Name = "panel_agregar";
-            this.panel_agregar.Size = new System.Drawing.Size(75, 36);
+            this.panel_agregar.Size = new System.Drawing.Size(303, 36);
             this.panel_agregar.TabIndex = 18;
             // 
             // kryptonButton3
@@ -488,6 +632,7 @@
             // 
             // panel_conten
             // 
+            this.panel_conten.Controls.Add(this.inicio_sesion_panel);
             this.panel_conten.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_conten.Location = new System.Drawing.Point(0, 82);
             this.panel_conten.Name = "panel_conten";
@@ -495,126 +640,201 @@
             this.panel_conten.TabIndex = 19;
             this.panel_conten.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_conten_Paint);
             // 
-            // panel_modificar
+            // inicio_sesion_panel
             // 
-            this.panel_modificar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel_modificar.Controls.Add(this.kryptonButton5);
-            this.panel_modificar.Controls.Add(this.kryptonButton6);
-            this.panel_modificar.Location = new System.Drawing.Point(116, 40);
-            this.panel_modificar.Name = "panel_modificar";
-            this.panel_modificar.Size = new System.Drawing.Size(183, 36);
-            this.panel_modificar.TabIndex = 22;
+            this.inicio_sesion_panel.Location = new System.Drawing.Point(352, 8);
+            this.inicio_sesion_panel.Name = "inicio_sesion_panel";
             // 
-            // kryptonButton5
+            // inicio_sesion_panel.Panel
             // 
-            this.kryptonButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton5.Location = new System.Drawing.Point(101, 3);
-            this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton5.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton5.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton5.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton5.Size = new System.Drawing.Size(75, 30);
-            this.kryptonButton5.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton5.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton5.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterRight;
-            this.kryptonButton5.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.inicio_sesion_panel.Panel.Controls.Add(this.pictureBox3);
+            this.inicio_sesion_panel.Panel.Controls.Add(this.pictureBox2);
+            this.inicio_sesion_panel.Panel.Controls.Add(this.tb_contra);
+            this.inicio_sesion_panel.Panel.Controls.Add(this.pictureBox1);
+            this.inicio_sesion_panel.Panel.Controls.Add(this.label1);
+            this.inicio_sesion_panel.Panel.Controls.Add(this.btn_ingresar);
+            this.inicio_sesion_panel.Panel.Controls.Add(this.tb_usuario);
+            this.inicio_sesion_panel.Panel.Controls.Add(this.lk_recuperar);
+            this.inicio_sesion_panel.Size = new System.Drawing.Size(325, 364);
+            this.inicio_sesion_panel.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.inicio_sesion_panel.StateCommon.Border.Color2 = System.Drawing.Color.Black;
+            this.inicio_sesion_panel.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateCommon.Border.Rounding = 5;
-            this.kryptonButton5.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton5.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, -1, -2);
-            this.kryptonButton5.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton5.StateDisabled.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton5.StateDisabled.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton5.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateNormal.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton5.StateNormal.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton5.StateNormal.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateNormal.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StatePressed.Back.Color1 = System.Drawing.Color.Silver;
-            this.kryptonButton5.StatePressed.Back.Color2 = System.Drawing.Color.Silver;
-            this.kryptonButton5.StatePressed.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton5.StatePressed.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton5.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.StateTracking.Back.Color1 = System.Drawing.Color.Silver;
-            this.kryptonButton5.StateTracking.Back.Color2 = System.Drawing.Color.Silver;
-            this.kryptonButton5.StateTracking.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateTracking.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton5.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton5.TabIndex = 20;
-            this.kryptonButton5.Values.Text = "Pieza";
-            this.kryptonButton5.Click += new System.EventHandler(this.kryptonButton5_Click);
+            this.inicio_sesion_panel.StateCommon.Border.Rounding = 5;
+            this.inicio_sesion_panel.TabIndex = 23;
             // 
-            // kryptonButton6
+            // pictureBox3
             // 
-            this.kryptonButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton6.Location = new System.Drawing.Point(3, 3);
-            this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton6.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton6.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton6.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton6.Size = new System.Drawing.Size(92, 30);
-            this.kryptonButton6.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton6.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton6.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterRight;
-            this.kryptonButton6.StateCommon.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateCommon.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.pictureBox3.Image = global::Cpresentacion1.Properties.Resources.acceso__2_;
+            this.pictureBox3.Location = new System.Drawing.Point(105, 55);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(112, 99);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Cpresentacion1.Properties.Resources.candado;
+            this.pictureBox2.Location = new System.Drawing.Point(17, 235);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // tb_contra
+            // 
+            this.tb_contra.Location = new System.Drawing.Point(44, 235);
+            this.tb_contra.MaximumSize = new System.Drawing.Size(260, 30);
+            this.tb_contra.MinimumSize = new System.Drawing.Size(200, 30);
+            this.tb_contra.Name = "tb_contra";
+            this.tb_contra.Size = new System.Drawing.Size(250, 30);
+            this.tb_contra.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.tb_contra.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.tb_contra.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.tb_contra.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton6.StateCommon.Border.Rounding = 5;
-            this.kryptonButton6.StateCommon.Content.LongText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton6.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, -1, -1, -2);
-            this.kryptonButton6.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton6.StateDisabled.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton6.StateDisabled.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton6.StateDisabled.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateDisabled.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.tb_contra.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.tb_contra.StateCommon.Border.Rounding = 5;
+            this.tb_contra.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tb_contra.StateCommon.Content.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_contra.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tb_contra.TabIndex = 20;
+            this.tb_contra.Text = "Contraseña";
+            this.tb_contra.WordWrap = false;
+            this.tb_contra.Enter += new System.EventHandler(this.tb_contra_Enter);
+            this.tb_contra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_contra_KeyPress);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cpresentacion1.Properties.Resources.persona;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 174);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(82, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(173, 26);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Ingreso al sistema";
+            // 
+            // btn_ingresar
+            // 
+            this.btn_ingresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ingresar.Location = new System.Drawing.Point(101, 309);
+            this.btn_ingresar.Name = "btn_ingresar";
+            this.btn_ingresar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.OverrideDefault.Border.Color1 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.OverrideDefault.Border.Color2 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton6.StateNormal.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton6.StateNormal.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton6.StateNormal.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateNormal.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btn_ingresar.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.OverrideFocus.Border.Color1 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.OverrideFocus.Border.Color2 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton6.StatePressed.Back.Color1 = System.Drawing.Color.Silver;
-            this.kryptonButton6.StatePressed.Back.Color2 = System.Drawing.Color.Silver;
-            this.kryptonButton6.StatePressed.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton6.StatePressed.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton6.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btn_ingresar.Size = new System.Drawing.Size(116, 34);
+            this.btn_ingresar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.StateCommon.Back.ColorAlign = ComponentFactory.Krypton.Toolkit.PaletteRectangleAlign.Local;
+            this.btn_ingresar.StateCommon.Back.ColorAngle = 45F;
+            this.btn_ingresar.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btn_ingresar.StateCommon.Border.Color1 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StateCommon.Border.Color2 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton6.StateTracking.Back.Color1 = System.Drawing.Color.Silver;
-            this.kryptonButton6.StateTracking.Back.Color2 = System.Drawing.Color.Silver;
-            this.kryptonButton6.StateTracking.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateTracking.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonButton6.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.btn_ingresar.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btn_ingresar.StateCommon.Border.Rounding = 10;
+            this.btn_ingresar.StateCommon.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.btn_ingresar.StateCommon.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.btn_ingresar.StateCommon.Content.LongText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ingresar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_ingresar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_ingresar.StateCommon.Content.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Solid;
+            this.btn_ingresar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ingresar.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.StateDisabled.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.StateDisabled.Border.Color1 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StateDisabled.Border.Color2 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton6.TabIndex = 19;
-            this.kryptonButton6.Values.Text = "Proveedor";
+            this.btn_ingresar.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.StateNormal.Border.Color1 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StateNormal.Border.Color2 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_ingresar.StatePressed.Back.Color1 = System.Drawing.Color.Cyan;
+            this.btn_ingresar.StatePressed.Back.Color2 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StatePressed.Border.Color1 = System.Drawing.Color.Black;
+            this.btn_ingresar.StatePressed.Border.Color2 = System.Drawing.Color.Black;
+            this.btn_ingresar.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_ingresar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_ingresar.StateTracking.Border.Color1 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StateTracking.Border.Color2 = System.Drawing.Color.Aqua;
+            this.btn_ingresar.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btn_ingresar.TabIndex = 17;
+            this.btn_ingresar.Values.Text = "Ingresar";
+            this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
+            // 
+            // lk_recuperar
+            // 
+            this.lk_recuperar.AutoSize = true;
+            this.lk_recuperar.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lk_recuperar.LinkColor = System.Drawing.Color.DimGray;
+            this.lk_recuperar.Location = new System.Drawing.Point(181, 268);
+            this.lk_recuperar.Name = "lk_recuperar";
+            this.lk_recuperar.Size = new System.Drawing.Size(113, 13);
+            this.lk_recuperar.TabIndex = 19;
+            this.lk_recuperar.TabStop = true;
+            this.lk_recuperar.Text = "Recuperar contraseña";
+            // 
+            // tb_usuario
+            // 
+            this.tb_usuario.Location = new System.Drawing.Point(44, 174);
+            this.tb_usuario.MaximumSize = new System.Drawing.Size(270, 30);
+            this.tb_usuario.MinimumSize = new System.Drawing.Size(200, 30);
+            this.tb_usuario.Name = "tb_usuario";
+            this.tb_usuario.Size = new System.Drawing.Size(250, 30);
+            this.tb_usuario.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.tb_usuario.StateCommon.Border.Color1 = System.Drawing.Color.Black;
+            this.tb_usuario.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.tb_usuario.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.tb_usuario.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.tb_usuario.StateCommon.Border.Rounding = 5;
+            this.tb_usuario.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tb_usuario.StateCommon.Content.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_usuario.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.tb_usuario.TabIndex = 18;
+            this.tb_usuario.Text = "Correo electronico";
+            this.tb_usuario.WordWrap = false;
+            this.tb_usuario.Enter += new System.EventHandler(this.tb_usuario_Enter);
+            this.tb_usuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_usuario_KeyPress);
             // 
             // Form1
             // 
@@ -630,12 +850,21 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panelConten.ResumeLayout(false);
+            this.panel_modificar.ResumeLayout(false);
             this.panel_agregar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suministraBindingSource)).EndInit();
-            this.panel_modificar.ResumeLayout(false);
+            this.panel_conten.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.inicio_sesion_panel.Panel)).EndInit();
+            this.inicio_sesion_panel.Panel.ResumeLayout(false);
+            this.inicio_sesion_panel.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inicio_sesion_panel)).EndInit();
+            this.inicio_sesion_panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -662,6 +891,15 @@
         private System.Windows.Forms.Panel panel_modificar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroup inicio_sesion_panel;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_contra;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_ingresar;
+        private System.Windows.Forms.LinkLabel lk_recuperar;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_usuario;
     }
 }
 

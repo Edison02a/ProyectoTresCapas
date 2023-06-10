@@ -45,6 +45,8 @@
             this.txt_codbuscar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.lbl_idP = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.txt_cantidad = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cb_proveedor = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -62,8 +64,9 @@
             this.btn_sig = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label12 = new System.Windows.Forms.Label();
             this.provTableAdapter = new Cpresentacion1.ProveedorDataSet5TableAdapters.provTableAdapter();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbl_idP = new System.Windows.Forms.Label();
+            this.proveedorDataSet6 = new Cpresentacion1.ProveedorDataSet6();
+            this.provBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.provTableAdapter1 = new Cpresentacion1.ProveedorDataSet6TableAdapters.provTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet5)).BeginInit();
@@ -78,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_pieza)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -118,7 +123,7 @@
             this.direccionDataGridViewTextBoxColumn,
             this.ciudadDataGridViewTextBoxColumn,
             this.provinciaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.provBindingSource;
+            this.dataGridView1.DataSource = this.provBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(35, 116);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -289,6 +294,24 @@
             this.kryptonGroupBox1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonGroupBox1.TabIndex = 175;
             this.kryptonGroupBox1.Values.Heading = "Modificar\r\n";
+            // 
+            // lbl_idP
+            // 
+            this.lbl_idP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_idP.Location = new System.Drawing.Point(341, 59);
+            this.lbl_idP.Name = "lbl_idP";
+            this.lbl_idP.Size = new System.Drawing.Size(76, 15);
+            this.lbl_idP.TabIndex = 188;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(312, 62);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 15);
+            this.label8.TabIndex = 187;
+            this.label8.Text = "ID:";
             // 
             // txt_cantidad
             // 
@@ -539,23 +562,19 @@
             // 
             this.provTableAdapter.ClearBeforeFill = true;
             // 
-            // label8
+            // proveedorDataSet6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(312, 62);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 15);
-            this.label8.TabIndex = 187;
-            this.label8.Text = "ID:";
+            this.proveedorDataSet6.DataSetName = "ProveedorDataSet6";
+            this.proveedorDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // lbl_idP
+            // provBindingSource1
             // 
-            this.lbl_idP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_idP.Location = new System.Drawing.Point(341, 59);
-            this.lbl_idP.Name = "lbl_idP";
-            this.lbl_idP.Size = new System.Drawing.Size(76, 15);
-            this.lbl_idP.TabIndex = 188;
+            this.provBindingSource1.DataMember = "prov";
+            this.provBindingSource1.DataSource = this.proveedorDataSet6;
+            // 
+            // provTableAdapter1
+            // 
+            this.provTableAdapter1.ClearBeforeFill = true;
             // 
             // FormModificar
             // 
@@ -589,6 +608,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_pieza)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -630,5 +651,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label lbl_idP;
         private System.Windows.Forms.Label label8;
+        private ProveedorDataSet6 proveedorDataSet6;
+        private System.Windows.Forms.BindingSource provBindingSource1;
+        private ProveedorDataSet6TableAdapters.provTableAdapter provTableAdapter1;
     }
 }

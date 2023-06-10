@@ -19,10 +19,13 @@ namespace Cpresentacion1
             InitializeComponent();
         }
 
+ 
         private void FormModificar_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet6.prov' Puede moverla o quitarla según sea necesario.
+            this.provTableAdapter1.Fill(this.proveedorDataSet6.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet5.prov' Puede moverla o quitarla según sea necesario.
-            this.provTableAdapter.Fill(this.proveedorDataSet5.prov);
+          //  this.provTableAdapter.Fill(this.proveedorDataSet5.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet4.prov' Puede moverla o quitarla según sea necesario.
             //this.provTableAdapter1.Fill(this.proveedorDataSet3.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet3.prov' Puede moverla o quitarla según sea necesario.
@@ -148,7 +151,7 @@ namespace Cpresentacion1
             txt_centro.Text = piezaSeleccionada.CentroPieza;
             cb_categoria.SelectedItem = piezaSeleccionada.CategoriaPieza;
             txt_cantidad.Text = Convert.ToString( piezaSeleccionada.CantidadSuministrada);
-
+            int ci = Convert.ToInt32(txt_codbuscar.Text);
             Entidades proveedor = objOpera.BuscarId(ci);
             if (proveedor != null)
             {
