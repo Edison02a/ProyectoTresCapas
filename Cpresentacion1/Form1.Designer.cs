@@ -427,6 +427,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton6.TabIndex = 19;
             this.kryptonButton6.Values.Text = "Proveedor";
+            this.kryptonButton6.Click += new System.EventHandler(this.kryptonButton6_Click);
             // 
             // btn_eliminar
             // 

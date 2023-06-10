@@ -322,5 +322,11 @@ namespace Cpresentacion1
         {
             OpenchildForm(new FormEliminarCateogira());
         }
+
+        private void kryptonButton6_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormModificarProv());
+            panel_modificar.Visible=false;
+        }
     }
 }

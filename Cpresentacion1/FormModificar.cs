@@ -23,8 +23,10 @@ namespace Cpresentacion1
  
         private void FormModificar_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet7.prov' Puede moverla o quitarla según sea necesario.
+            this.provTableAdapter.Fill(this.proveedorDataSet7.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet2.prov' Puede moverla o quitarla según sea necesario.
-            this.provTableAdapter1.Fill(this.proveedorDataSet2.prov);
+            //this.provTableAdapter1.Fill(this.proveedorDataSet2.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet1.prov' Puede moverla o quitarla según sea necesario.
             //this.provTableAdapter.Fill(this.proveedorDataSet1.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet8.prov' Puede moverla o quitarla según sea necesario.
@@ -448,6 +450,11 @@ namespace Cpresentacion1
 
                 }
             }
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

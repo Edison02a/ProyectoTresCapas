@@ -76,11 +76,11 @@ namespace CLogica
             ObjDatos.ActualizarPieza(nombrePieza, colorPieza, centroPieza, categoriaPieza, idPieza);
         }
 
-        /*public void ActualizarProveedor(int ciProveedor, string nombreProveedor, string apellidoProveedor)
+        public void ActualizarProveedor(int ciProveedor, string nombreP, string apellido, string direccion, string provincia, string ciudad)
         {
             // Actualizar el proveedor en la base de datos
-            ObjDatos.ActualizarProveedor(ciProveedor, nombreProveedor, apellidoProveedor);
-        }*/
+            ObjDatos.ActualizarProveedor(ciProveedor, nombreP, apellido, direccion, provincia, ciudad);
+        }
 
         public void ActualizarSuministra(int idPieza, int ciProveedor, int cantidadSuministra)
         {

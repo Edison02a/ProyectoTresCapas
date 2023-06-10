@@ -199,7 +199,7 @@ namespace CDatos
         public Entidades BuscarId(int ciPr)
         {
             cBD.Abrir();
-            string cadena = "SELECT Pr.ci, Pr.nombreP, Pr.apellido FROM prov Pr WHERE Pr.ci =" + ciPr + "";
+            string cadena = "SELECT Pr.ci, Pr.nombreP, Pr.apellido, Pr.direccion, Pr.provincia, Pr.ciudad FROM prov Pr WHERE Pr.ci =" + ciPr + "";
             SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
             SqlDataAdapter adaptador = new SqlDataAdapter();
             SqlDataReader dataReader = comando.ExecuteReader();
@@ -210,22 +210,29 @@ namespace CDatos
                 {
                     CedulaProv = Convert.ToInt32(dataReader["ci"]),
                     NombreProv = Convert.ToString(dataReader["nombreP"]),
-                    ApellidoProv = Convert.ToString(dataReader["apellido"])
-
+                    ApellidoProv = Convert.ToString(dataReader["apellido"]),
+                    DireccionProv = Convert.ToString(dataReader["direccion"]),
+                    ProviciaProv = Convert.ToString(dataReader["provincia"]),
+                    CiudadProv = Convert.ToString(dataReader["ciudad"])
                 };
                 dataReader.Close();
                 cBD.Cerrar();
                 return objEnt;
+
             }
             else
             {
+                if (dataReader.Read())
+                {
+                    dataReader.Close();
+                }
+                dataReader.Close();
                 return null;
 
             }
 
 
         }
-
         public List<EntidadesPieza> ObtenerPiezasProveedor(int ciProveedor)
         {
             List<EntidadesPieza> listaPiezas = new List<EntidadesPieza>();
@@ -312,20 +319,22 @@ namespace CDatos
             cBD.Cerrar();
         }
 
-        /*public void ActualizarProveedor(int ciProveedor, string nombreProveedor, string apellidoProveedor)
+        public void ActualizarProveedor(int ciProveedor, string nombreP, string apellido, string direccion, string provincia, string ciudad)
         {
             cBD.Abrir();
-            string consulta = "UPDATE prov SET nombreP = @nombreProveedor, apellido = @apellidoProveedor WHERE ci = @ciProveedor";
+            string consulta = "UPDATE prov SET nombreP = @nombreP, apellido = @apellido, direccion =@direccion, provincia=@provincia, ciudad= @ciudad WHERE ci = @ciProveedor";
 
             SqlCommand comando = new SqlCommand(consulta, cBD.conectar);
-            comando.Parameters.AddWithValue("@nombreProveedor", nombreProveedor);
-            comando.Parameters.AddWithValue("@apellidoProveedor", apellidoProveedor);
+            comando.Parameters.AddWithValue("@nombreP", nombreP);
+            comando.Parameters.AddWithValue("@apellido", apellido);
             comando.Parameters.AddWithValue("@ciProveedor", ciProveedor);
+            comando.Parameters.AddWithValue("@direccion", direccion);
+            comando.Parameters.AddWithValue("@provincia", provincia);
+            comando.Parameters.AddWithValue("@ciudad", ciudad);
 
             comando.ExecuteNonQuery();
             cBD.Cerrar();
         }
-        */
         public void ActualizarSuministra(int idPieza, int ciProveedor, int cantidadSuministra)
         {
             cBD.Abrir();
