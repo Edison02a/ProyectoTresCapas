@@ -149,7 +149,6 @@ namespace Cpresentacion1
             cb_categoria.SelectedItem = piezaSeleccionada.CategoriaPieza;
             txt_cantidad.Text = Convert.ToString( piezaSeleccionada.CantidadSuministrada);
 
-            int ci = Convert.ToInt32(txt_codbuscar.Text);
             Entidades proveedor = objOpera.BuscarId(ci);
             if (proveedor != null)
             {
