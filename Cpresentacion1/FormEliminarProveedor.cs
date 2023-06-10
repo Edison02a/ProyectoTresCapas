@@ -54,7 +54,7 @@ namespace Cpresentacion1
                 else
                 {
                     MessageBox.Show("No se encontro un proveedor con esa cédula", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    txt_codbuscar.Focus();
                 }
 
             }
@@ -83,6 +83,15 @@ namespace Cpresentacion1
             {
                 objOp.EliminarProveedor(int.Parse(txt_codbuscar.Text));
                 MessageBox.Show("Se eliminaron correctamente los datos", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_cedula.Clear();
+                tb_apellido.Clear();
+                tb_nombre.Clear();
+                tb_direccion.Clear();
+                cmbx_ciudad.Clear();
+                cmbx_povincia.Clear();
+                txt_codbuscar.Clear();
+                txt_codbuscar.Focus();
+                btn_eliminar.Enabled = false;
             }
             else if (result == DialogResult.No)
             {

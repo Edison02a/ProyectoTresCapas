@@ -69,6 +69,12 @@ namespace Cpresentacion1
             {
                 objOp.EliminarCategoria(catego);
                 MessageBox.Show("Se eliminaron correctamente los datos", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tb_nombre.Clear();
+                tb_precio.Clear();
+                tb_nombre.Clear();
+                txt_codbuscar.Clear();
+                txt_codbuscar.Focus();
+                btn_eliminar.Enabled = false;
             }
             else if (result == DialogResult.No)
             {

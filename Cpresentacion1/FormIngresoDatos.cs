@@ -61,6 +61,7 @@ namespace Cpresentacion1
                     if (ex.Message.Contains("PRIMARY KEY"))
                     {
                         MessageBox.Show("Error: Ya existe un proveedor con esa cédula", "Error de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        tb_cedula.Focus();
                     }
                     else
                     {
