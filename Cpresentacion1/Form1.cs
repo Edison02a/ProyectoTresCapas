@@ -45,10 +45,10 @@ namespace Cpresentacion1
             }*/
 
             List<EntidadesPieza> DatosPieza = objOpera.Lista2();
-            foreach (EntidadesPieza item in DatosPieza)
+            /*foreach (EntidadesPieza item in DatosPieza)
             {
                 //ComboBox2.Items.Add(item.NombrePieza);
-            }
+            }*/
 
             List<EntidadesSuministra> DatosSuministra = objOpera.Lista3();
             /*foreach (EntidadesSuministra item in DatosSuministra)
@@ -58,10 +58,10 @@ namespace Cpresentacion1
 
 
             List<EntidadesCategoria> datosCategoria = objOpera.Lista4();
-            foreach (EntidadesCategoria item in datosCategoria)
+            /*foreach (EntidadesCategoria item in datosCategoria)
             {
                 //ComboBox4.Items.Add(item.CategCategoria);
-            }
+            }*/
 
             panel_agregar.Visible = false;
             btn_agregar.Enabled = false;

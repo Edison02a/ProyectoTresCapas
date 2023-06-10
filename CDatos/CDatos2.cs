@@ -41,6 +41,7 @@ namespace CDatos
 
 
                 }
+                sqlreader.Close();
                 return DatosProveedor;
                
             }
@@ -79,6 +80,7 @@ namespace CDatos
 
 
                 }
+                sqlreader.Close();
                 return DatosPieza;
             }
             catch
@@ -111,6 +113,7 @@ namespace CDatos
 
 
                 }
+                sqlreader.Close();
                 return DatosSuministra;
             }
             catch
@@ -144,6 +147,7 @@ namespace CDatos
                     
 
                 }
+                sqlreader.Close();
                 return datosCategorias;
                 
             }
@@ -195,58 +199,79 @@ namespace CDatos
         public Entidades BuscarId(int ciPr)
         {
             cBD.Abrir();
-            string consulta = "SELECT Pr.nombreP, Pr.apellido FROM prov Pr WHERE Pr.ci = @ciProv";
-
-            SqlCommand cmd = new SqlCommand(consulta, cBD.conectar);
-            cmd.Parameters.AddWithValue("@ciProv", ciPr);
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            Entidades proveedor = null;
-
-            if (dr.Read())
+            string cadena = "SELECT Pr.ci, Pr.nombreP, Pr.apellido FROM prov Pr WHERE Pr.ci =" + ciPr + "";
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            SqlDataReader dataReader = comando.ExecuteReader();
+            if (dataReader.Read())
             {
-                proveedor = new Entidades();
-                proveedor.NombreProv = dr["nombreP"].ToString();
-                proveedor.ApellidoProv = dr["apellido"].ToString();
-                dr.Close();
+
+                Entidades objEnt = new Entidades()
+                {
+                    CedulaProv = Convert.ToInt32(dataReader["ci"]),
+                    NombreProv = Convert.ToString(dataReader["nombreP"]),
+                    ApellidoProv = Convert.ToString(dataReader["apellido"])
+
+                };
+                dataReader.Close();
+                cBD.Cerrar();
+                return objEnt;
             }
-            
-            cBD.Cerrar();
-            return proveedor;
+            else
+            {
+                return null;
+
+            }
+
+
         }
 
         public List<EntidadesPieza> ObtenerPiezasProveedor(int ciProveedor)
         {
-
-            cBD.Abrir();
-            string consulta = "SELECT P.id, P.nombre, P.color, P.centro, P.categ, S.cantidad FROM pieza P INNER JOIN suministra S ON P.id=S.id_pieza WHERE S.id_proveedor = @ciProv";
-
-            SqlCommand cmd = new SqlCommand(consulta, cBD.conectar);
-            cmd.Parameters.AddWithValue("@ciProv", ciProveedor);
-
-            SqlDataReader dr = cmd.ExecuteReader();
             List<EntidadesPieza> listaPiezas = new List<EntidadesPieza>();
-            if (dr.Read())
+
+            try
             {
-                while (dr.Read())
+                cBD.Abrir();
+                string cadena = "SELECT P.id, P.nombre, P.color, P.centro, P.categ, S.cantidad FROM pieza P INNER JOIN suministra S ON P.id=S.id_pieza WHERE S.id_proveedor =" + ciProveedor + "";
+                SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+                SqlDataReader dataReader = comando.ExecuteReader();
+
+                while (dataReader.Read())
                 {
-                    EntidadesPieza pieza = new EntidadesPieza();
-                    pieza.IdPieza = Convert.ToInt32(dr["id"]);
-                    pieza.NombrePieza = dr["nombre"].ToString();
-                    pieza.ColorPieza = dr["color"].ToString();
-                    pieza.CentroPieza = dr["centro"].ToString();
-                    pieza.CategoriaPieza = dr["categ"].ToString();
-                    pieza.CantidadSuministrada = Convert.ToInt32(dr["cantidad"]);
+                    EntidadesPieza pieza = new EntidadesPieza()
+                    {
+                        IdPieza = Convert.ToInt32(dataReader["id"]),
+                        NombrePieza = Convert.ToString(dataReader["nombre"]),
+                        ColorPieza = Convert.ToString(dataReader["color"]),
+                        CentroPieza = Convert.ToString(dataReader["centro"]),
+                        CategoriaPieza = Convert.ToString(dataReader["categ"]),
+                        CantidadSuministrada = Convert.ToInt32(dataReader["cantidad"])
+                    };
 
                     listaPiezas.Add(pieza);
                 }
-                dr.Close();
+                if(dataReader.Read())
+                {
+                    dataReader.Close();
+                }
+                dataReader.Close();
+                // Cerrar el SqlDataReader después de recorrer los datos
             }
-            cBD.Cerrar();
+            catch (Exception ex)
+            {
+                // Manejar la excepción apropiadamente
+                Console.WriteLine("Error al obtener las piezas del proveedor: " + ex.Message);
+            }
+            finally
+            {
+                cBD.Cerrar();
+            }
+
             return listaPiezas;
         }
 
-        public EntidadesSuministra BuscarIdS(int ciPr)
+        /*public EntidadesSuministra BuscarIdS(int ciPr)
         {
             cBD.Abrir();
             string consulta = "SELECT cantidad " +
@@ -268,78 +293,51 @@ namespace CDatos
             
             cBD.Cerrar();
             return suministro;
-        }
+        }*/
 
 
-        public void ActualizarPieza(string nombrePieza, string colorPieza, string centroPieza, string categoriaPieza, int IdPieza, int ciProveedor, int cantidadSuministra)
+        public void ActualizarPieza(string nombrePieza, string colorPieza, string centroPieza, string categoriaPieza, int idPieza)
         {
             cBD.Abrir();
-            string consulta = "UPDATE pieza SET color = @color, centro = @centro, categ = @categoria WHERE nombre = @nombreP";
-            SqlCommand cmd = new SqlCommand(consulta, cBD.conectar);
-            cmd.Parameters.AddWithValue("@color", colorPieza);
-            cmd.Parameters.AddWithValue("@centro", centroPieza);
-            cmd.Parameters.AddWithValue("@categoria", categoriaPieza);
-            cmd.Parameters.AddWithValue("@nombreP", nombrePieza);
+            string consulta = "UPDATE pieza SET nombre = @nombrePieza, color = @colorPieza, centro = @centroPieza, categ = @categoriaPieza WHERE id = @idPieza";
 
-            int filasAfectadas = cmd.ExecuteNonQuery();
+            SqlCommand comando = new SqlCommand(consulta, cBD.conectar);
+            comando.Parameters.AddWithValue("@nombrePieza", nombrePieza);
+            comando.Parameters.AddWithValue("@colorPieza", colorPieza);
+            comando.Parameters.AddWithValue("@centroPieza", centroPieza);
+            comando.Parameters.AddWithValue("@categoriaPieza", categoriaPieza);
+            comando.Parameters.AddWithValue("@idPieza", idPieza);
 
-            if (filasAfectadas > 0)
-            {
-                // Actualizar la tabla suministra
-
-                consulta = "UPDATE suministra SET cantidad = @cantidad WHERE id_pieza = @idPieza";
-                cmd = new SqlCommand(consulta, cBD.conectar);
-                cmd.Parameters.AddWithValue("@cantidad", cantidadSuministra);
-                cmd.Parameters.AddWithValue("@idPieza", IdPieza);
-                cmd.ExecuteNonQuery();
-
-                //MessageBox.Show("Los datos se actualizaron correctamente.");
-            }
-            else
-            {
-                //MessageBox.Show("No se pudo actualizar la pieza.");
-            }
-
-            cBD.Cerrar();
-        }
-
-        /*
-        //eliminar
-        public void EliminarV(int ide)
-        {
-            cBD.Abrir();
-            string sql = "delete from Tabla_datos where IdEstu='" + ide + "'";
-            SqlCommand comando = new SqlCommand(sql, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();
         }
 
-        public Entidades buscarPorID(int ides)
+        /*public void ActualizarProveedor(int ciProveedor, string nombreProveedor, string apellidoProveedor)
         {
             cBD.Abrir();
-            string sql = "SELECT FROM Tabla_datos where IdEstu='" + ides + "'";
-            SqlCommand comando = new SqlCommand(sql, cBD.conectar);
-            //comando.ExecuteNonQuery();
+            string consulta = "UPDATE prov SET nombreP = @nombreProveedor, apellido = @apellidoProveedor WHERE ci = @ciProveedor";
 
-            SqlDataReader dataReader = comando.ExecuteReader();
+            SqlCommand comando = new SqlCommand(consulta, cBD.conectar);
+            comando.Parameters.AddWithValue("@nombreProveedor", nombreProveedor);
+            comando.Parameters.AddWithValue("@apellidoProveedor", apellidoProveedor);
+            comando.Parameters.AddWithValue("@ciProveedor", ciProveedor);
 
-            if (dataReader.Read())
-            {
-                Entidades obje = new Entidades
-                {
-                    idEst = Convert.ToInt32(dataReader["IdEstu"]),
-                    NombreEst = Convert.ToString(dataReader["Nombre"]),
-                    ApellidoEst = Convert.ToString(dataReader["Apellido"])
-                };
-                dataReader.Close();
-                return obje;
-            }
-            else
-            {
-                return null;
-            }
-
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
         }
         */
+        public void ActualizarSuministra(int idPieza, int ciProveedor, int cantidadSuministra)
+        {
+            cBD.Abrir();
+            string consulta = "UPDATE suministra SET cantidad = @cantidadSuministra,id_proveedor=@ciProveedor WHERE id_pieza = @idPieza";
+
+            SqlCommand comando = new SqlCommand(consulta, cBD.conectar);
+            comando.Parameters.AddWithValue("@cantidadSuministra", cantidadSuministra);
+            comando.Parameters.AddWithValue("@idPieza", idPieza);
+            comando.Parameters.AddWithValue("@ciProveedor", ciProveedor);
+
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
+        }
     }
 }

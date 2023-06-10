@@ -65,14 +65,28 @@ namespace CLogica
             return ObjDatos.ObtenerPiezasProveedor(ciProveedor);
         }
 
-        public EntidadesSuministra BuscarIdS(int ciP)
+        /*public EntidadesSuministra BuscarIdS(int ciP)
         {
             return ObjDatos.BuscarIdS(ciP);
 
-        }
-        public void ActualizarPieza(string nombrePieza, string colorPieza, string centroPieza, string categoriaPieza, int IdPieza, int ciProveedor, int cantidadSuministra)
+        }*/
+        public void ActualizarPieza(string nombrePieza, string colorPieza, string centroPieza, string categoriaPieza, int idPieza)
         {
-            ObjDatos.ActualizarPieza(nombrePieza, colorPieza, centroPieza, categoriaPieza,IdPieza, ciProveedor, cantidadSuministra);
+            // Actualizar la pieza en la base de datos
+            ObjDatos.ActualizarPieza(nombrePieza, colorPieza, centroPieza, categoriaPieza, idPieza);
         }
+
+        /*public void ActualizarProveedor(int ciProveedor, string nombreProveedor, string apellidoProveedor)
+        {
+            // Actualizar el proveedor en la base de datos
+            ObjDatos.ActualizarProveedor(ciProveedor, nombreProveedor, apellidoProveedor);
+        }*/
+
+        public void ActualizarSuministra(int idPieza, int ciProveedor, int cantidadSuministra)
+        {
+            // Actualizar la cantidad suministrada en la base de datos
+            ObjDatos.ActualizarSuministra(idPieza, ciProveedor, cantidadSuministra);
+        }
+
     }
 }

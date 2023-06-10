@@ -22,19 +22,13 @@ namespace Cpresentacion1
  
         private void FormModificar_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet6.prov' Puede moverla o quitarla según sea necesario.
-            this.provTableAdapter1.Fill(this.proveedorDataSet6.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet5.prov' Puede moverla o quitarla según sea necesario.
-          //  this.provTableAdapter.Fill(this.proveedorDataSet5.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet4.prov' Puede moverla o quitarla según sea necesario.
-            //this.provTableAdapter1.Fill(this.proveedorDataSet3.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet3.prov' Puede moverla o quitarla según sea necesario.
-            //this.provTableAdapter1.Fill(this.proveedorDataSet3.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet2.prov' Puede moverla o quitarla según sea necesario.
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet7.prov' Puede moverla o quitarla según sea necesario.
+            this.provTableAdapter.Fill(this.proveedorDataSet7.prov);
+
             List<Entidades> DatosProveedor = objOpera.Lista();
             foreach (Entidades item in DatosProveedor)
             {
-                cb_proveedor.Items.Add(item.NombreProv + " " + item.ApellidoProv);
+                cb_proveedor.Items.Add(item.NombreProv + " " + item.ApellidoProv + " "+item.CedulaProv);
             }
 
 
@@ -155,7 +149,7 @@ namespace Cpresentacion1
             Entidades proveedor = objOpera.BuscarId(ci);
             if (proveedor != null)
             {
-                string proveedorConcatenado = proveedor.NombreProv + " " + proveedor.ApellidoProv;
+                string proveedorConcatenado = proveedor.NombreProv + " " + proveedor.ApellidoProv + " " +proveedor.CedulaProv;
                 cb_proveedor.SelectedItem = proveedorConcatenado;
             }
 
@@ -190,11 +184,25 @@ namespace Cpresentacion1
                 string colorPieza = txt_color.Text;
                 string centroPieza = txt_centro.Text;
                 string categoriaPieza = cb_categoria.SelectedItem.ToString();
-                int idPieza= Convert.ToInt32(lbl_idP.Text);
-                int ciProveedor = Convert.ToInt32(txt_codbuscar.Text);
+                int idPieza = Convert.ToInt32(lbl_idP.Text);
+                //int ciProveedor1 = Convert.ToInt32(txt_codbuscar.Text);
                 int cantidadSuministra = Convert.ToInt32(txt_cantidad.Text);
 
-                objOpera.ActualizarPieza(nombrePieza, colorPieza, centroPieza, categoriaPieza, idPieza ,ciProveedor, cantidadSuministra);
+                // Obtener el proveedor seleccionado del combo box
+                
+                string proveedorSeleccionado = cb_proveedor.SelectedItem.ToString();
+                string[] partesProveedor = proveedorSeleccionado.Split(' ');
+                string nombreProveedor = partesProveedor[0];
+                string apellidoProveedor = partesProveedor[1];
+                string ciProveedor= partesProveedor[2];
+                int ciProveedor1= Convert.ToInt32(ciProveedor);
+
+                // Llamar al método para actualizar la pieza y el proveedor en la base de datos
+                objOpera.ActualizarPieza(nombrePieza, colorPieza, centroPieza, categoriaPieza, idPieza);
+                //objOpera.ActualizarProveedor(ciProveedor, nombreProveedor, apellidoProveedor);
+                objOpera.ActualizarSuministra(idPieza, ciProveedor1, cantidadSuministra);
+
+                MessageBox.Show("Datos actualizados correctamente", "Éxito");
             }
             catch (Exception ex)
             {
