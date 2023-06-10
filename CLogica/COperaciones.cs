@@ -88,5 +88,17 @@ namespace CLogica
             ObjDatos.ActualizarSuministra(idPieza, ciProveedor, cantidadSuministra);
         }
 
+        public Entidades BuscarCedula(int ciPro)
+        {
+
+            return ObjDatos.BuscaCedula(ciPro);
+        }
+
+        public void EliminarProveedor(int CiPro)
+        {
+
+            ObjDatos.EliminarProvedeor(CiPro);
+        }
+
     }
 }

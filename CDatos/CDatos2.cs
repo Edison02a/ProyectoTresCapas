@@ -339,5 +339,50 @@ namespace CDatos
             comando.ExecuteNonQuery();
             cBD.Cerrar();
         }
+
+        //eliminar 
+
+        public Entidades BuscaCedula(int ciPr)
+        {
+            cBD.Abrir();
+            string cadena = "SELECT * FROM prov Pr WHERE Pr.ci =" + ciPr + "";
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            SqlDataReader dataReader = comando.ExecuteReader();
+            if (dataReader.Read())
+            {
+
+                Entidades objEnt = new Entidades()
+                {
+                    CedulaProv = Convert.ToInt32(dataReader["ci"]),
+                    NombreProv = Convert.ToString(dataReader["nombreP"]),
+                    ApellidoProv = Convert.ToString(dataReader["apellido"]),
+                    DireccionProv = Convert.ToString(dataReader["direccion"]),
+                    ProviciaProv = Convert.ToString(dataReader["provincia"]),
+                    CiudadProv = Convert.ToString(dataReader["ciudad"])
+
+                };
+                dataReader.Close();
+                cBD.Cerrar();
+                return objEnt;
+            }
+            else
+            {
+                return null;
+            }
+
+
+        }
+
+        public void EliminarProvedeor(int ci)
+        {
+            cBD.Abrir();
+            string cadena = "DELETE from prov where ci = " + ci + "";
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
+
+        }
+
     }
 }

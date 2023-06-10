@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Design">
       <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEliminarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEliminarProveedor.Designer.cs">
+      <DependentUpon>FormEliminarProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="FormIngresoCategoria.cs">
       <SubType>Form</SubType>
@@ -143,8 +149,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet9.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEliminarProveedor.resx">
+      <DependentUpon>FormEliminarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIngresoCategoria.resx">
       <DependentUpon>FormIngresoCategoria.cs</DependentUpon>
@@ -279,6 +298,28 @@
     </None>
     <None Include="ProveedorDataSet7.xss">
       <DependentUpon>ProveedorDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet8.xsc">
+      <DependentUpon>ProveedorDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet8.xss">
+      <DependentUpon>ProveedorDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet9.xsc">
+      <DependentUpon>ProveedorDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet9.xss">
+      <DependentUpon>ProveedorDataSet9.xsd</DependentUpon>
     </None>
     <None Include="Resources\acceso %282%29.png" />
   </ItemGroup>

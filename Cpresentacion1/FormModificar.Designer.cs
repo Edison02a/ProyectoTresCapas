@@ -32,6 +32,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrePDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.proveedorDataSet7 = new Cpresentacion1.ProveedorDataSet7();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.btn_buscar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txt_codbuscar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -55,16 +63,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_sig = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label12 = new System.Windows.Forms.Label();
-            this.proveedorDataSet7 = new Cpresentacion1.ProveedorDataSet7();
-            this.provBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.provTableAdapter = new Cpresentacion1.ProveedorDataSet7TableAdapters.provTableAdapter();
-            this.ciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombrePDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciudadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.provinciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedorDataSet8 = new Cpresentacion1.ProveedorDataSet8();
+            this.provBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.provTableAdapter1 = new Cpresentacion1.ProveedorDataSet8TableAdapters.provTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
@@ -76,8 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_pieza)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -118,7 +123,7 @@
             this.direccionDataGridViewTextBoxColumn,
             this.ciudadDataGridViewTextBoxColumn,
             this.provinciaDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.provBindingSource;
+            this.dataGridView1.DataSource = this.provBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(35, 116);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -126,6 +131,52 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(365, 165);
             this.dataGridView1.TabIndex = 177;
+            // 
+            // ciDataGridViewTextBoxColumn
+            // 
+            this.ciDataGridViewTextBoxColumn.DataPropertyName = "ci";
+            this.ciDataGridViewTextBoxColumn.HeaderText = "ci";
+            this.ciDataGridViewTextBoxColumn.Name = "ciDataGridViewTextBoxColumn";
+            // 
+            // nombrePDataGridViewTextBoxColumn
+            // 
+            this.nombrePDataGridViewTextBoxColumn.DataPropertyName = "nombreP";
+            this.nombrePDataGridViewTextBoxColumn.HeaderText = "nombreP";
+            this.nombrePDataGridViewTextBoxColumn.Name = "nombrePDataGridViewTextBoxColumn";
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            // 
+            // ciudadDataGridViewTextBoxColumn
+            // 
+            this.ciudadDataGridViewTextBoxColumn.DataPropertyName = "ciudad";
+            this.ciudadDataGridViewTextBoxColumn.HeaderText = "ciudad";
+            this.ciudadDataGridViewTextBoxColumn.Name = "ciudadDataGridViewTextBoxColumn";
+            // 
+            // provinciaDataGridViewTextBoxColumn
+            // 
+            this.provinciaDataGridViewTextBoxColumn.DataPropertyName = "provincia";
+            this.provinciaDataGridViewTextBoxColumn.HeaderText = "provincia";
+            this.provinciaDataGridViewTextBoxColumn.Name = "provinciaDataGridViewTextBoxColumn";
+            // 
+            // provBindingSource
+            // 
+            this.provBindingSource.DataMember = "prov";
+            this.provBindingSource.DataSource = this.proveedorDataSet7;
+            // 
+            // proveedorDataSet7
+            // 
+            this.proveedorDataSet7.DataSetName = "ProveedorDataSet7";
+            this.proveedorDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // kryptonGroupBox2
             // 
@@ -507,55 +558,23 @@
             this.label12.TabIndex = 173;
             this.label12.Text = "Proveedores";
             // 
-            // proveedorDataSet7
-            // 
-            this.proveedorDataSet7.DataSetName = "ProveedorDataSet7";
-            this.proveedorDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // provBindingSource
-            // 
-            this.provBindingSource.DataMember = "prov";
-            this.provBindingSource.DataSource = this.proveedorDataSet7;
-            // 
             // provTableAdapter
             // 
             this.provTableAdapter.ClearBeforeFill = true;
             // 
-            // ciDataGridViewTextBoxColumn
+            // proveedorDataSet8
             // 
-            this.ciDataGridViewTextBoxColumn.DataPropertyName = "ci";
-            this.ciDataGridViewTextBoxColumn.HeaderText = "ci";
-            this.ciDataGridViewTextBoxColumn.Name = "ciDataGridViewTextBoxColumn";
+            this.proveedorDataSet8.DataSetName = "ProveedorDataSet8";
+            this.proveedorDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nombrePDataGridViewTextBoxColumn
+            // provBindingSource1
             // 
-            this.nombrePDataGridViewTextBoxColumn.DataPropertyName = "nombreP";
-            this.nombrePDataGridViewTextBoxColumn.HeaderText = "nombreP";
-            this.nombrePDataGridViewTextBoxColumn.Name = "nombrePDataGridViewTextBoxColumn";
+            this.provBindingSource1.DataMember = "prov";
+            this.provBindingSource1.DataSource = this.proveedorDataSet8;
             // 
-            // apellidoDataGridViewTextBoxColumn
+            // provTableAdapter1
             // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            // 
-            // ciudadDataGridViewTextBoxColumn
-            // 
-            this.ciudadDataGridViewTextBoxColumn.DataPropertyName = "ciudad";
-            this.ciudadDataGridViewTextBoxColumn.HeaderText = "ciudad";
-            this.ciudadDataGridViewTextBoxColumn.Name = "ciudadDataGridViewTextBoxColumn";
-            // 
-            // provinciaDataGridViewTextBoxColumn
-            // 
-            this.provinciaDataGridViewTextBoxColumn.DataPropertyName = "provincia";
-            this.provinciaDataGridViewTextBoxColumn.HeaderText = "provincia";
-            this.provinciaDataGridViewTextBoxColumn.Name = "provinciaDataGridViewTextBoxColumn";
+            this.provTableAdapter1.ClearBeforeFill = true;
             // 
             // FormModificar
             // 
@@ -574,6 +593,8 @@
             this.Text = "FormModificar";
             this.Load += new System.EventHandler(this.FormModificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             this.kryptonGroupBox2.Panel.PerformLayout();
@@ -587,8 +608,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_pieza)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -630,5 +651,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ciudadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn provinciaDataGridViewTextBoxColumn;
+        private ProveedorDataSet8 proveedorDataSet8;
+        private System.Windows.Forms.BindingSource provBindingSource1;
+        private ProveedorDataSet8TableAdapters.provTableAdapter provTableAdapter1;
     }
 }

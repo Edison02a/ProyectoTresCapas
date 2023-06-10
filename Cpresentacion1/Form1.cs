@@ -294,5 +294,10 @@ namespace Cpresentacion1
                 }
             }
         }
+
+        private void kryptonButton8_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormEliminarProveedor());
+        }
     }
 }
