@@ -384,5 +384,43 @@ namespace CDatos
 
         }
 
+        //eliminar categoria
+
+        public EntidadesCategoria BuscarCategorias(string categoria)
+        {
+            cBD.Abrir();
+            string cadena = "SELECT * FROM categoria  WHERE categ = @categoria" ;
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            comando.Parameters.AddWithValue("@categoria", categoria);
+            SqlDataReader dataReader = comando.ExecuteReader();
+            if (dataReader.Read())
+            {
+
+                EntidadesCategoria objEnt = new EntidadesCategoria()
+                {
+                    CategCategoria = Convert.ToString(dataReader["categ"]),
+                    PrecioCategoria = Convert.ToString(dataReader["precio"]),
+                };
+                dataReader.Close();
+                cBD.Cerrar();
+                return objEnt;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public void EliminarCategoria(string ci)
+        {
+            cBD.Abrir();
+            string cadena = "DELETE from categoria where categ =  @categoria";
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            comando.Parameters.AddWithValue("@categoria", ci);
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
+
+        }
+
     }
 }

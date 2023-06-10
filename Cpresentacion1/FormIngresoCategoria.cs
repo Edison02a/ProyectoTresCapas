@@ -119,7 +119,14 @@ namespace Cpresentacion1
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                if (ex.Message.Contains("UNIQUE"))
+                {
+                    MessageBox.Show("Error: Ya existe una categoría con ese nombre", "Error de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Erro: " + ex.Message, "Error de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
 

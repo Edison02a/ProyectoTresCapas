@@ -100,5 +100,16 @@ namespace CLogica
             ObjDatos.EliminarProvedeor(CiPro);
         }
 
+        public EntidadesCategoria BuscarCategoria(string NombreCategoria)
+        {
+
+            return ObjDatos.BuscarCategorias(NombreCategoria);
+        }
+
+        public void EliminarCategoria(string categ)
+        {
+
+            ObjDatos.EliminarCategoria(categ);
+        }
     }
 }

@@ -22,8 +22,12 @@ namespace Cpresentacion1
 
         private void FormEliminarProveedor_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet5.prov' Puede moverla o quitarla según sea necesario.
+            this.provTableAdapter2.Fill(this.proveedorDataSet5.prov);
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet3.prov' Puede moverla o quitarla según sea necesario.
+            //this.provTableAdapter1.Fill(this.proveedorDataSet3.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet9.prov' Puede moverla o quitarla según sea necesario.
-            this.provTableAdapter.Fill(this.proveedorDataSet9.prov);
+            //this.provTableAdapter.Fill(this.proveedorDataSet9.prov);
 
         }
 
@@ -45,15 +49,27 @@ namespace Cpresentacion1
                     tb_direccion.Text = objEntidades.DireccionProv;
                     cmbx_ciudad.Text = objEntidades.CiudadProv;
                     cmbx_povincia.Text = objEntidades.ProviciaProv;
+                    btn_eliminar.Enabled = true;
                 }
                 else
+                {
+                    MessageBox.Show("No se encontro un proveedor con esa cédula", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    MessageBox.Show("El proveedor no existe");
+                }
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format("Error: {0}", ex.Message), "Error inesperado");
+                if (txt_codbuscar.TextLength < 1)
+                {
+                    MessageBox.Show("El campo esta vacío", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show(string.Format("Error: {0}", ex.Message), "Error inesperado");
+
+                }
             }
 
         }
@@ -61,7 +77,27 @@ namespace Cpresentacion1
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            objOp.EliminarProveedor(int.Parse(txt_codbuscar.Text));
+            DialogResult result = MessageBox.Show("Desea eliminar el proveedor " + tb_nombre.Text + " " + tb_apellido.Text + " " + tb_cedula.Text + "? \nLas piezas de este proveedor seran eliminadas", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                objOp.EliminarProveedor(int.Parse(txt_codbuscar.Text));
+                MessageBox.Show("Se eliminaron correctamente los datos", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (result == DialogResult.No)
+            {
+
+            }
+        }
+
+        private void kryptonGroup1_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.kryptonPalette1 = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.panelConten = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_eliminar = new System.Windows.Forms.Panel();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -64,7 +64,7 @@
             this.lk_recuperar = new System.Windows.Forms.LinkLabel();
             this.panel_conten = new System.Windows.Forms.Panel();
             this.panelConten.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel_eliminar.SuspendLayout();
             this.panel_modificar.SuspendLayout();
             this.panel_agregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).BeginInit();
@@ -119,7 +119,7 @@
             // 
             // panelConten
             // 
-            this.panelConten.Controls.Add(this.panel1);
+            this.panelConten.Controls.Add(this.panel_eliminar);
             this.panelConten.Controls.Add(this.panel_modificar);
             this.panelConten.Controls.Add(this.btn_eliminar);
             this.panelConten.Controls.Add(this.btn_modificar);
@@ -131,15 +131,15 @@
             this.panelConten.Size = new System.Drawing.Size(1046, 82);
             this.panelConten.TabIndex = 6;
             // 
-            // panel1
+            // panel_eliminar
             // 
-            this.panel1.Controls.Add(this.kryptonButton4);
-            this.panel1.Controls.Add(this.kryptonButton7);
-            this.panel1.Controls.Add(this.kryptonButton8);
-            this.panel1.Location = new System.Drawing.Point(238, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(303, 36);
-            this.panel1.TabIndex = 22;
+            this.panel_eliminar.Controls.Add(this.kryptonButton4);
+            this.panel_eliminar.Controls.Add(this.kryptonButton7);
+            this.panel_eliminar.Controls.Add(this.kryptonButton8);
+            this.panel_eliminar.Location = new System.Drawing.Point(238, 40);
+            this.panel_eliminar.Name = "panel_eliminar";
+            this.panel_eliminar.Size = new System.Drawing.Size(303, 36);
+            this.panel_eliminar.TabIndex = 22;
             // 
             // kryptonButton4
             // 
@@ -195,6 +195,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton4.TabIndex = 21;
             this.kryptonButton4.Values.Text = "Categoria\r\n";
+            this.kryptonButton4.Click += new System.EventHandler(this.kryptonButton4_Click);
             // 
             // kryptonButton7
             // 
@@ -483,6 +484,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_eliminar.TabIndex = 3;
             this.btn_eliminar.Values.Text = "Eliminar";
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_modificar
             // 
@@ -1031,7 +1033,7 @@
             this.Text = "DISTRIBUIDORA";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.panelConten.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panel_eliminar.ResumeLayout(false);
             this.panel_modificar.ResumeLayout(false);
             this.panel_agregar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet)).EndInit();
@@ -1082,7 +1084,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_usuario;
         private System.Windows.Forms.LinkLabel lk_recuperar;
         private System.Windows.Forms.Panel panel_conten;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel_eliminar;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;

@@ -17,6 +17,8 @@ namespace Cpresentacion1
 {
     public partial class Form1 : KryptonForm
     {
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +26,8 @@ namespace Cpresentacion1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            panel_modificar.Visible = false;
+            
+
         }
         COperaciones objOpera = new COperaciones();
         private void Form1_Load_1(object sender, EventArgs e)
@@ -67,8 +70,10 @@ namespace Cpresentacion1
             btn_agregar.Enabled = false;
             btn_modificar.Enabled = false;
             btn_eliminar.Enabled = false;
+            panel_eliminar.Visible = false;
 
-
+            panel_modificar.Visible = false;
+          
         }
 
         private void btn_agregar_Click(object sender, EventArgs e)
@@ -226,7 +231,8 @@ namespace Cpresentacion1
     }
     private void tb_contra_Enter(object sender, EventArgs e)
     {
-        tb_contra.Text = "";
+            tb_contra.UseSystemPasswordChar = true;
+            tb_contra.Text = "";
     }
     private void tb_contra_KeyPress(object sender, KeyPressEventArgs e)
     {
@@ -298,6 +304,23 @@ namespace Cpresentacion1
         private void kryptonButton8_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FormEliminarProveedor());
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            if(panel_eliminar.Visible)
+            {
+                panel_eliminar.Visible = false;
+            }
+            else
+            {
+                panel_eliminar.Visible = true;
+            }
+        }
+
+        private void kryptonButton4_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormEliminarCateogira());
         }
     }
 }
