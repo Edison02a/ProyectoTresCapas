@@ -349,5 +349,10 @@ namespace Cpresentacion1
             OpenchildForm(new FormModificarCat());
             panel_modificar.Visible = false;
         }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormBuscar());
+        }
     }
 }

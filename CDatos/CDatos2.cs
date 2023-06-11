@@ -233,7 +233,7 @@ namespace CDatos
 
 
         }
-
+       
         public EntidadesCategoria BuscarCat(string cat)
         {
             cBD.Abrir();
@@ -320,30 +320,7 @@ namespace CDatos
             return listaPiezas;
         }
 
-        /*public EntidadesSuministra BuscarIdS(int ciPr)
-        {
-            cBD.Abrir();
-            string consulta = "SELECT cantidad " +
-                              "FROM suministra " +
-                              "WHERE id_proveedor = @ciProv";
-
-            SqlCommand cmd = new SqlCommand(consulta, cBD.conectar);
-            cmd.Parameters.AddWithValue("@ciProv", ciPr);
-
-            SqlDataReader dr = cmd.ExecuteReader();
-            EntidadesSuministra suministro = null;
-
-            if (dr.Read())
-            {
-                suministro = new EntidadesSuministra();
-                suministro.CantidadSuministra = Convert.ToInt32(dr["cantidad"]);
-                dr.Close();
-            }
-            
-            cBD.Cerrar();
-            return suministro;
-        }*/
-
+       
 
         public void ActualizarPieza(string nombrePieza, string colorPieza, string centroPieza, string categoriaPieza, int idPieza)
         {
@@ -471,6 +448,26 @@ namespace CDatos
             comando.ExecuteNonQuery();
             cBD.Cerrar();
 
+        }
+        public DataTable BuscarPiezaNombr(string pieza)
+        {
+            cBD.Abrir();
+            string consulta = @"select P.nombre as Pieza,P.color as Color,P.centro as Centro,P.categ as Categoría,Pr.nombreP as NombreProveedor,Pr.apellido as ApellidoProveedor,S.cantidad as Cantidad
+                        FROM pieza P
+                        INNER JOIN suministra S ON P.id = S.id_pieza
+                        INNER JOIN prov Pr ON S.id_proveedor = Pr.ci
+                        WHERE P.nombre = @nombrePieza";
+            SqlCommand comando = new SqlCommand(consulta, cBD.conectar);
+            comando.Parameters.AddWithValue("@nombrePieza", pieza);
+            SqlDataReader dataReader = comando.ExecuteReader();
+
+            DataTable dataTable = new DataTable();
+            dataTable.Load(dataReader);
+
+            dataReader.Close();
+            cBD.Cerrar();
+
+            return dataTable;
         }
 
         //eliminar pieza

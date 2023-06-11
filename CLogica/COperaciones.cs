@@ -119,7 +119,10 @@ namespace CLogica
 
             ObjDatos.EliminarCategoria(categ);
         }
-
+        public DataTable BuscarPiezaNombre(string pieza)
+        {
+            return ObjDatos.BuscarPiezaNombr(pieza);
+        }
         public EntidadesPieza BuscarPieza(int id)
         {
 
