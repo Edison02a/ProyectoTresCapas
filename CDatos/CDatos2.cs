@@ -233,6 +233,48 @@ namespace CDatos
 
 
         }
+
+        public EntidadesCategoria BuscarCat(string cat)
+        {
+            cBD.Abrir();
+            string consulta = "SELECT * FROM categoria WHERE categ= @nombreCategoria";
+            SqlCommand comando = new SqlCommand(consulta, cBD.conectar);
+            comando.Parameters.AddWithValue("@nombreCategoria", cat);
+            SqlDataReader dataReader = comando.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+                EntidadesCategoria categoria = new EntidadesCategoria()
+                {
+                    IdCateogoria = Convert.ToInt32(dataReader["id"]),
+                    PrecioCategoria = Convert.ToString(dataReader["precio"]),
+                    CategCategoria = Convert.ToString(dataReader["categ"])
+                };
+
+                dataReader.Close();
+                cBD.Cerrar();
+                return categoria;
+            }
+            else
+            {
+                dataReader.Close();
+                cBD.Cerrar();
+                return null;
+            }
+        }
+        public void ActualizarCategoria(int idCategoria, string categoria, float precio)
+        {
+            cBD.Abrir();
+            string consulta = "UPDATE categoria SET categ = @categoria,precio=@precio WHERE id = @idCategoria";
+
+            SqlCommand comando = new SqlCommand(consulta, cBD.conectar);
+            comando.Parameters.AddWithValue("@categoria", categoria);
+            comando.Parameters.AddWithValue("@precio", precio);
+            comando.Parameters.AddWithValue("@idCategoria", idCategoria);
+
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
+        }
         public List<EntidadesPieza> ObtenerPiezasProveedor(int ciProveedor)
         {
             List<EntidadesPieza> listaPiezas = new List<EntidadesPieza>();

@@ -34,25 +34,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\..\bunifu\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Design">
       <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -67,7 +67,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WinFormAnimation">
-      <HintPath>..\..\Visual 2do parcial\WinAppDatos_GET_SET\bin\Debug\WinFormAnimation.dll</HintPath>
+      <HintPath>..\..\WinAppDatos_GET_SET\bin\Debug\WinFormAnimation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +118,12 @@
     </Compile>
     <Compile Include="FormModificar.Designer.cs">
       <DependentUpon>FormModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModificarCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModificarCat.Designer.cs">
+      <DependentUpon>FormModificarCat.cs</DependentUpon>
     </Compile>
     <Compile Include="FormModificarProv.cs">
       <SubType>Form</SubType>
@@ -177,10 +183,35 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet17.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet19.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProveedorDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet22.xsd</DependentUpon>
     </Compile>
     <Compile Include="ProveedorDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -240,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormModificar.resx">
       <DependentUpon>FormModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarCat.resx">
+      <DependentUpon>FormModificarCat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModificarProv.resx">
       <DependentUpon>FormModificarProv.cs</DependentUpon>
@@ -388,6 +422,28 @@
     <None Include="ProveedorDataSet17.xss">
       <DependentUpon>ProveedorDataSet17.xsd</DependentUpon>
     </None>
+    <None Include="ProveedorDataSet18.xsc">
+      <DependentUpon>ProveedorDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet18.xss">
+      <DependentUpon>ProveedorDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet19.xsc">
+      <DependentUpon>ProveedorDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet19.xss">
+      <DependentUpon>ProveedorDataSet19.xsd</DependentUpon>
+    </None>
     <None Include="ProveedorDataSet2.xsc">
       <DependentUpon>ProveedorDataSet2.xsd</DependentUpon>
     </None>
@@ -398,6 +454,39 @@
     </None>
     <None Include="ProveedorDataSet2.xss">
       <DependentUpon>ProveedorDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet20.xsc">
+      <DependentUpon>ProveedorDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet20.xss">
+      <DependentUpon>ProveedorDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet21.xsc">
+      <DependentUpon>ProveedorDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet21.xss">
+      <DependentUpon>ProveedorDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet22.xsc">
+      <DependentUpon>ProveedorDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet22.xss">
+      <DependentUpon>ProveedorDataSet22.xsd</DependentUpon>
     </None>
     <None Include="ProveedorDataSet3.xsc">
       <DependentUpon>ProveedorDataSet3.xsd</DependentUpon>

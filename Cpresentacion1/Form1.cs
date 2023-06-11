@@ -343,5 +343,11 @@ namespace Cpresentacion1
         {
 
         }
+
+        private void kryptonButton9_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormModificarCat());
+            panel_modificar.Visible = false;
+        }
     }
 }

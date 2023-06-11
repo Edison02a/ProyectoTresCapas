@@ -59,7 +59,15 @@ namespace CLogica
         {
             return ObjDatos.BuscarId(ciP);
         }
+        public void ActualizarCategoria(int idCategoria, string categoria, float precio)
+        {
+            ObjDatos.ActualizarCategoria(idCategoria, categoria, precio);
+        }
 
+        public EntidadesCategoria BuscarCat(string cat)
+        {
+            return ObjDatos.BuscarCat(cat);
+        }
         public List<EntidadesPieza> ObtenerPiezasProveedor(int ciProveedor)
         {
             return ObjDatos.ObtenerPiezasProveedor(ciProveedor);

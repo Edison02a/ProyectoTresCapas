@@ -32,8 +32,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.provBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proveedorDataSet7 = new Cpresentacion1.ProveedorDataSet7();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.btn_buscar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.txt_codbuscar = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -57,21 +55,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_sig = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label12 = new System.Windows.Forms.Label();
-            this.provTableAdapter = new Cpresentacion1.ProveedorDataSet7TableAdapters.provTableAdapter();
-            this.proveedorDataSet12 = new Cpresentacion1.ProveedorDataSet12();
-            this.provBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.provTableAdapter1 = new Cpresentacion1.ProveedorDataSet12TableAdapters.provTableAdapter();
-            this.proveedorDataSet14 = new Cpresentacion1.ProveedorDataSet14();
-            this.piezaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.piezaTableAdapter = new Cpresentacion1.ProveedorDataSet14TableAdapters.piezaTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.centroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedorDataSet21 = new Cpresentacion1.ProveedorDataSet21();
+            this.provBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.provTableAdapter = new Cpresentacion1.ProveedorDataSet21TableAdapters.provTableAdapter();
+            this.ciDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombrePDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
@@ -83,10 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_pieza)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -124,12 +112,10 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
-            this.colorDataGridViewTextBoxColumn,
-            this.centroDataGridViewTextBoxColumn,
-            this.categDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.piezaBindingSource;
+            this.ciDataGridViewTextBoxColumn,
+            this.nombrePDataGridViewTextBoxColumn,
+            this.apellidoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.provBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(35, 116);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
@@ -138,16 +124,6 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(365, 165);
             this.dataGridView1.TabIndex = 177;
-            // 
-            // provBindingSource
-            // 
-            this.provBindingSource.DataMember = "prov";
-            this.provBindingSource.DataSource = this.proveedorDataSet7;
-            // 
-            // proveedorDataSet7
-            // 
-            this.proveedorDataSet7.DataSetName = "ProveedorDataSet7";
-            this.proveedorDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // kryptonGroupBox2
             // 
@@ -301,7 +277,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_cantidad.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txt_cantidad.StateCommon.Border.Rounding = 18;
-            this.txt_cantidad.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
+            this.txt_cantidad.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txt_cantidad.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cantidad.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txt_cantidad.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -385,7 +361,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_centro.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txt_centro.StateCommon.Border.Rounding = 18;
-            this.txt_centro.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
+            this.txt_centro.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txt_centro.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_centro.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txt_centro.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -425,7 +401,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_nombre.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txt_nombre.StateCommon.Border.Rounding = 18;
-            this.txt_nombre.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
+            this.txt_nombre.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txt_nombre.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txt_nombre.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -448,7 +424,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txt_color.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.txt_color.StateCommon.Border.Rounding = 18;
-            this.txt_color.StateCommon.Content.Color1 = System.Drawing.Color.DimGray;
+            this.txt_color.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txt_color.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_color.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.txt_color.StateDisabled.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -534,72 +510,40 @@
             this.label12.TabIndex = 173;
             this.label12.Text = "Proveedores";
             // 
+            // proveedorDataSet21
+            // 
+            this.proveedorDataSet21.DataSetName = "ProveedorDataSet21";
+            this.proveedorDataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // provBindingSource
+            // 
+            this.provBindingSource.DataMember = "prov";
+            this.provBindingSource.DataSource = this.proveedorDataSet21;
+            // 
             // provTableAdapter
             // 
             this.provTableAdapter.ClearBeforeFill = true;
             // 
-            // proveedorDataSet12
+            // ciDataGridViewTextBoxColumn
             // 
-            this.proveedorDataSet12.DataSetName = "ProveedorDataSet12";
-            this.proveedorDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.ciDataGridViewTextBoxColumn.DataPropertyName = "ci";
+            this.ciDataGridViewTextBoxColumn.HeaderText = "ci";
+            this.ciDataGridViewTextBoxColumn.Name = "ciDataGridViewTextBoxColumn";
+            this.ciDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // provBindingSource1
+            // nombrePDataGridViewTextBoxColumn
             // 
-            this.provBindingSource1.DataMember = "prov";
-            this.provBindingSource1.DataSource = this.proveedorDataSet12;
+            this.nombrePDataGridViewTextBoxColumn.DataPropertyName = "nombreP";
+            this.nombrePDataGridViewTextBoxColumn.HeaderText = "nombreP";
+            this.nombrePDataGridViewTextBoxColumn.Name = "nombrePDataGridViewTextBoxColumn";
+            this.nombrePDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // provTableAdapter1
+            // apellidoDataGridViewTextBoxColumn
             // 
-            this.provTableAdapter1.ClearBeforeFill = true;
-            // 
-            // proveedorDataSet14
-            // 
-            this.proveedorDataSet14.DataSetName = "ProveedorDataSet14";
-            this.proveedorDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // piezaBindingSource
-            // 
-            this.piezaBindingSource.DataMember = "pieza";
-            this.piezaBindingSource.DataSource = this.proveedorDataSet14;
-            // 
-            // piezaTableAdapter
-            // 
-            this.piezaTableAdapter.ClearBeforeFill = true;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // colorDataGridViewTextBoxColumn
-            // 
-            this.colorDataGridViewTextBoxColumn.DataPropertyName = "color";
-            this.colorDataGridViewTextBoxColumn.HeaderText = "color";
-            this.colorDataGridViewTextBoxColumn.Name = "colorDataGridViewTextBoxColumn";
-            this.colorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // centroDataGridViewTextBoxColumn
-            // 
-            this.centroDataGridViewTextBoxColumn.DataPropertyName = "centro";
-            this.centroDataGridViewTextBoxColumn.HeaderText = "centro";
-            this.centroDataGridViewTextBoxColumn.Name = "centroDataGridViewTextBoxColumn";
-            this.centroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // categDataGridViewTextBoxColumn
-            // 
-            this.categDataGridViewTextBoxColumn.DataPropertyName = "categ";
-            this.categDataGridViewTextBoxColumn.HeaderText = "categ";
-            this.categDataGridViewTextBoxColumn.Name = "categDataGridViewTextBoxColumn";
-            this.categDataGridViewTextBoxColumn.ReadOnly = true;
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // FormModificar
             // 
@@ -618,8 +562,6 @@
             this.Text = "FormModificar";
             this.Load += new System.EventHandler(this.FormModificar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             this.kryptonGroupBox2.Panel.PerformLayout();
@@ -633,10 +575,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cb_proveedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cb_categoria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbx_pieza)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.piezaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.proveedorDataSet21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,19 +609,11 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_idP;
         private System.Windows.Forms.Label label8;
-        private ProveedorDataSet7 proveedorDataSet7;
+        private ProveedorDataSet21 proveedorDataSet21;
         private System.Windows.Forms.BindingSource provBindingSource;
-        private ProveedorDataSet7TableAdapters.provTableAdapter provTableAdapter;
-        private ProveedorDataSet12 proveedorDataSet12;
-        private System.Windows.Forms.BindingSource provBindingSource1;
-        private ProveedorDataSet12TableAdapters.provTableAdapter provTableAdapter1;
-        private ProveedorDataSet14 proveedorDataSet14;
-        private System.Windows.Forms.BindingSource piezaBindingSource;
-        private ProveedorDataSet14TableAdapters.piezaTableAdapter piezaTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn centroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categDataGridViewTextBoxColumn;
+        private ProveedorDataSet21TableAdapters.provTableAdapter provTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ciDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombrePDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellidoDataGridViewTextBoxColumn;
     }
 }

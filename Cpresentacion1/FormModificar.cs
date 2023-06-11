@@ -23,21 +23,11 @@ namespace Cpresentacion1
  
         private void FormModificar_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet14.pieza' Puede moverla o quitarla según sea necesario.
-            this.piezaTableAdapter.Fill(this.proveedorDataSet14.pieza);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet12.prov' Puede moverla o quitarla según sea necesario.
-            this.provTableAdapter1.Fill(this.proveedorDataSet12.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet7.prov' Puede moverla o quitarla según sea necesario.
-            this.provTableAdapter.Fill(this.proveedorDataSet7.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet2.prov' Puede moverla o quitarla según sea necesario.
-            //this.provTableAdapter1.Fill(this.proveedorDataSet2.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet1.prov' Puede moverla o quitarla según sea necesario.
-            //this.provTableAdapter.Fill(this.proveedorDataSet1.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet8.prov' Puede moverla o quitarla según sea necesario.
-            //this.provTableAdapter1.Fill(this.proveedorDataSet8.prov);
-            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet7.prov' Puede moverla o quitarla según sea necesario.
-            //this.provTableAdapter.Fill(this.proveedorDataSet7.prov);
-
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet21.prov' Puede moverla o quitarla según sea necesario.
+            this.provTableAdapter.Fill(this.proveedorDataSet21.prov);
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet19.prov' Puede moverla o quitarla según sea necesario.
+                
+         
             List<Entidades> DatosProveedor = objOpera.Lista();
             foreach (Entidades item in DatosProveedor)
             {
@@ -53,59 +43,7 @@ namespace Cpresentacion1
 
             
         }
-        /*COperaciones objOpera = new COperaciones();
-        Entidades objEntidades = new Entidades();
-        EntidadesSuministra objSumi = new EntidadesSuministra();
-        EntidadesPieza objPieza = new EntidadesPieza();
-        private void btn_buscar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int ci = Convert.ToInt32(txt_codbuscar.Text);
-                objEntidades = objOpera.BuscarId(ci);
-                if (objEntidades != null)
-                {
-                    txt_cantidad.Enabled = true;
-                    txt_centro.Enabled = true;
-                    txt_color.Enabled = true;
-                    txt_nombre.Enabled = true;
-                    cbx_pieza.Enabled = true;
-                    cb_categoria.Enabled = true;
-                    cb_proveedor.Enabled = true;
-                   
-                    string proveedorConcatenado = objEntidades.NombreProv.ToString() + " " + objEntidades.ApellidoProv.ToString();
-                    cb_proveedor.SelectedItem = proveedorConcatenado;
-                }
-                else
-                    MessageBox.Show("El estudiante no existe");
-                objPieza = objOpera.BuscarIdP(ci);
-                if (objPieza != null)
-                {
-                    txt_nombre.Text = Convert.ToString(objPieza.NombrePieza);
-                    txt_color.Text = Convert.ToString(objPieza.ColorPieza);
-                    txt_centro.Text = Convert.ToString(objPieza.CentroPieza);
-                    cb_categoria.SelectedItem = objPieza.CategoriaPieza.ToString();
-                   
-                }
-                else
-                    MessageBox.Show("El estudiante no existe");
 
-                objSumi = objOpera.BuscarIdS(ci);
-                if (objPieza != null)
-                {
-                    txt_cantidad.Text = Convert.ToString(objSumi.CantidadSuministra);
-
-                }
-                else
-                    MessageBox.Show("El estudiante no existe");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(String.Format("Error: {0}", ex.Message), "Error inesperado");
-            }
-        }*/
-
-        //COperaciones objOpera = new COperaciones();
         Entidades objEntidades = new Entidades();
         EntidadesSuministra objSumi = new EntidadesSuministra();
         EntidadesPieza objPieza = new EntidadesPieza();

@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 using CEntidades;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-using System.Data.SqlClient;
+
 
 namespace CDatos
 {
     public class CBD
     {
-        //public string cadena = "Data Source=MARCO\\SQLEXPRESS;Initial Catalog=Proveedor;Integrated Security=True";
-        public string cadena ="Data Source=DESKTOP-95D5LCE\\SQLEXPRESS;Initial Catalog=Proveedor;Integrated Security=True";
+        public string cadena = "Data Source=MARCO\\SQLEXPRESS;Initial Catalog=Proveedor;Integrated Security=True";
+        //public string cadena ="Data Source=DESKTOP-95D5LCE\\SQLEXPRESS;Initial Catalog=Proveedor;Integrated Security=True";
         //Data Source=MARCO\\SQLEXPRESS;Initial Catalog=Proveedor;Integrated Security=True
         //public string cadena = "Data Source=.;Initial Catalog=Proveedor;Persist Security Info=True;User ID=sa;Password=sqlserver";
         public SqlConnection conectar = new SqlConnection();
