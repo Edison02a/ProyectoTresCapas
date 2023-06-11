@@ -80,18 +80,15 @@ namespace Cpresentacion1
         private void btn_agregar_Click(object sender, EventArgs e)
         {
             
-            panel_agregar.BringToFront();
-            panel_modificar.Visible = false;
-            //panel_reporteAdmin.Visible = false;
-            if (panel_agregar.Visible)
+            if (panel_agregar.Visible==false)
             {
-                panel_agregar.Visible = false;
+                panel_agregar.Visible = true;
+                panel_eliminar.Visible = false;
+                panel_modificar.Visible = false;
             }
             else
             {
-                panel_agregar.Size = new System.Drawing.Size(277, 36);
-                panel_agregar.Visible = true;
-
+                panel_agregar.Visible = false;
             }
         }
 
@@ -156,18 +153,16 @@ namespace Cpresentacion1
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            panel_modificar.BringToFront();
-            panel_agregar.Visible = false;
-            //panel_reporteAdmin.Visible = false;
-            if (panel_modificar.Visible)
+            
+            if (panel_modificar.Visible==false)
             {
-                panel_modificar.Visible = false;
+                panel_modificar.Visible = true;
+                panel_agregar.Visible = false;
+                panel_eliminar.Visible = false;
             }
             else
             {
-                panel_modificar.Size = new System.Drawing.Size(183, 36);
-                panel_modificar.Visible = true;
-
+                panel_modificar.Visible = false;
             }
         }
 
@@ -309,13 +304,16 @@ namespace Cpresentacion1
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            if(panel_eliminar.Visible)
+            
+            if (panel_eliminar.Visible==false)
             {
-                panel_eliminar.Visible = false;
+                panel_eliminar.Visible = true;
+                panel_modificar.Visible = false;
+                panel_agregar.Visible = false;
             }
             else
             {
-                panel_eliminar.Visible = true;
+                panel_eliminar.Visible = false;
             }
         }
 
@@ -333,6 +331,11 @@ namespace Cpresentacion1
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FormEliminarPieza());
+        }
+
+        private void panelConten_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

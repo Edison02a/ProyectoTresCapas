@@ -120,16 +120,17 @@
             // panelConten
             // 
             this.panelConten.Controls.Add(this.panel_eliminar);
-            this.panelConten.Controls.Add(this.panel_modificar);
             this.panelConten.Controls.Add(this.btn_eliminar);
             this.panelConten.Controls.Add(this.btn_modificar);
-            this.panelConten.Controls.Add(this.btn_agregar);
             this.panelConten.Controls.Add(this.panel_agregar);
+            this.panelConten.Controls.Add(this.panel_modificar);
+            this.panelConten.Controls.Add(this.btn_agregar);
             this.panelConten.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConten.Location = new System.Drawing.Point(0, 0);
             this.panelConten.Name = "panelConten";
             this.panelConten.Size = new System.Drawing.Size(1046, 82);
             this.panelConten.TabIndex = 6;
+            this.panelConten.Paint += new System.Windows.Forms.PaintEventHandler(this.panelConten_Paint);
             // 
             // panel_eliminar
             // 
@@ -609,7 +610,7 @@
             this.panel_agregar.Controls.Add(this.kryptonButton3);
             this.panel_agregar.Controls.Add(this.kryptonButton2);
             this.panel_agregar.Controls.Add(this.kryptonButton1);
-            this.panel_agregar.Location = new System.Drawing.Point(14, 43);
+            this.panel_agregar.Location = new System.Drawing.Point(14, 40);
             this.panel_agregar.Name = "panel_agregar";
             this.panel_agregar.Size = new System.Drawing.Size(303, 36);
             this.panel_agregar.TabIndex = 18;
