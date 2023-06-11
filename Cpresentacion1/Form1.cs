@@ -328,5 +328,10 @@ namespace Cpresentacion1
             OpenchildForm(new FormModificarProv());
             panel_modificar.Visible=false;
         }
+
+        private void kryptonButton7_Click(object sender, EventArgs e)
+        {
+            OpenchildForm(new FormEliminarPieza());
+        }
     }
 }

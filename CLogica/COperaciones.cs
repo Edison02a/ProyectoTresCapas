@@ -111,5 +111,21 @@ namespace CLogica
 
             ObjDatos.EliminarCategoria(categ);
         }
+
+        public EntidadesPieza BuscarPieza(int id)
+        {
+
+            return ObjDatos.BuscarPieza(id);
+        }
+        public EntidadesSuministra BuscarSuministraPieza(int id3)
+        {
+
+            return ObjDatos.BuscarPiezaSuministra(id3);
+        }
+        public void EliminarPieza(int id2)
+        {
+
+            ObjDatos.EliminarPieza(id2);
+        }
     }
 }

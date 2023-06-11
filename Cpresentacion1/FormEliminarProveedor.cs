@@ -22,6 +22,8 @@ namespace Cpresentacion1
 
         private void FormEliminarProveedor_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet11.prov' Puede moverla o quitarla según sea necesario.
+            this.provTableAdapter3.Fill(this.proveedorDataSet11.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet5.prov' Puede moverla o quitarla según sea necesario.
             this.provTableAdapter2.Fill(this.proveedorDataSet5.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet3.prov' Puede moverla o quitarla según sea necesario.
@@ -38,7 +40,7 @@ namespace Cpresentacion1
             try
 
             {
-                int idE = Convert.ToInt32(txt_codbuscar.Text);
+                int idE = int.Parse(txt_codbuscar.Text);
                 objEntidades = objOpera.BuscarCedula(idE);
                 if (objEntidades != null)
                 {

@@ -383,10 +383,10 @@ namespace CDatos
 
         }
 
-        public void EliminarProvedeor(int ci)
+        public void EliminarProvedeor(int ci2)
         {
             cBD.Abrir();
-            string cadena = "DELETE from prov where ci = " + ci + "";
+            string cadena = "  delete from prov where ci=" + ci2;
             SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();
@@ -431,5 +431,70 @@ namespace CDatos
 
         }
 
+        //eliminar pieza
+
+        public EntidadesPieza BuscarPieza(int id)
+        {
+            cBD.Abrir();
+            string cadena = "SELECT * FROM pieza  WHERE id =" + id;
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            SqlDataReader dataReader = comando.ExecuteReader();
+            if (dataReader.Read())
+            {
+
+                EntidadesPieza objEnt = new EntidadesPieza()
+                {
+                    NombrePieza = Convert.ToString(dataReader["nombre"]),
+                    ColorPieza = Convert.ToString(dataReader["color"]),
+                    CentroPieza = Convert.ToString(dataReader["centro"]),
+                    CategoriaPieza = Convert.ToString(dataReader["categ"]),
+                };
+                dataReader.Close();
+                cBD.Cerrar();
+                return objEnt;
+            }
+            else
+            {
+                dataReader.Close();
+                return null;
+            }
+        }
+
+        public EntidadesSuministra BuscarPiezaSuministra(int id4)
+        {
+            cBD.Abrir();
+            string cadena = "SELECT * FROM suministra  WHERE id_pieza =" + id4;
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            SqlDataAdapter adaptador = new SqlDataAdapter();
+            SqlDataReader dataReader = comando.ExecuteReader();
+            if (dataReader.Read())
+            {
+
+                EntidadesSuministra objEnt = new EntidadesSuministra()
+                {
+                    CantidadSuministra = Convert.ToInt32(dataReader["cantidad"]),
+                    IdProveedor = Convert.ToInt32(dataReader["id_proveedor"])
+                };
+                dataReader.Close();
+                cBD.Cerrar();
+                return objEnt;
+            }
+            else
+            {
+                dataReader.Close();
+                return null;
+
+            }
+        }
+        public void EliminarPieza(int id1)
+        {
+            cBD.Abrir();
+            string cadena = "DELETE from pieza where id = " +id1;
+            SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
+            comando.ExecuteNonQuery();
+            cBD.Cerrar();
+
+        }
     }
 }

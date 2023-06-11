@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Design">
       <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
@@ -82,6 +82,12 @@
     </Compile>
     <Compile Include="FormEliminarCateogira.Designer.cs">
       <DependentUpon>FormEliminarCateogira.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEliminarPieza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEliminarPieza.Designer.cs">
+      <DependentUpon>FormEliminarPieza.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEliminarProveedor.cs">
       <SubType>Form</SubType>
@@ -131,6 +137,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet17.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProveedorDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -161,6 +207,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProveedorDataSet9.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEliminarCateogira.resx">
       <DependentUpon>FormEliminarCateogira.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEliminarPieza.resx">
+      <DependentUpon>FormEliminarPieza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEliminarProveedor.resx">
       <DependentUpon>FormEliminarProveedor.cs</DependentUpon>
@@ -246,6 +300,94 @@
     <None Include="ProveedorDataSet1.xss">
       <DependentUpon>ProveedorDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="ProveedorDataSet10.xsc">
+      <DependentUpon>ProveedorDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet10.xss">
+      <DependentUpon>ProveedorDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet11.xsc">
+      <DependentUpon>ProveedorDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet11.xss">
+      <DependentUpon>ProveedorDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet12.xsc">
+      <DependentUpon>ProveedorDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet12.xss">
+      <DependentUpon>ProveedorDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet13.xsc">
+      <DependentUpon>ProveedorDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet13.xss">
+      <DependentUpon>ProveedorDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet14.xsc">
+      <DependentUpon>ProveedorDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet14.xss">
+      <DependentUpon>ProveedorDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet15.xsc">
+      <DependentUpon>ProveedorDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet15.xss">
+      <DependentUpon>ProveedorDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet16.xsc">
+      <DependentUpon>ProveedorDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet16.xss">
+      <DependentUpon>ProveedorDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet17.xsc">
+      <DependentUpon>ProveedorDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet17.xss">
+      <DependentUpon>ProveedorDataSet17.xsd</DependentUpon>
+    </None>
     <None Include="ProveedorDataSet2.xsc">
       <DependentUpon>ProveedorDataSet2.xsd</DependentUpon>
     </None>
@@ -311,6 +453,17 @@
     </None>
     <None Include="ProveedorDataSet7.xss">
       <DependentUpon>ProveedorDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet8.xsc">
+      <DependentUpon>ProveedorDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet8.xss">
+      <DependentUpon>ProveedorDataSet8.xsd</DependentUpon>
     </None>
     <None Include="ProveedorDataSet9.xsc">
       <DependentUpon>ProveedorDataSet9.xsd</DependentUpon>

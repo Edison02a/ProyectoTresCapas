@@ -21,6 +21,8 @@ namespace Cpresentacion1
 
         private void FormEliminarCateogira_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet10.categoria' Puede moverla o quitarla según sea necesario.
+            this.categoriaTableAdapter1.Fill(this.proveedorDataSet10.categoria);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet4.categoria' Puede moverla o quitarla según sea necesario.
             this.categoriaTableAdapter.Fill(this.proveedorDataSet4.categoria);
 

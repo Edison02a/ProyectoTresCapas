@@ -54,15 +54,15 @@
             this.suministraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suministraTableAdapter = new Cpresentacion1.ProveedorDataSetTableAdapters.suministraTableAdapter();
             this.inicio_sesion_panel = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tb_contra = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_ingresar = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tb_usuario = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lk_recuperar = new System.Windows.Forms.LinkLabel();
             this.panel_conten = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelConten.SuspendLayout();
             this.panel_eliminar.SuspendLayout();
             this.panel_modificar.SuspendLayout();
@@ -75,10 +75,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.inicio_sesion_panel.Panel)).BeginInit();
             this.inicio_sesion_panel.Panel.SuspendLayout();
             this.inicio_sesion_panel.SuspendLayout();
+            this.panel_conten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel_conten.SuspendLayout();
             this.SuspendLayout();
             // 
             // kryptonPalette1
@@ -251,6 +251,7 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonButton7.TabIndex = 20;
             this.kryptonButton7.Values.Text = "Pieza";
+            this.kryptonButton7.Click += new System.EventHandler(this.kryptonButton7_Click);
             // 
             // kryptonButton8
             // 
@@ -837,26 +838,6 @@
             this.inicio_sesion_panel.StateCommon.Border.Rounding = 5;
             this.inicio_sesion_panel.TabIndex = 23;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Cpresentacion1.Properties.Resources.acceso__2_;
-            this.pictureBox3.Location = new System.Drawing.Point(105, 55);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(112, 99);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Cpresentacion1.Properties.Resources.candado;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 235);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            // 
             // tb_contra
             // 
             this.tb_contra.Location = new System.Drawing.Point(44, 235);
@@ -880,16 +861,6 @@
             this.tb_contra.WordWrap = false;
             this.tb_contra.Enter += new System.EventHandler(this.tb_contra_Enter);
             this.tb_contra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_contra_KeyPress);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cpresentacion1.Properties.Resources.persona;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 174);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -1019,6 +990,36 @@
             this.panel_conten.TabIndex = 19;
             this.panel_conten.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_conten_Paint);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Cpresentacion1.Properties.Resources.acceso__2_;
+            this.pictureBox3.Location = new System.Drawing.Point(105, 55);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(112, 99);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Cpresentacion1.Properties.Resources.candado;
+            this.pictureBox2.Location = new System.Drawing.Point(17, 235);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cpresentacion1.Properties.Resources.persona;
+            this.pictureBox1.Location = new System.Drawing.Point(17, 174);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1046,10 +1047,10 @@
             this.inicio_sesion_panel.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inicio_sesion_panel)).EndInit();
             this.inicio_sesion_panel.ResumeLayout(false);
+            this.panel_conten.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel_conten.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

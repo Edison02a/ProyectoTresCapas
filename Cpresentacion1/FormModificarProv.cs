@@ -22,8 +22,10 @@ namespace Cpresentacion1
 
         private void FormModificarProv_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet13.prov' Puede moverla o quitarla según sea necesario.
+            this.provTableAdapter1.Fill(this.proveedorDataSet13.prov);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet6.prov' Puede moverla o quitarla según sea necesario.
-            this.provTableAdapter.Fill(this.proveedorDataSet6.prov);
+            //this.provTableAdapter.Fill(this.proveedorDataSet6.prov);
 
         }
         int cedula;
