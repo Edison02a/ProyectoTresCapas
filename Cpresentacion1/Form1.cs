@@ -129,16 +129,19 @@ namespace Cpresentacion1
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FormIngresoDatos());
+            panel_agregar.Visible = false;
         }
 
         private void kryptonButton2_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FormIngresoPiezas());
+            panel_agregar.Visible = false;
         }
 
         private void kryptonButton3_Click(object sender, EventArgs e)
         {
-            OpenchildForm(new FormIngresoCategoria());  
+            OpenchildForm(new FormIngresoCategoria());
+            panel_agregar.Visible = false;
         }
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -300,6 +303,7 @@ namespace Cpresentacion1
         private void kryptonButton8_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FormEliminarProveedor());
+            panel_eliminar.Visible = false;
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -320,6 +324,7 @@ namespace Cpresentacion1
         private void kryptonButton4_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FormEliminarCateogira());
+            panel_eliminar.Visible = false;
         }
 
         private void kryptonButton6_Click(object sender, EventArgs e)
@@ -331,6 +336,7 @@ namespace Cpresentacion1
         private void kryptonButton7_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FormEliminarPieza());
+            panel_eliminar.Visible = false;
         }
 
         private void panelConten_Paint(object sender, PaintEventArgs e)
