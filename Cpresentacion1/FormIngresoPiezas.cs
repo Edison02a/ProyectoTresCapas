@@ -76,6 +76,11 @@ namespace Cpresentacion1
                 try
                 {
                     int cantidad = int.Parse(tb_cantidad.Text);
+                    if (int.Parse(tb_cantidad.Text) < 1)
+                    {
+                        MessageBox.Show("La cantidad no puede ser negativa", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }   
                 }
                 catch
                 {
@@ -87,11 +92,11 @@ namespace Cpresentacion1
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese número enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        tb_cantidad.Clear();
-                        tb_cantidad.Focus();
-                    }
-                   
+                            MessageBox.Show("Ingrese número enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            tb_cantidad.Clear();
+                            tb_cantidad.Focus();
+                        
+                    }   
                 }
             }
         }

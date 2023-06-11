@@ -34,25 +34,43 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\bunifu\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Design">
       <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Design.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\..\..\..\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>G:\5TO SEMESTRE\Aplicaciones informaticas\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -136,6 +154,36 @@
     </Compile>
     <Compile Include="FormModificarProv.Designer.cs">
       <DependentUpon>FormModificarProv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteCategoriaPiezas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteCategoriaPiezas.Designer.cs">
+      <DependentUpon>FormReporteCategoriaPiezas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteCategorias.Designer.cs">
+      <DependentUpon>FormReporteCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportePiezas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportePiezas.Designer.cs">
+      <DependentUpon>FormReportePiezas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteProveedores.Designer.cs">
+      <DependentUpon>FormReporteProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporteProveedorPiezas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporteProveedorPiezas.Designer.cs">
+      <DependentUpon>FormReporteProveedorPiezas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -234,10 +282,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet25.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ProveedorDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet29.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProveedorDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProveedorDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProveedorDataSet34.xsd</DependentUpon>
     </Compile>
     <Compile Include="ProveedorDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -269,6 +362,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProveedorDataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +396,21 @@
     <EmbeddedResource Include="FormModificarProv.resx">
       <DependentUpon>FormModificarProv.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteCategoriaPiezas.resx">
+      <DependentUpon>FormReporteCategoriaPiezas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteCategorias.resx">
+      <DependentUpon>FormReporteCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportePiezas.resx">
+      <DependentUpon>FormReportePiezas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteProveedores.resx">
+      <DependentUpon>FormReporteProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporteProveedorPiezas.resx">
+      <DependentUpon>FormReporteProveedorPiezas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -312,6 +421,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReporteCategorias.rdlc" />
+    <EmbeddedResource Include="ReportPiezasCategoria.rdlc" />
+    <EmbeddedResource Include="ReportProveedor.rdlc" />
+    <EmbeddedResource Include="ReportPrueba.rdlc" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -545,6 +660,50 @@
     <None Include="ProveedorDataSet25.xss">
       <DependentUpon>ProveedorDataSet25.xsd</DependentUpon>
     </None>
+    <None Include="ProveedorDataSet26.xsc">
+      <DependentUpon>ProveedorDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet26.xss">
+      <DependentUpon>ProveedorDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet27.xsc">
+      <DependentUpon>ProveedorDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet27.xss">
+      <DependentUpon>ProveedorDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet28.xsc">
+      <DependentUpon>ProveedorDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet28.xss">
+      <DependentUpon>ProveedorDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet29.xsc">
+      <DependentUpon>ProveedorDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet29.xss">
+      <DependentUpon>ProveedorDataSet29.xsd</DependentUpon>
+    </None>
     <None Include="ProveedorDataSet3.xsc">
       <DependentUpon>ProveedorDataSet3.xsd</DependentUpon>
     </None>
@@ -555,6 +714,61 @@
     </None>
     <None Include="ProveedorDataSet3.xss">
       <DependentUpon>ProveedorDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet30.xsc">
+      <DependentUpon>ProveedorDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet30.xss">
+      <DependentUpon>ProveedorDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet31.xsc">
+      <DependentUpon>ProveedorDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet31.xss">
+      <DependentUpon>ProveedorDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet32.xsc">
+      <DependentUpon>ProveedorDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet32.xss">
+      <DependentUpon>ProveedorDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet33.xsc">
+      <DependentUpon>ProveedorDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet33.xss">
+      <DependentUpon>ProveedorDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet34.xsc">
+      <DependentUpon>ProveedorDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="ProveedorDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProveedorDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProveedorDataSet34.xss">
+      <DependentUpon>ProveedorDataSet34.xsd</DependentUpon>
     </None>
     <None Include="ProveedorDataSet4.xsc">
       <DependentUpon>ProveedorDataSet4.xsd</DependentUpon>
@@ -629,6 +843,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

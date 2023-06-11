@@ -32,8 +32,10 @@ namespace Cpresentacion1
         COperaciones objOpera = new COperaciones();
         private void Form1_Load_1(object sender, EventArgs e)
         {
-           
+            btn_sesion.Enabled = false;
+            panel_iniciar_sesion.Visible = false;
             panel_modificar.Visible = false;
+            panel_reporte.Visible = false;
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.suministra' Puede moverla o quitarla según sea necesario.
             //this.suministraTableAdapter.Fill(this.proveedorDataSet.suministra);
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.pieza' Puede moverla o quitarla según sea necesario.
@@ -85,6 +87,7 @@ namespace Cpresentacion1
                 panel_agregar.Visible = true;
                 panel_eliminar.Visible = false;
                 panel_modificar.Visible = false;
+                panel_reporte.Visible = false;
             }
             else
             {
@@ -162,6 +165,7 @@ namespace Cpresentacion1
                 panel_modificar.Visible = true;
                 panel_agregar.Visible = false;
                 panel_eliminar.Visible = false;
+                panel_reporte.Visible = false;
             }
             else
             {
@@ -213,9 +217,13 @@ namespace Cpresentacion1
                     btn_eliminar.Enabled = true;
                     btn_agregar.Enabled = true;
                     btn_modificar.Enabled = true;
+                    btn_buscar.Enabled = true;
                     MessageBox.Show("Ingreso al sistema correcto", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     inicio_sesion_panel.Visible = false;
-
+                    tb_contra.Text = "";
+                    tb_usuario.Text = "";
+                    btn_sesion.Enabled = true;
+                    btn_reportes.Enabled = true;
                 }
                 else
                 {
@@ -251,8 +259,13 @@ namespace Cpresentacion1
                             btn_eliminar.Enabled = true;
                             btn_agregar.Enabled = true;
                             btn_modificar.Enabled = true;
+                            btn_buscar.Enabled = true;
                             MessageBox.Show("Ingreso al sistema correcto", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             inicio_sesion_panel.Visible = false;
+                            tb_contra.Text = "";
+                            tb_usuario.Text = "";
+                            btn_sesion.Enabled = true;
+                            btn_reportes.Enabled = true;
 
                         }
                         else
@@ -314,6 +327,7 @@ namespace Cpresentacion1
                 panel_eliminar.Visible = true;
                 panel_modificar.Visible = false;
                 panel_agregar.Visible = false;
+                panel_reporte.Visible = false;
             }
             else
             {
@@ -353,6 +367,101 @@ namespace Cpresentacion1
         private void btn_buscar_Click(object sender, EventArgs e)
         {
             OpenchildForm(new FormBuscar());
+            
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (panel_iniciar_sesion.Visible)
+            {
+                panel_iniciar_sesion.Visible = false;
+                panel_agregar.Visible = false;
+                panel_eliminar.Visible = false;
+                panel_modificar.Visible = false;
+            }
+            else
+            {
+                panel_iniciar_sesion.Visible = true;
+            }
+        }
+
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btb_cerrar_sesion_Click(object sender, EventArgs e)
+        {
+
+
+            Panel nuevoPanel = new Panel();
+            nuevoPanel.BackColor = Color.Red;
+            nuevoPanel.Size = inicio_sesion_panel.Size;
+            // Configura otras propiedades y agrega controles al nuevoPanel según tus necesidades
+
+            inicio_sesion_panel.Controls.Add(nuevoPanel);
+            panel_agregar.Visible = false;
+            btn_agregar.Enabled = false;
+            btn_modificar.Enabled = false;
+            btn_eliminar.Enabled = false;
+            btn_buscar.Enabled = false;
+            panel_eliminar.Visible = false;
+            panel_modificar.Visible = false;
+            tb_contra.UseSystemPasswordChar = false ;
+            tb_contra.Text = "Contraseña";
+            tb_usuario.Text = "Correo Electrónico";
+            
+            panel_iniciar_sesion.Visible = false;
+        }
+
+        private void tb_contra_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+            if (panel_reporte.Visible == false)
+            {
+                panel_reporte.Visible = true;
+                panel_modificar.Visible = false;
+                panel_agregar.Visible = false;
+                panel_eliminar.Visible = false;
+            }
+            else
+            {
+                panel_reporte.Visible = false;
+            }
+        }
+
+        private void btn_r_proveedor_Click(object sender, EventArgs e)
+        {
+            panel_reporte.Visible = false;
+            OpenchildForm(new FormReporteProveedores());
+        }
+
+        private void btn_r_piezas_Click(object sender, EventArgs e)
+        {
+            panel_reporte.Visible = false;
+            OpenchildForm(new FormReportePiezas());
+        }
+
+        private void btn_r_categoria_Click(object sender, EventArgs e)
+        {
+            panel_reporte.Visible = false;
+            OpenchildForm(new FormReporteCategorias());
+        }
+
+        private void btn_piezasCate_Click(object sender, EventArgs e)
+        {
+            panel_reporte.Visible = false;
+            OpenchildForm(new FormReporteCategoriaPiezas());
+        }
+
+        private void btn_piezasProveedor_Click(object sender, EventArgs e)
+        {
+            panel_reporte.Visible = false;
+            OpenchildForm(new FormReporteProveedorPiezas());
         }
     }
 }
