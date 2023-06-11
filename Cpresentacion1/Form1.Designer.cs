@@ -119,10 +119,10 @@
             // 
             // panelConten
             // 
+            this.panelConten.Controls.Add(this.panel_eliminar);
             this.panelConten.Controls.Add(this.panel_agregar);
             this.panelConten.Controls.Add(this.btn_eliminar);
             this.panelConten.Controls.Add(this.btn_modificar);
-            this.panelConten.Controls.Add(this.panel_modificar);
             this.panelConten.Controls.Add(this.btn_agregar);
             this.panelConten.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelConten.Location = new System.Drawing.Point(0, 0);
@@ -136,7 +136,7 @@
             this.panel_eliminar.Controls.Add(this.kryptonButton4);
             this.panel_eliminar.Controls.Add(this.kryptonButton7);
             this.panel_eliminar.Controls.Add(this.kryptonButton8);
-            this.panel_eliminar.Location = new System.Drawing.Point(224, 0);
+            this.panel_eliminar.Location = new System.Drawing.Point(238, 37);
             this.panel_eliminar.Name = "panel_eliminar";
             this.panel_eliminar.Size = new System.Drawing.Size(303, 36);
             this.panel_eliminar.TabIndex = 22;
@@ -313,7 +313,7 @@
             // 
             this.panel_modificar.Controls.Add(this.kryptonButton5);
             this.panel_modificar.Controls.Add(this.kryptonButton6);
-            this.panel_modificar.Location = new System.Drawing.Point(116, 40);
+            this.panel_modificar.Location = new System.Drawing.Point(104, 0);
             this.panel_modificar.Name = "panel_modificar";
             this.panel_modificar.Size = new System.Drawing.Size(183, 36);
             this.panel_modificar.TabIndex = 22;
@@ -606,11 +606,11 @@
             // 
             // panel_agregar
             // 
-            this.panel_agregar.Controls.Add(this.panel_eliminar);
             this.panel_agregar.Controls.Add(this.kryptonButton3);
             this.panel_agregar.Controls.Add(this.kryptonButton2);
             this.panel_agregar.Controls.Add(this.kryptonButton1);
-            this.panel_agregar.Location = new System.Drawing.Point(14, 40);
+            this.panel_agregar.Controls.Add(this.panel_modificar);
+            this.panel_agregar.Location = new System.Drawing.Point(12, 37);
             this.panel_agregar.Name = "panel_agregar";
             this.panel_agregar.Size = new System.Drawing.Size(303, 36);
             this.panel_agregar.TabIndex = 18;

@@ -386,7 +386,7 @@ namespace CDatos
         public void EliminarProvedeor(int ci2)
         {
             cBD.Abrir();
-            string cadena = "  delete from prov where ci=" + ci2;
+            string cadena = "Delete FROM pieza WHERE id IN(SELECT id_pieza FROM suministra WHERE id_proveedor ="+ ci2+");" + "delete from prov where ci=" + ci2 + ";";
             SqlCommand comando = new SqlCommand(cadena, cBD.conectar);
             comando.ExecuteNonQuery();
             cBD.Cerrar();
