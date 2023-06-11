@@ -68,7 +68,7 @@ namespace Cpresentacion1
                     }
                     else
                     {
-                        MessageBox.Show("No se encontro una pieza con ese id", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("No se encontró una pieza con ese id", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
@@ -79,7 +79,7 @@ namespace Cpresentacion1
                 bool esNumero = input.All(char.IsDigit);
                 if (!esNumero)
                 {
-                    MessageBox.Show("El id de las piesas son números enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El id de las piezas son números enteros", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txt_codbuscar.Clear();
                     txt_codbuscar.Focus();
                 }

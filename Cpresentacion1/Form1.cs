@@ -32,6 +32,7 @@ namespace Cpresentacion1
         COperaciones objOpera = new COperaciones();
         private void Form1_Load_1(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             panel_modificar.Visible = false;
             // TODO: esta línea de código carga datos en la tabla 'proveedorDataSet.suministra' Puede moverla o quitarla según sea necesario.
             //this.suministraTableAdapter.Fill(this.proveedorDataSet.suministra);

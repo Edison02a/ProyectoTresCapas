@@ -51,7 +51,7 @@ namespace Cpresentacion1
                     }
                     else
                     {
-                        MessageBox.Show("No se encontro una categoría con este nombre", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("No se encontró una categoría con este nombre", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                 }
@@ -65,7 +65,7 @@ namespace Cpresentacion1
         COperaciones objOp = new COperaciones();
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Desea la categoría " + tb_nombre.Text +" ?"+" \nLas piezas que pertenezcan a esta categoría seran eliminadas", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Desea eliminar la categoría " + tb_nombre.Text +" ?"+" \nLas piezas que pertenezcan a esta categoría serán eliminadas", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (result == DialogResult.Yes)
             {

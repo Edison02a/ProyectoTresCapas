@@ -55,7 +55,7 @@ namespace Cpresentacion1
                 }
                 else
                 {
-                    MessageBox.Show("No se encontro un proveedor con esa cédula", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No se encontró un proveedor con esa cédula", "Estado del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_codbuscar.Focus();
                 }
 
@@ -79,7 +79,7 @@ namespace Cpresentacion1
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Desea eliminar el proveedor " + tb_nombre.Text + " " + tb_apellido.Text + " " + tb_cedula.Text + "? \nLas piezas de este proveedor seran eliminadas", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult result = MessageBox.Show("Desea eliminar el proveedor " + tb_nombre.Text + " " + tb_apellido.Text + " " + tb_cedula.Text + "? \n\nSe eliminará la cantidad de piezas que distribuyó\nRecomendación: Cambiar de proveedor las piezas", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (result == DialogResult.Yes)
             {
